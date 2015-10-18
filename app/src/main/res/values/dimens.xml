@@ -1,5 +1,28 @@
 <resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_size_xxsmall">10sp</dimen>
+    <dimen name="text_size_xsmall">12sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_intermediate">18sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_xlarge">24sp</dimen>
+    <dimen name="text_size_xxlarge">26sp</dimen>
+
+    <dimen name="touchfriendly_max_size">88dip</dimen>
+    <dimen name="touchfriendly_row_size">72dip</dimen>
+    <dimen name="touchfriendly_intermediate_size">66dip</dimen>
+    <dimen name="touchfriendly_normal_size">50dip</dimen>
+    <dimen name="touchfriendly_min_size">44dip</dimen>
+    <dimen name="touchfriendly_btn_size">37dp</dimen>
+    <dimen name="touchfriendly_min_intermediate_size">33dip</dimen>
+    <dimen name="touchfriendly_halfmin_size">22dip</dimen>
+
+    <dimen name="spacing_xsmall">2dp</dimen>
+    <dimen name="spacing_small">4dp</dimen>
+    <dimen name="spacing_medium">8dp</dimen>
+    <dimen name="spacing_intermediate">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_xlarge">32dp</dimen>
+
+    <dimen name="toolbar_height_material">56dp</dimen>
 </resources>
