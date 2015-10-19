@@ -47,13 +47,13 @@ public class EspressoHelper {
                 .check(matches(not(isDisplayed())));
     }
 
-    public static void checkViewByStringVisible(@StringRes int id) {
-        onView(withText(id))
+    public static void checkViewByStringVisible(@StringRes int text) {
+        onView(withText(text))
                 .check(matches(isDisplayed()));
     }
 
-    public static void checkViewByStringNotVisible(@StringRes int id) {
-        onView(withText(id))
+    public static void checkViewByStringNotVisible(@StringRes int text) {
+        onView(withText(text))
                 .check(matches(not(isDisplayed())));
     }
 

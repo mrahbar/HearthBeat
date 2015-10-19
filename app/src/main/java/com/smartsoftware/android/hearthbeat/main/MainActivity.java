@@ -1,13 +1,12 @@
 package com.smartsoftware.android.hearthbeat.main;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.smartsoftware.android.hearthbeat.R;
 
 import io.realm.Realm;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private Realm realm;
 

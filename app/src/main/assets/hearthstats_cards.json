@@ -1,5980 +1,4784 @@
 [{
 	"id": 1,
-	"card_set": "Classic",
 	"blizz_id": "EX1_613"
 },
 {
 	"id": 2,
-	"card_set": "Classic",
 	"blizz_id": "EX1_133"
 },
 {
 	"id": 3,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_018"
 },
 {
 	"id": 4,
-	"card_set": "Classic",
 	"blizz_id": "EX1_012"
 },
 {
 	"id": 5,
-	"card_set": "Classic",
 	"blizz_id": "CS2_231"
 },
 {
 	"id": 6,
-	"card_set": "Basic",
 	"blizz_id": "CS2_179"
 },
 {
 	"id": 7,
-	"card_set": "Basic",
 	"blizz_id": "EX1_244"
 },
 {
 	"id": 8,
-	"card_set": "Basic",
 	"blizz_id": "EX1_025"
 },
 {
 	"id": 9,
-	"card_set": "Classic",
 	"blizz_id": "EX1_396"
 },
 {
 	"id": 10,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_017"
 },
 {
 	"id": 11,
-	"card_set": "Classic",
 	"blizz_id": "EX1_533"
 },
 {
 	"id": 12,
-	"card_set": "Classic",
 	"blizz_id": "EX1_522"
 },
 {
 	"id": 13,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_026"
 },
 {
 	"id": 14,
-	"card_set": "Classic",
 	"blizz_id": "EX1_398"
 },
 {
 	"id": 15,
-	"card_set": "Classic",
 	"blizz_id": "EX1_007"
 },
 {
 	"id": 16,
-	"card_set": "Basic",
 	"blizz_id": "CS1_112"
 },
 {
 	"id": 17,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_036"
 },
 {
 	"id": 18,
-	"card_set": "Classic",
 	"blizz_id": "EX1_258"
 },
 {
 	"id": 19,
-	"card_set": "Basic",
 	"blizz_id": "CS2_087"
 },
 {
 	"id": 20,
-	"card_set": "Basic",
 	"blizz_id": "CS2_092"
 },
 {
 	"id": 21,
-	"card_set": "Basic",
 	"blizz_id": "CS2_022"
 },
 {
 	"id": 22,
-	"card_set": "Classic",
 	"blizz_id": "EX1_046"
 },
 {
 	"id": 23,
-	"card_set": "Basic",
 	"blizz_id": "CS2_103"
 },
 {
 	"id": 24,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_041"
 },
 {
 	"id": 25,
-	"card_set": "Basic",
 	"blizz_id": "EX1_360"
 },
 {
 	"id": 26,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_038"
 },
 {
 	"id": 27,
-	"card_set": "Basic",
 	"blizz_id": "CS2_009"
 },
 {
 	"id": 28,
-	"card_set": "Classic",
 	"blizz_id": "EX1_010"
 },
 {
 	"id": 29,
-	"card_set": "Basic",
 	"blizz_id": "CS2_024"
 },
 {
 	"id": 30,
-	"card_set": "Basic",
 	"blizz_id": "EX1_565"
 },
 {
 	"id": 31,
-	"card_set": "Basic",
 	"blizz_id": "CS2_076"
 },
 {
 	"id": 32,
-	"card_set": "Basic",
 	"blizz_id": "CS2_162"
 },
 {
 	"id": 33,
-	"card_set": "Classic",
 	"blizz_id": "CS2_181"
 },
 {
 	"id": 34,
-	"card_set": "Classic",
 	"blizz_id": "EX1_309"
 },
 {
 	"id": 35,
-	"card_set": "Classic",
 	"blizz_id": "EX1_354"
 },
 {
 	"id": 36,
-	"card_set": "Classic",
 	"blizz_id": "EX1_023"
 },
 {
 	"id": 37,
-	"card_set": "Basic",
 	"blizz_id": "CS2_003"
 },
 {
 	"id": 38,
-	"card_set": "Basic",
 	"blizz_id": "CS2_201"
 },
 {
 	"id": 39,
-	"card_set": "Basic",
 	"blizz_id": "EX1_508"
 },
 {
 	"id": 40,
-	"card_set": "Classic",
 	"blizz_id": "EX1_259"
 },
 {
 	"id": 41,
-	"card_set": "Classic",
 	"blizz_id": "EX1_341"
 },
 {
 	"id": 42,
-	"card_set": "Classic",
 	"blizz_id": "EX1_103"
 },
 {
 	"id": 43,
-	"card_set": "Classic",
 	"blizz_id": "EX1_411"
 },
 {
 	"id": 44,
-	"card_set": "Classic",
 	"blizz_id": "CS2_053"
 },
 {
 	"id": 45,
-	"card_set": "Basic",
 	"blizz_id": "CS2_182"
 },
 {
 	"id": 46,
-	"card_set": "Classic",
 	"blizz_id": "CS2_008"
 },
 {
 	"id": 47,
-	"card_set": "Classic",
 	"blizz_id": "CS2_233"
 },
 {
 	"id": 48,
-	"card_set": "Classic",
 	"blizz_id": "EX1_626"
 },
 {
 	"id": 49,
-	"card_set": "Classic",
 	"blizz_id": "EX1_059"
 },
 {
 	"id": 50,
-	"card_set": "Classic",
 	"blizz_id": "EX1_334"
 },
 {
 	"id": 51,
-	"card_set": "Classic",
 	"blizz_id": "EX1_619"
 },
 {
 	"id": 52,
-	"card_set": "Classic",
 	"blizz_id": "EX1_006"
 },
 {
 	"id": 53,
-	"card_set": "Basic",
 	"blizz_id": "NEW1_031"
 },
 {
 	"id": 54,
-	"card_set": "Classic",
 	"blizz_id": "EX1_004"
 },
 {
 	"id": 55,
-	"card_set": "Classic",
 	"blizz_id": "EX1_095"
 },
 {
 	"id": 56,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_007"
 },
 {
 	"id": 57,
-	"card_set": "Classic",
 	"blizz_id": "EX1_275"
 },
 {
 	"id": 58,
-	"card_set": "Classic",
 	"blizz_id": "EX1_245"
 },
 {
 	"id": 59,
-	"card_set": "Classic",
 	"blizz_id": "EX1_383"
 },
 {
 	"id": 60,
-	"card_set": "Basic",
 	"blizz_id": "CS2_125"
 },
 {
 	"id": 61,
-	"card_set": "Classic",
 	"blizz_id": "EX1_137"
 },
 {
 	"id": 62,
-	"card_set": "Basic",
 	"blizz_id": "DS1_185"
 },
 {
 	"id": 63,
-	"card_set": "Classic",
 	"blizz_id": "EX1_304"
 },
 {
 	"id": 64,
-	"card_set": "Basic",
 	"blizz_id": "EX1_302"
 },
 {
 	"id": 65,
-	"card_set": "Basic",
 	"blizz_id": "CS2_108"
 },
 {
 	"id": 66,
-	"card_set": "Basic",
 	"blizz_id": "CS2_046"
 },
 {
 	"id": 67,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_005"
 },
 {
 	"id": 68,
-	"card_set": "Reward",
 	"blizz_id": "EX1_062"
 },
 {
 	"id": 69,
-	"card_set": "Basic",
 	"blizz_id": "CS2_072"
 },
 {
 	"id": 70,
-	"card_set": "Classic",
 	"blizz_id": "EX1_507"
 },
 {
 	"id": 71,
-	"card_set": "Classic",
 	"blizz_id": "EX1_144"
 },
 {
 	"id": 72,
-	"card_set": "Classic",
 	"blizz_id": "CS2_038"
 },
 {
 	"id": 73,
-	"card_set": "Classic",
 	"blizz_id": "EX1_093"
 },
 {
 	"id": 74,
-	"card_set": "Basic",
 	"blizz_id": "CS2_080"
 },
 {
 	"id": 75,
-	"card_set": "Classic",
 	"blizz_id": "EX1_005"
 },
 {
 	"id": 76,
-	"card_set": "Classic",
 	"blizz_id": "EX1_382"
 },
 {
 	"id": 77,
-	"card_set": "Classic",
 	"blizz_id": "CS2_028"
 },
 {
 	"id": 78,
-	"card_set": "Classic",
 	"blizz_id": "EX1_538"
 },
 {
 	"id": 79,
-	"card_set": "Basic",
 	"blizz_id": "EX1_581"
 },
 {
 	"id": 80,
-	"card_set": "Basic",
 	"blizz_id": "CS2_147"
 },
 {
 	"id": 81,
-	"card_set": "Basic",
 	"blizz_id": "CS1_113"
 },
 {
 	"id": 82,
-	"card_set": "Classic",
 	"blizz_id": "CS2_161"
 },
 {
 	"id": 83,
-	"card_set": "Classic",
 	"blizz_id": "CS2_031"
 },
 {
 	"id": 84,
-	"card_set": "Basic",
 	"blizz_id": "EX1_066"
 },
 {
 	"id": 85,
-	"card_set": "Classic",
 	"blizz_id": "EX1_355"
 },
 {
 	"id": 86,
-	"card_set": "Classic",
 	"blizz_id": "EX1_534"
 },
 {
 	"id": 87,
-	"card_set": "Classic",
 	"blizz_id": "EX1_162"
 },
 {
 	"id": 88,
-	"card_set": "Classic",
 	"blizz_id": "EX1_363"
 },
 {
 	"id": 89,
-	"card_set": "Classic",
 	"blizz_id": "CS2_188"
 },
 {
 	"id": 90,
-	"card_set": "Classic",
 	"blizz_id": "EX1_016"
 },
 {
 	"id": 91,
-	"card_set": "Classic",
 	"blizz_id": "EX1_603"
 },
 {
 	"id": 92,
-	"card_set": "Classic",
 	"blizz_id": "EX1_238"
 },
 {
 	"id": 93,
-	"card_set": "Classic",
 	"blizz_id": "EX1_166"
 },
 {
 	"id": 94,
-	"card_set": "Basic",
 	"blizz_id": "DS1_183"
 },
 {
 	"id": 95,
-	"card_set": "Classic",
 	"blizz_id": "EX1_076"
 },
 {
 	"id": 96,
-	"card_set": "Classic",
 	"blizz_id": "EX1_048"
 },
 {
 	"id": 97,
-	"card_set": "Basic",
 	"blizz_id": "CS2_074"
 },
 {
 	"id": 98,
-	"card_set": "Basic",
 	"blizz_id": "EX1_129"
 },
 {
 	"id": 99,
-	"card_set": "Classic",
 	"blizz_id": "EX1_405"
 },
 {
 	"id": 100,
-	"card_set": "Classic",
 	"blizz_id": "EX1_317"
 },
 {
 	"id": 101,
-	"card_set": "Basic",
 	"blizz_id": "EX1_606"
 },
 {
 	"id": 102,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_008"
 },
 {
 	"id": 103,
-	"card_set": "Basic",
 	"blizz_id": "CS2_119"
 },
 {
 	"id": 104,
-	"card_set": "Basic",
 	"blizz_id": "CS2_121"
 },
 {
 	"id": 105,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_020"
 },
 {
 	"id": 106,
-	"card_set": "Basic",
 	"blizz_id": "CS2_196"
 },
 {
 	"id": 107,
-	"card_set": "Classic",
 	"blizz_id": "EX1_312"
 },
 {
 	"id": 108,
-	"card_set": "Classic",
 	"blizz_id": "EX1_563"
 },
 {
 	"id": 109,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_029"
 },
 {
 	"id": 110,
-	"card_set": "Classic",
 	"blizz_id": "CS1_129"
 },
 {
 	"id": 111,
-	"card_set": "Classic",
 	"blizz_id": "EX1_158"
 },
 {
 	"id": 112,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_025"
 },
 {
 	"id": 113,
-	"card_set": "Classic",
 	"blizz_id": "EX1_083"
 },
 {
 	"id": 114,
-	"card_set": "Classic",
 	"blizz_id": "EX1_295"
 },
 {
 	"id": 115,
-	"card_set": "Classic",
 	"blizz_id": "EX1_407"
 },
 {
 	"id": 116,
-	"card_set": "Basic",
 	"blizz_id": "NEW1_004"
 },
 {
 	"id": 117,
-	"card_set": "Classic",
 	"blizz_id": "EX1_014"
 },
 {
 	"id": 118,
-	"card_set": "Basic",
 	"blizz_id": "CS2_097"
 },
 {
 	"id": 119,
-	"card_set": "Classic",
 	"blizz_id": "EX1_558"
 },
 {
 	"id": 120,
-	"card_set": "Basic",
 	"blizz_id": "CS2_186"
 },
 {
 	"id": 121,
-	"card_set": "Basic",
 	"blizz_id": "EX1_084"
 },
 {
 	"id": 122,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_012"
 },
 {
 	"id": 123,
-	"card_set": "Classic",
 	"blizz_id": "EX1_578"
 },
 {
 	"id": 124,
-	"card_set": "Classic",
 	"blizz_id": "CS2_221"
 },
 {
 	"id": 125,
-	"card_set": "Basic",
 	"blizz_id": "EX1_019"
 },
 {
 	"id": 126,
-	"card_set": "Classic",
 	"blizz_id": "EX1_132"
 },
 {
 	"id": 127,
-	"card_set": "Classic",
 	"blizz_id": "EX1_284"
 },
 {
 	"id": 128,
-	"card_set": "Classic",
 	"blizz_id": "EX1_105"
 },
 {
 	"id": 129,
-	"card_set": "Basic",
 	"blizz_id": "NEW1_011"
 },
 {
 	"id": 130,
-	"card_set": "Classic",
 	"blizz_id": "EX1_017"
 },
 {
 	"id": 131,
-	"card_set": "Classic",
 	"blizz_id": "EX1_249"
 },
 {
 	"id": 132,
-	"card_set": "Classic",
 	"blizz_id": "EX1_313"
 },
 {
 	"id": 133,
-	"card_set": "Basic",
 	"blizz_id": "CS2_106"
 },
 {
 	"id": 134,
-	"card_set": "Basic",
 	"blizz_id": "DS1_233"
 },
 {
 	"id": 135,
-	"card_set": "Basic",
 	"blizz_id": "DS1_175"
 },
 {
 	"id": 136,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_024"
 },
 {
 	"id": 137,
-	"card_set": "Basic",
 	"blizz_id": "CS2_189"
 },
 {
 	"id": 138,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_037"
 },
 {
 	"id": 139,
-	"card_set": "Classic",
 	"blizz_id": "EX1_414"
 },
 {
 	"id": 140,
-	"card_set": "Classic",
 	"blizz_id": "EX1_586"
 },
 {
 	"id": 141,
-	"card_set": "Classic",
 	"blizz_id": "EX1_310"
 },
 {
 	"id": 142,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_010"
 },
 {
 	"id": 143,
-	"card_set": "Classic",
 	"blizz_id": "EX1_604"
 },
 {
 	"id": 144,
-	"card_set": "Classic",
 	"blizz_id": "EX1_160"
 },
 {
 	"id": 145,
-	"card_set": "Basic",
 	"blizz_id": "CS2_062"
 },
 {
 	"id": 146,
-	"card_set": "Basic",
 	"blizz_id": "CS2_155"
 },
 {
 	"id": 147,
-	"card_set": "Basic",
 	"blizz_id": "CS2_213"
 },
 {
 	"id": 148,
-	"card_set": "Basic",
 	"blizz_id": "CS2_004"
 },
 {
 	"id": 149,
-	"card_set": "Basic",
 	"blizz_id": "CS2_023"
 },
 {
 	"id": 150,
-	"card_set": "Classic",
 	"blizz_id": "EX1_164"
 },
 {
 	"id": 151,
-	"card_set": "Classic",
 	"blizz_id": "EX1_009"
 },
 {
 	"id": 152,
-	"card_set": "Classic",
 	"blizz_id": "EX1_345"
 },
 {
 	"id": 153,
-	"card_set": "Classic",
 	"blizz_id": "EX1_116"
 },
 {
 	"id": 154,
-	"card_set": "Basic",
 	"blizz_id": "EX1_399"
 },
 {
 	"id": 155,
-	"card_set": "Basic",
 	"blizz_id": "EX1_587"
 },
 {
 	"id": 156,
-	"card_set": "Classic",
 	"blizz_id": "EX1_571"
 },
 {
 	"id": 157,
-	"card_set": "Classic",
 	"blizz_id": "EX1_335"
 },
 {
 	"id": 158,
-	"card_set": "Classic",
 	"blizz_id": "EX1_283"
 },
 {
 	"id": 159,
-	"card_set": "Classic",
 	"blizz_id": "EX1_339"
 },
 {
 	"id": 160,
-	"card_set": "Classic",
 	"blizz_id": "EX1_531"
 },
 {
 	"id": 161,
-	"card_set": "Classic",
 	"blizz_id": "EX1_134"
 },
 {
 	"id": 162,
-	"card_set": "Classic",
 	"blizz_id": "EX1_350"
 },
 {
 	"id": 163,
-	"card_set": "Basic",
 	"blizz_id": "EX1_308"
 },
 {
 	"id": 164,
-	"card_set": "Basic",
 	"blizz_id": "CS2_197"
 },
 {
 	"id": 165,
-	"card_set": "Classic",
 	"blizz_id": "EX1_509"
 },
 {
 	"id": 166,
-	"card_set": "Classic",
 	"blizz_id": "EX1_612"
 },
 {
 	"id": 167,
-	"card_set": "Classic",
 	"blizz_id": "EX1_021"
 },
 {
 	"id": 168,
-	"card_set": "Basic",
 	"blizz_id": "CS2_226"
 },
 {
 	"id": 169,
-	"card_set": "Classic",
 	"blizz_id": "EX1_608"
 },
 {
 	"id": 170,
-	"card_set": "Classic",
 	"blizz_id": "EX1_624"
 },
 {
 	"id": 171,
-	"card_set": "Classic",
 	"blizz_id": "EX1_616"
 },
 {
 	"id": 172,
-	"card_set": "Classic",
 	"blizz_id": "EX1_008"
 },
 {
 	"id": 173,
-	"card_set": "Classic",
 	"blizz_id": "EX1_045"
 },
 {
 	"id": 174,
-	"card_set": "Basic",
 	"blizz_id": "EX1_015"
 },
 {
 	"id": 175,
-	"card_set": "Basic",
 	"blizz_id": "CS2_171"
 },
 {
 	"id": 176,
-	"card_set": "Basic",
 	"blizz_id": "CS2_041"
 },
 {
 	"id": 177,
-	"card_set": "Classic",
 	"blizz_id": "EX1_128"
 },
 {
 	"id": 178,
-	"card_set": "Basic",
 	"blizz_id": "CS2_112"
 },
 {
 	"id": 179,
-	"card_set": "Classic",
 	"blizz_id": "EX1_412"
 },
 {
 	"id": 180,
-	"card_set": "Classic",
 	"blizz_id": "CS2_117"
 },
 {
 	"id": 181,
-	"card_set": "Classic",
 	"blizz_id": "EX1_562"
 },
 {
 	"id": 182,
-	"card_set": "Classic",
 	"blizz_id": "EX1_055"
 },
 {
 	"id": 183,
-	"card_set": "Basic",
 	"blizz_id": "EX1_278"
 },
 {
 	"id": 184,
-	"card_set": "Classic",
 	"blizz_id": "EX1_590"
 },
 {
 	"id": 185,
-	"card_set": "Basic",
 	"blizz_id": "CS1_130"
 },
 {
 	"id": 186,
-	"card_set": "Classic",
 	"blizz_id": "EX1_365"
 },
 {
 	"id": 187,
-	"card_set": "Basic",
 	"blizz_id": "CS2_141"
 },
 {
 	"id": 188,
-	"card_set": "Basic",
 	"blizz_id": "CS2_173"
 },
 {
 	"id": 189,
-	"card_set": "Classic",
 	"blizz_id": "EX1_392"
 },
 {
 	"id": 190,
-	"card_set": "Basic",
 	"blizz_id": "EX1_593"
 },
 {
 	"id": 191,
-	"card_set": "Classic",
 	"blizz_id": "EX1_049"
 },
 {
 	"id": 192,
-	"card_set": "Classic",
 	"blizz_id": "EX1_002"
 },
 {
 	"id": 193,
-	"card_set": "Classic",
 	"blizz_id": "EX1_596"
 },
 {
 	"id": 194,
-	"card_set": "Classic",
 	"blizz_id": "EX1_136"
 },
 {
 	"id": 195,
-	"card_set": "Classic",
 	"blizz_id": "EX1_323"
 },
 {
 	"id": 196,
-	"card_set": "Classic",
 	"blizz_id": "CS2_073"
 },
 {
 	"id": 197,
-	"card_set": "Classic",
 	"blizz_id": "EX1_001"
 },
 {
 	"id": 198,
-	"card_set": "Classic",
 	"blizz_id": "EX1_044"
 },
 {
 	"id": 199,
-	"card_set": "Basic",
 	"blizz_id": "CS2_142"
 },
 {
 	"id": 200,
-	"card_set": "Classic",
 	"blizz_id": "EX1_573"
 },
 {
 	"id": 201,
-	"card_set": "Classic",
 	"blizz_id": "EX1_390"
 },
 {
 	"id": 202,
-	"card_set": "Classic",
 	"blizz_id": "EX1_610"
 },
 {
 	"id": 203,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_040"
 },
 {
 	"id": 204,
-	"card_set": "Classic",
 	"blizz_id": "EX1_595"
 },
 {
 	"id": 205,
-	"card_set": "Basic",
 	"blizz_id": "CS2_013"
 },
 {
 	"id": 206,
-	"card_set": "Basic",
 	"blizz_id": "CS2_077"
 },
 {
 	"id": 207,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_014"
 },
 {
 	"id": 208,
-	"card_set": "Classic",
 	"blizz_id": "EX1_165"
 },
 {
 	"id": 209,
-	"card_set": "Classic",
 	"blizz_id": "EX1_591"
 },
 {
 	"id": 210,
-	"card_set": "Classic",
 	"blizz_id": "EX1_549"
 },
 {
 	"id": 211,
-	"card_set": "Basic",
 	"blizz_id": "CS2_045"
 },
 {
 	"id": 212,
-	"card_set": "Basic",
 	"blizz_id": "CS2_237"
 },
 {
 	"id": 213,
-	"card_set": "Basic",
 	"blizz_id": "CS2_027"
 },
 {
 	"id": 214,
-	"card_set": "Basic",
 	"blizz_id": "CS2_063"
 },
 {
 	"id": 215,
-	"card_set": "Classic",
 	"blizz_id": "EX1_145"
 },
 {
 	"id": 216,
-	"card_set": "Classic",
 	"blizz_id": "EX1_110"
 },
 {
 	"id": 217,
-	"card_set": "Classic",
 	"blizz_id": "EX1_408"
 },
 {
 	"id": 218,
-	"card_set": "Classic",
 	"blizz_id": "EX1_544"
 },
 {
 	"id": 219,
-	"card_set": "Classic",
 	"blizz_id": "CS2_151"
 },
 {
 	"id": 220,
-	"card_set": "Basic",
 	"blizz_id": "CS2_088"
 },
 {
 	"id": 221,
-	"card_set": "Classic",
 	"blizz_id": "EX1_057"
 },
 {
 	"id": 222,
-	"card_set": "Classic",
 	"blizz_id": "CS2_169"
 },
 {
 	"id": 223,
-	"card_set": "Basic",
 	"blizz_id": "CS2_037"
 },
 {
 	"id": 224,
-	"card_set": "Basic",
 	"blizz_id": "CS2_007"
 },
 {
 	"id": 225,
-	"card_set": "Classic",
 	"blizz_id": "CS2_227"
 },
 {
 	"id": 226,
-	"card_set": "Basic",
 	"blizz_id": "NEW1_003"
 },
 {
 	"id": 227,
-	"card_set": "Classic",
 	"blizz_id": "EX1_320"
 },
 {
 	"id": 228,
-	"card_set": "Classic",
 	"blizz_id": "EX1_097"
 },
 {
 	"id": 229,
-	"card_set": "Classic",
 	"blizz_id": "tt_004"
 },
 {
 	"id": 230,
-	"card_set": "Classic",
 	"blizz_id": "EX1_096"
 },
 {
 	"id": 231,
-	"card_set": "Classic",
 	"blizz_id": "EX1_126"
 },
 {
 	"id": 232,
-	"card_set": "Classic",
 	"blizz_id": "EX1_577"
 },
 {
 	"id": 233,
-	"card_set": "Classic",
 	"blizz_id": "EX1_319"
 },
 {
 	"id": 234,
-	"card_set": "Classic",
 	"blizz_id": "EX1_611"
 },
 {
 	"id": 235,
-	"card_set": "Classic",
 	"blizz_id": "CS2_146"
 },
 {
 	"id": 236,
-	"card_set": "Basic",
 	"blizz_id": "CS2_172"
 },
 {
 	"id": 237,
-	"card_set": "Basic",
 	"blizz_id": "CS2_114"
 },
 {
 	"id": 238,
-	"card_set": "Classic",
 	"blizz_id": "CS1_069"
 },
 {
 	"id": 239,
-	"card_set": "Basic",
 	"blizz_id": "EX1_173"
 },
 {
 	"id": 240,
-	"card_set": "Basic",
 	"blizz_id": "CS1_042"
 },
 {
 	"id": 241,
-	"card_set": "Classic",
 	"blizz_id": "EX1_298"
 },
 {
 	"id": 242,
-	"card_set": "Classic",
 	"blizz_id": "CS2_104"
 },
 {
 	"id": 243,
-	"card_set": "Reward",
 	"blizz_id": "NEW1_016"
 },
 {
 	"id": 244,
-	"card_set": "Classic",
 	"blizz_id": "EX1_033"
 },
 {
 	"id": 245,
-	"card_set": "Classic",
 	"blizz_id": "EX1_028"
 },
 {
 	"id": 246,
-	"card_set": "Classic",
 	"blizz_id": "EX1_621"
 },
 {
 	"id": 247,
-	"card_set": "Classic",
 	"blizz_id": "EX1_554"
 },
 {
 	"id": 248,
-	"card_set": "Classic",
 	"blizz_id": "EX1_091"
 },
 {
 	"id": 249,
-	"card_set": "Classic",
 	"blizz_id": "EX1_409"
 },
 {
 	"id": 250,
-	"card_set": "Classic",
 	"blizz_id": "EX1_410"
 },
 {
 	"id": 251,
-	"card_set": "Basic",
 	"blizz_id": "CS2_039"
 },
 {
 	"id": 252,
-	"card_set": "Classic",
 	"blizz_id": "EX1_557"
 },
 {
 	"id": 253,
-	"card_set": "Basic",
 	"blizz_id": "DS1_070"
 },
 {
 	"id": 254,
-	"card_set": "Basic",
 	"blizz_id": "CS2_033"
 },
 {
 	"id": 255,
-	"card_set": "Classic",
 	"blizz_id": "EX1_536"
 },
 {
 	"id": 256,
-	"card_set": "Classic",
 	"blizz_id": "EX1_559"
 },
 {
 	"id": 257,
-	"card_set": "Basic",
 	"blizz_id": "EX1_539"
 },
 {
 	"id": 258,
-	"card_set": "Classic",
 	"blizz_id": "EX1_575"
 },
 {
 	"id": 259,
-	"card_set": "Basic",
 	"blizz_id": "CS2_061"
 },
 {
 	"id": 260,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_021"
 },
 {
 	"id": 261,
-	"card_set": "Basic",
 	"blizz_id": "DS1_055"
 },
 {
 	"id": 262,
-	"card_set": "Classic",
 	"blizz_id": "EX1_625"
 },
 {
 	"id": 263,
-	"card_set": "Basic",
 	"blizz_id": "CS2_026"
 },
 {
 	"id": 264,
-	"card_set": "Classic",
 	"blizz_id": "EX1_294"
 },
 {
 	"id": 265,
-	"card_set": "Classic",
 	"blizz_id": "EX1_287"
 },
 {
 	"id": 266,
-	"card_set": "Basic",
 	"blizz_id": "CS2_118"
 },
 {
 	"id": 267,
-	"card_set": "Basic",
 	"blizz_id": "CS2_124"
 },
 {
 	"id": 268,
-	"card_set": "Promotion",
 	"blizz_id": "EX1_112"
 },
 {
 	"id": 269,
-	"card_set": "Classic",
 	"blizz_id": "EX1_607"
 },
 {
 	"id": 270,
-	"card_set": "Basic",
 	"blizz_id": "CS2_105"
 },
 {
 	"id": 271,
-	"card_set": "Classic",
 	"blizz_id": "EX1_567"
 },
 {
 	"id": 272,
-	"card_set": "Basic",
 	"blizz_id": "DS1_184"
 },
 {
 	"id": 273,
-	"card_set": "Basic",
 	"blizz_id": "CS2_029"
 },
 {
 	"id": 274,
-	"card_set": "Basic",
 	"blizz_id": "CS2_187"
 },
 {
 	"id": 275,
-	"card_set": "Classic",
 	"blizz_id": "EX1_020"
 },
 {
 	"id": 276,
-	"card_set": "Basic",
 	"blizz_id": "EX1_011"
 },
 {
 	"id": 277,
-	"card_set": "Basic",
 	"blizz_id": "CS2_057"
 },
 {
 	"id": 278,
-	"card_set": "Classic",
 	"blizz_id": "EX1_274"
 },
 {
 	"id": 279,
-	"card_set": "Basic",
 	"blizz_id": "EX1_306"
 },
 {
 	"id": 280,
-	"card_set": "Classic",
 	"blizz_id": "EX1_170"
 },
 {
 	"id": 281,
-	"card_set": "Classic",
 	"blizz_id": "EX1_617"
 },
 {
 	"id": 282,
-	"card_set": "Basic",
 	"blizz_id": "CS2_005"
 },
 {
 	"id": 283,
-	"card_set": "Classic",
 	"blizz_id": "EX1_537"
 },
 {
 	"id": 284,
-	"card_set": "Classic",
 	"blizz_id": "EX1_384"
 },
 {
 	"id": 285,
-	"card_set": "Classic",
 	"blizz_id": "EX1_362"
 },
 {
 	"id": 286,
-	"card_set": "Classic",
 	"blizz_id": "EX1_301"
 },
 {
 	"id": 287,
-	"card_set": "Basic",
 	"blizz_id": "CS2_235"
 },
 {
 	"id": 288,
-	"card_set": "Classic",
 	"blizz_id": "EX1_029"
 },
 {
 	"id": 289,
-	"card_set": "Basic",
 	"blizz_id": "CS2_042"
 },
 {
 	"id": 290,
-	"card_set": "Classic",
 	"blizz_id": "EX1_609"
 },
 {
 	"id": 291,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_027"
 },
 {
 	"id": 292,
-	"card_set": "Classic",
 	"blizz_id": "EX1_570"
 },
 {
 	"id": 293,
-	"card_set": "Classic",
 	"blizz_id": "EX1_131"
 },
 {
 	"id": 294,
-	"card_set": "Classic",
 	"blizz_id": "EX1_556"
 },
 {
 	"id": 295,
-	"card_set": "Classic",
 	"blizz_id": "EX1_543"
 },
 {
 	"id": 296,
-	"card_set": "Classic",
 	"blizz_id": "EX1_100"
 },
 {
 	"id": 297,
-	"card_set": "Basic",
 	"blizz_id": "CS2_084"
 },
 {
 	"id": 298,
-	"card_set": "Basic",
 	"blizz_id": "EX1_582"
 },
 {
 	"id": 299,
-	"card_set": "Classic",
 	"blizz_id": "EX1_043"
 },
 {
 	"id": 300,
-	"card_set": "Classic",
 	"blizz_id": "EX1_050"
 },
 {
 	"id": 301,
-	"card_set": "Classic",
 	"blizz_id": "EX1_620"
 },
 {
 	"id": 302,
-	"card_set": "Classic",
 	"blizz_id": "EX1_303"
 },
 {
 	"id": 303,
-	"card_set": "Classic",
 	"blizz_id": "EX1_067"
 },
 {
 	"id": 304,
-	"card_set": "Basic",
 	"blizz_id": "EX1_277"
 },
 {
 	"id": 305,
-	"card_set": "Classic",
 	"blizz_id": "EX1_178"
 },
 {
 	"id": 306,
-	"card_set": "Basic",
 	"blizz_id": "CS2_222"
 },
 {
 	"id": 307,
-	"card_set": "Basic",
 	"blizz_id": "CS2_012"
 },
 {
 	"id": 308,
-	"card_set": "Basic",
 	"blizz_id": "EX1_246"
 },
 {
 	"id": 309,
-	"card_set": "Classic",
 	"blizz_id": "EX1_572"
 },
 {
 	"id": 310,
-	"card_set": "Classic",
 	"blizz_id": "EX1_089"
 },
 {
 	"id": 311,
-	"card_set": "Classic",
 	"blizz_id": "CS2_059"
 },
 {
 	"id": 312,
-	"card_set": "Classic",
 	"blizz_id": "EX1_279"
 },
 {
 	"id": 313,
-	"card_set": "Basic",
 	"blizz_id": "CS2_168"
 },
 {
 	"id": 314,
-	"card_set": "Classic",
 	"blizz_id": "tt_010"
 },
 {
 	"id": 315,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_023"
 },
 {
 	"id": 316,
-	"card_set": "Basic",
 	"blizz_id": "CS2_075"
 },
 {
 	"id": 317,
-	"card_set": "Classic",
 	"blizz_id": "EX1_316"
 },
 {
 	"id": 318,
-	"card_set": "Basic",
 	"blizz_id": "CS2_025"
 },
 {
 	"id": 319,
-	"card_set": "Basic",
 	"blizz_id": "CS2_234"
 },
 {
 	"id": 320,
-	"card_set": "Classic",
 	"blizz_id": "EX1_130"
 },
 {
 	"id": 321,
-	"card_set": "Basic",
 	"blizz_id": "CS2_064"
 },
 {
 	"id": 322,
-	"card_set": "Classic",
 	"blizz_id": "EX1_161"
 },
 {
 	"id": 323,
-	"card_set": "Classic",
 	"blizz_id": "EX1_154"
 },
 {
 	"id": 324,
-	"card_set": "Classic",
 	"blizz_id": "EX1_080"
 },
 {
 	"id": 325,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_022"
 },
 {
 	"id": 326,
-	"card_set": "Classic",
 	"blizz_id": "EX1_251"
 },
 {
 	"id": 327,
-	"card_set": "Basic",
 	"blizz_id": "EX1_371"
 },
 {
 	"id": 328,
-	"card_set": "Classic",
 	"blizz_id": "EX1_594"
 },
 {
 	"id": 329,
-	"card_set": "Classic",
 	"blizz_id": "EX1_560"
 },
 {
 	"id": 330,
-	"card_set": "Basic",
 	"blizz_id": "CS2_236"
 },
 {
 	"id": 331,
-	"card_set": "Classic",
 	"blizz_id": "EX1_402"
 },
 {
 	"id": 332,
-	"card_set": "Basic",
 	"blizz_id": "EX1_506"
 },
 {
 	"id": 333,
-	"card_set": "Basic",
 	"blizz_id": "DS1_178"
 },
 {
 	"id": 334,
-	"card_set": "Classic",
 	"blizz_id": "EX1_315"
 },
 {
 	"id": 335,
-	"card_set": "Basic",
 	"blizz_id": "CS2_094"
 },
 {
 	"id": 336,
-	"card_set": "Basic",
 	"blizz_id": "CS2_131"
 },
 {
 	"id": 337,
-	"card_set": "Classic",
 	"blizz_id": "EX1_082"
 },
 {
 	"id": 338,
-	"card_set": "Basic",
 	"blizz_id": "CS2_093"
 },
 {
 	"id": 339,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_019"
 },
 {
 	"id": 340,
-	"card_set": "Classic",
 	"blizz_id": "EX1_289"
 },
 {
 	"id": 341,
-	"card_set": "Basic",
 	"blizz_id": "CS2_091"
 },
 {
 	"id": 342,
-	"card_set": "Classic",
 	"blizz_id": "EX1_241"
 },
 {
 	"id": 343,
-	"card_set": "Classic",
 	"blizz_id": "EX1_085"
 },
 {
 	"id": 344,
-	"card_set": "Basic",
 	"blizz_id": "CS2_200"
 },
 {
 	"id": 345,
-	"card_set": "Classic",
 	"blizz_id": "EX1_583"
 },
 {
 	"id": 346,
-	"card_set": "Classic",
 	"blizz_id": "EX1_584"
 },
 {
 	"id": 347,
-	"card_set": "Classic",
 	"blizz_id": "EX1_155"
 },
 {
 	"id": 348,
-	"card_set": "Basic",
 	"blizz_id": "EX1_622"
 },
 {
 	"id": 349,
-	"card_set": "Classic",
 	"blizz_id": "CS2_203"
 },
 {
 	"id": 350,
-	"card_set": "Classic",
 	"blizz_id": "EX1_124"
 },
 {
 	"id": 351,
-	"card_set": "Classic",
 	"blizz_id": "EX1_379"
 },
 {
 	"id": 352,
-	"card_set": "Classic",
 	"blizz_id": "EX1_032"
 },
 {
 	"id": 353,
-	"card_set": "Classic",
 	"blizz_id": "EX1_391"
 },
 {
 	"id": 354,
-	"card_set": "Classic",
 	"blizz_id": "EX1_366"
 },
 {
 	"id": 355,
-	"card_set": "Basic",
 	"blizz_id": "EX1_400"
 },
 {
 	"id": 356,
-	"card_set": "Classic",
 	"blizz_id": "EX1_614"
 },
 {
 	"id": 357,
-	"card_set": "Classic",
 	"blizz_id": "EX1_561"
 },
 {
 	"id": 358,
-	"card_set": "Classic",
 	"blizz_id": "EX1_332"
 },
 {
 	"id": 359,
-	"card_set": "Basic",
 	"blizz_id": "CS2_065"
 },
 {
 	"id": 360,
-	"card_set": "Basic",
 	"blizz_id": "CS2_032"
 },
 {
 	"id": 361,
-	"card_set": "Basic",
 	"blizz_id": "CS2_120"
 },
 {
 	"id": 362,
-	"card_set": "Classic",
 	"blizz_id": "EX1_247"
 },
 {
 	"id": 363,
-	"card_set": "Classic",
 	"blizz_id": "EX1_623"
 },
 {
 	"id": 364,
-	"card_set": "Classic",
 	"blizz_id": "EX1_597"
 },
 {
 	"id": 365,
-	"card_set": "Basic",
 	"blizz_id": "CS2_011"
 },
 {
 	"id": 366,
-	"card_set": "Basic",
 	"blizz_id": "EX1_169"
 },
 {
 	"id": 367,
-	"card_set": "Classic",
 	"blizz_id": "EX1_250"
 },
 {
 	"id": 368,
-	"card_set": "Classic",
 	"blizz_id": "EX1_564"
 },
 {
 	"id": 369,
-	"card_set": "Classic",
 	"blizz_id": "EX1_349"
 },
 {
 	"id": 370,
-	"card_set": "Classic",
 	"blizz_id": "EX1_102"
 },
 {
 	"id": 371,
-	"card_set": "Classic",
 	"blizz_id": "EX1_058"
 },
 {
 	"id": 372,
-	"card_set": "Classic",
 	"blizz_id": "EX1_243"
 },
 {
 	"id": 373,
-	"card_set": "Basic",
 	"blizz_id": "CS2_089"
 },
 {
 	"id": 374,
-	"card_set": "Classic",
 	"blizz_id": "EX1_248"
 },
 {
 	"id": 375,
-	"card_set": "Basic",
 	"blizz_id": "CS2_122"
 },
 {
 	"id": 376,
-	"card_set": "Classic",
 	"blizz_id": "EX1_393"
 },
 {
 	"id": 377,
-	"card_set": "Basic",
 	"blizz_id": "CS2_232"
 },
 {
 	"id": 378,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_030"
 },
 {
 	"id": 379,
-	"card_set": "Basic",
 	"blizz_id": "CS2_150"
 },
 {
 	"id": 380,
-	"card_set": "Basic",
 	"blizz_id": "CS2_127"
 },
 {
 	"id": 381,
-	"card_set": "Classic",
 	"blizz_id": "DS1_188"
 },
 {
 	"id": 382,
-	"card_set": "Promotion",
 	"blizz_id": "PRO_001"
 },
 {
 	"id": 383,
-	"card_set": "Basic",
 	"blizz_id": "CS2_013t"
 },
 {
 	"id": 384,
-	"card_set": "Basic",
 	"blizz_id": "GAME_006"
 },
 {
 	"id": 385,
-	"card_set": "Basic",
 	"blizz_id": "GAME_005"
 },
 {
 	"id": 386,
-	"card_set": "Basic",
 	"blizz_id": "GAME_002"
 },
 {
 	"id": 387,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "CS2_boar"
 },
 {
 	"id": 388,
-	"card_set": "Basic",
 	"blizz_id": "hexfrog"
 },
 {
 	"id": 389,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "NEW1_009"
 },
 {
 	"id": 390,
-	"card_set": "Basic",
 	"blizz_id": "NEW1_034"
 },
 {
 	"id": 391,
-	"card_set": "Basic",
 	"blizz_id": "NEW1_033"
 },
 {
 	"id": 392,
-	"card_set": "Basic",
 	"blizz_id": "EX1_025t"
 },
 {
 	"id": 393,
-	"card_set": "Basic",
 	"blizz_id": "NEW1_032"
 },
 {
 	"id": 394,
-	"card_set": "Basic",
 	"blizz_id": "EX1_506a"
 },
 {
 	"id": 395,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "CS2_050"
 },
 {
 	"id": 396,
-	"card_set": "Basic",
 	"blizz_id": "CS2_tk1"
 },
 {
 	"id": 397,
-	"card_set": "Basic",
 	"blizz_id": "CS2_101t"
 },
 {
 	"id": 398,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "skele11"
 },
 {
 	"id": 399,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "CS2_051"
 },
 {
 	"id": 400,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "CS2_052"
 },
 {
 	"id": 401,
-	"card_set": "Credits",
 	"blizz_id": "CRED_15"
 },
 {
 	"id": 402,
-	"card_set": "Credits",
 	"blizz_id": "CRED_08"
 },
 {
 	"id": 403,
-	"card_set": "Credits",
 	"blizz_id": "CRED_09"
 },
 {
 	"id": 404,
-	"card_set": "Credits",
 	"blizz_id": "CRED_03"
 },
 {
 	"id": 405,
-	"card_set": "Credits",
 	"blizz_id": "CRED_13"
 },
 {
 	"id": 406,
-	"card_set": "Credits",
 	"blizz_id": "CRED_06"
 },
 {
 	"id": 407,
-	"card_set": "Credits",
 	"blizz_id": "CRED_02"
 },
 {
 	"id": 408,
-	"card_set": "Credits",
 	"blizz_id": "CRED_16"
 },
 {
 	"id": 409,
-	"card_set": "Credits",
 	"blizz_id": "CRED_01"
 },
 {
 	"id": 410,
-	"card_set": "Credits",
 	"blizz_id": "CRED_11"
 },
 {
 	"id": 411,
-	"card_set": "Credits",
 	"blizz_id": "CRED_05"
 },
 {
 	"id": 412,
-	"card_set": "Credits",
 	"blizz_id": "CRED_10"
 },
 {
 	"id": 413,
-	"card_set": "Credits",
 	"blizz_id": "CRED_12"
 },
 {
 	"id": 414,
-	"card_set": "Credits",
 	"blizz_id": "CRED_17"
 },
 {
 	"id": 415,
-	"card_set": "Credits",
 	"blizz_id": "CRED_04"
 },
 {
 	"id": 416,
-	"card_set": "Credits",
 	"blizz_id": "CRED_14"
 },
 {
 	"id": 417,
-	"card_set": "Credits",
 	"blizz_id": "CRED_07"
 },
 {
 	"id": 418,
-	"card_set": "Debug",
 	"blizz_id": "XXX_039"
 },
 {
 	"id": 419,
-	"card_set": "Debug",
 	"blizz_id": "XXX_012"
 },
 {
 	"id": 420,
-	"card_set": "Debug",
 	"blizz_id": "XXX_006"
 },
 {
 	"id": 421,
-	"card_set": "Debug",
 	"blizz_id": "XXX_015"
 },
 {
 	"id": 422,
-	"card_set": "Debug",
 	"blizz_id": "XXX_001"
 },
 {
 	"id": 423,
-	"card_set": "Debug",
 	"blizz_id": "XXX_002"
 },
 {
 	"id": 424,
-	"card_set": "Debug",
 	"blizz_id": "XXX_020"
 },
 {
 	"id": 425,
-	"card_set": null,
 	"blizz_id": null
 },
 {
 	"id": 426,
-	"card_set": "Debug",
 	"blizz_id": "XXX_005"
 },
 {
 	"id": 427,
-	"card_set": "Debug",
 	"blizz_id": "XXX_023"
 },
 {
 	"id": 428,
-	"card_set": "Debug",
 	"blizz_id": "XXX_018"
 },
 {
 	"id": 429,
-	"card_set": "Debug",
 	"blizz_id": "XXX_013"
 },
 {
 	"id": 430,
-	"card_set": "Debug",
 	"blizz_id": "XXX_025"
 },
 {
 	"id": 431,
-	"card_set": "Debug",
 	"blizz_id": "XXX_017"
 },
 {
 	"id": 432,
-	"card_set": "Debug",
 	"blizz_id": "XXX_026"
 },
 {
 	"id": 433,
-	"card_set": "Debug",
 	"blizz_id": "XXX_007"
 },
 {
 	"id": 434,
-	"card_set": "Debug",
 	"blizz_id": "XXX_009"
 },
 {
 	"id": 435,
-	"card_set": "Debug",
 	"blizz_id": "XXX_022"
 },
 {
 	"id": 436,
-	"card_set": "Debug",
 	"blizz_id": "XXX_008"
 },
 {
 	"id": 437,
-	"card_set": "Debug",
 	"blizz_id": "XXX_042"
 },
 {
 	"id": 438,
-	"card_set": "Debug",
 	"blizz_id": "XXX_014"
 },
 {
 	"id": 439,
-	"card_set": "Debug",
 	"blizz_id": "XXX_043"
 },
 {
 	"id": 440,
-	"card_set": "Debug",
 	"blizz_id": "XXX_019"
 },
 {
 	"id": 441,
-	"card_set": "Debug",
 	"blizz_id": "XXX_029"
 },
 {
 	"id": 442,
-	"card_set": "Debug",
 	"blizz_id": "XXX_030"
 },
 {
 	"id": 443,
-	"card_set": "Debug",
 	"blizz_id": "XXX_003"
 },
 {
 	"id": 444,
-	"card_set": "Debug",
 	"blizz_id": "XXX_004"
 },
 {
 	"id": 445,
-	"card_set": "Debug",
 	"blizz_id": "XXX_021"
 },
 {
 	"id": 446,
-	"card_set": "Debug",
 	"blizz_id": "XXX_028"
 },
 {
 	"id": 447,
-	"card_set": "Debug",
 	"blizz_id": "XXX_027"
 },
 {
 	"id": 448,
-	"card_set": "Debug",
 	"blizz_id": "XXX_010"
 },
 {
 	"id": 449,
-	"card_set": "Debug",
 	"blizz_id": "XXX_016"
 },
 {
 	"id": 450,
-	"card_set": "Debug",
 	"blizz_id": "XXX_045"
 },
 {
 	"id": 451,
-	"card_set": "Debug",
 	"blizz_id": "XXX_011"
 },
 {
 	"id": 452,
-	"card_set": "Debug",
 	"blizz_id": "XXX_024"
 },
 {
 	"id": 453,
-	"card_set": "Debug",
 	"blizz_id": "XXX_044"
 },
 {
 	"id": 454,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_008b"
 },
 {
 	"id": 455,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_008a"
 },
 {
 	"id": 456,
-	"card_set": "Missions",
 	"blizz_id": "EX1_014t"
 },
 {
 	"id": 457,
-	"card_set": "Classic",
 	"blizz_id": "EX1_165b"
 },
 {
 	"id": 458,
-	"card_set": "Classic",
 	"blizz_id": "EX1_165a"
 },
 {
 	"id": 459,
-	"card_set": "Classic",
 	"blizz_id": "EX1_573a"
 },
 {
 	"id": 460,
-	"card_set": "Classic",
 	"blizz_id": "EX1_166b"
 },
 {
 	"id": 461,
-	"card_set": "Classic",
 	"blizz_id": "DREAM_04"
 },
 {
 	"id": 462,
-	"card_set": "Classic",
 	"blizz_id": "EX1_160b"
 },
 {
 	"id": 463,
-	"card_set": "Classic",
 	"blizz_id": "DREAM_05"
 },
 {
 	"id": 464,
-	"card_set": "Classic",
 	"blizz_id": "EX1_178a"
 },
 {
 	"id": 465,
-	"card_set": "Classic",
 	"blizz_id": "EX1_573b"
 },
 {
 	"id": 466,
-	"card_set": "Classic",
 	"blizz_id": "EX1_160a"
 },
 {
 	"id": 467,
-	"card_set": "Classic",
 	"blizz_id": "EX1_178b"
 },
 {
 	"id": 468,
-	"card_set": "Classic",
 	"blizz_id": "DREAM_02"
 },
 {
 	"id": 469,
-	"card_set": "Classic",
 	"blizz_id": "EX1_110t"
 },
 {
 	"id": 470,
-	"card_set": "Classic",
 	"blizz_id": "skele21"
 },
 {
 	"id": 471,
-	"card_set": "Classic",
 	"blizz_id": "EX1_130a"
 },
 {
 	"id": 472,
-	"card_set": "Classic",
 	"blizz_id": "EX1_131t"
 },
 {
 	"id": 473,
-	"card_set": "Classic",
 	"blizz_id": "EX1_tk29"
 },
 {
 	"id": 474,
-	"card_set": "Classic",
 	"blizz_id": "DREAM_03"
 },
 {
 	"id": 475,
-	"card_set": "Classic",
 	"blizz_id": "EX1_finkle"
 },
 {
 	"id": 476,
-	"card_set": "Missions",
 	"blizz_id": "EX1_614t"
 },
 {
 	"id": 477,
-	"card_set": "Missions",
 	"blizz_id": "TU4a_003"
 },
 {
 	"id": 478,
-	"card_set": "Classic",
 	"blizz_id": "EX1_538t"
 },
 {
 	"id": 479,
-	"card_set": "Classic",
 	"blizz_id": "EX1_534t"
 },
 {
 	"id": 480,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "EX1_598"
 },
 {
 	"id": 481,
-	"card_set": "Classic",
 	"blizz_id": "EX1_tk34"
 },
 {
 	"id": 482,
-	"card_set": "Classic",
 	"blizz_id": "DREAM_01"
 },
 {
 	"id": 483,
-	"card_set": "Classic",
 	"blizz_id": "EX1_160t"
 },
 {
 	"id": 484,
-	"card_set": "Classic",
 	"blizz_id": "EX1_345t"
 },
 {
 	"id": 485,
-	"card_set": "Classic",
 	"blizz_id": "EX1_554t"
 },
 {
 	"id": 486,
-	"card_set": "Classic",
 	"blizz_id": "EX1_tk11"
 },
 {
 	"id": 487,
-	"card_set": "Classic",
 	"blizz_id": "CS2_152"
 },
 {
 	"id": 488,
-	"card_set": "Classic",
 	"blizz_id": "EX1_tk28"
 },
 {
 	"id": 489,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "EX1_tk9"
 },
 {
 	"id": 490,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_026t"
 },
 {
 	"id": 491,
-	"card_set": "Classic",
 	"blizz_id": "BRM_004t"
 },
 {
 	"id": 492,
-	"card_set": "Classic",
 	"blizz_id": "EX1_317t"
 },
 {
 	"id": 493,
-	"card_set": "Missions",
 	"blizz_id": "TU4c_002"
 },
 {
 	"id": 494,
-	"card_set": "Missions",
 	"blizz_id": "TU4e_005"
 },
 {
 	"id": 495,
-	"card_set": "Missions",
 	"blizz_id": "TU4a_004"
 },
 {
 	"id": 496,
-	"card_set": "Missions",
 	"blizz_id": "TU4f_004"
 },
 {
 	"id": 497,
-	"card_set": null,
 	"blizz_id": null
 },
 {
 	"id": 498,
-	"card_set": "Missions",
 	"blizz_id": "TU4c_004"
 },
 {
 	"id": 499,
-	"card_set": "Missions",
 	"blizz_id": "TU4f_006"
 },
 {
 	"id": 500,
-	"card_set": "Missions",
 	"blizz_id": "TU4c_008"
 },
 {
 	"id": 501,
-	"card_set": "Missions",
 	"blizz_id": "TU4c_003"
 },
 {
 	"id": 502,
-	"card_set": "Missions",
 	"blizz_id": "TU4f_005"
 },
 {
 	"id": 503,
-	"card_set": "Missions",
 	"blizz_id": "TU4d_002"
 },
 {
 	"id": 504,
-	"card_set": "Missions",
 	"blizz_id": "TU4f_007"
 },
 {
 	"id": 505,
-	"card_set": "Missions",
 	"blizz_id": "TU4c_005"
 },
 {
 	"id": 506,
-	"card_set": "Missions",
 	"blizz_id": "TU4a_005"
 },
 {
 	"id": 507,
-	"card_set": "Missions",
 	"blizz_id": "TU4c_007"
 },
 {
 	"id": 508,
-	"card_set": "Missions",
 	"blizz_id": "TU4e_003"
 },
 {
 	"id": 509,
-	"card_set": "Missions",
 	"blizz_id": "TU4f_002"
 },
 {
 	"id": 510,
-	"card_set": "Missions",
 	"blizz_id": "TU4a_002"
 },
 {
 	"id": 511,
-	"card_set": "Missions",
 	"blizz_id": "TU4f_003"
 },
 {
 	"id": 512,
-	"card_set": "Promotion",
 	"blizz_id": "PRO_001a"
 },
 {
 	"id": 513,
-	"card_set": "Promotion",
 	"blizz_id": "PRO_001c"
 },
 {
 	"id": 514,
-	"card_set": "Promotion",
 	"blizz_id": "PRO_001b"
 },
 {
 	"id": 515,
-	"card_set": "Promotion",
 	"blizz_id": "Mekka4t"
 },
 {
 	"id": 516,
-	"card_set": "Promotion",
 	"blizz_id": "Mekka3"
 },
 {
 	"id": 517,
-	"card_set": "Promotion",
 	"blizz_id": "Mekka1"
 },
 {
 	"id": 518,
-	"card_set": "Promotion",
 	"blizz_id": "PRO_001at"
 },
 {
 	"id": 519,
-	"card_set": "Promotion",
 	"blizz_id": "Mekka4"
 },
 {
 	"id": 520,
-	"card_set": "Promotion",
 	"blizz_id": "Mekka2"
 },
 {
 	"id": 521,
-	"card_set": "System",
 	"blizz_id": "PlaceholderCard"
 },
 {
 	"id": 522,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_026"
 },
 {
 	"id": 523,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_020"
 },
 {
 	"id": 524,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_031"
 },
 {
 	"id": 525,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_005e"
 },
 {
 	"id": 526,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_029"
 },
 {
 	"id": 527,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_023"
 },
 {
 	"id": 528,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_028e"
 },
 {
 	"id": 529,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_021"
 },
 {
 	"id": 530,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_006"
 },
 {
 	"id": 531,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_009"
 },
 {
 	"id": 532,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_018"
 },
 {
 	"id": 533,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_003"
 },
 {
 	"id": 534,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_015"
 },
 {
 	"id": 535,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_002"
 },
 {
 	"id": 536,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_013"
 },
 {
 	"id": 537,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_030"
 },
 {
 	"id": 538,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_004"
 },
 {
 	"id": 539,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_010"
 },
 {
 	"id": 540,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX6_02"
 },
 {
 	"id": 541,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_017"
 },
 {
 	"id": 542,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "NAX1_03"
 },
 {
 	"id": 543,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_007"
 },
 {
 	"id": 544,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_019"
 },
 {
 	"id": 545,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_023e"
 },
 {
 	"id": 546,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_025"
 },
 {
 	"id": 547,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_005"
 },
 {
 	"id": 548,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_012t"
 },
 {
 	"id": 549,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_012"
 },
 {
 	"id": 550,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_008"
 },
 {
 	"id": 551,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_002t"
 },
 {
 	"id": 552,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_014"
 },
 {
 	"id": 553,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_027"
 },
 {
 	"id": 554,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX13_01"
 },
 {
 	"id": 555,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_028"
 },
 {
 	"id": 556,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_024"
 },
 {
 	"id": 557,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_020e"
 },
 {
 	"id": 558,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_022"
 },
 {
 	"id": 559,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_016"
 },
 {
 	"id": 560,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_011"
 },
 {
 	"id": 561,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "FP1_001"
 },
 {
 	"id": 562,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_001"
 },
 {
 	"id": 563,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_002"
 },
 {
 	"id": 564,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_003"
 },
 {
 	"id": 565,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_004"
 },
 {
 	"id": 566,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_005"
 },
 {
 	"id": 567,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_006"
 },
 {
 	"id": 568,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_007"
 },
 {
 	"id": 569,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_008"
 },
 {
 	"id": 570,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_009"
 },
 {
 	"id": 571,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_010"
 },
 {
 	"id": 572,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_011"
 },
 {
 	"id": 573,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_012"
 },
 {
 	"id": 574,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_013"
 },
 {
 	"id": 575,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_014"
 },
 {
 	"id": 576,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_015"
 },
 {
 	"id": 577,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_016"
 },
 {
 	"id": 578,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_017"
 },
 {
 	"id": 579,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_018"
 },
 {
 	"id": 580,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_019"
 },
 {
 	"id": 581,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_020"
 },
 {
 	"id": 582,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_021"
 },
 {
 	"id": 583,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_022"
 },
 {
 	"id": 584,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_023"
 },
 {
 	"id": 585,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_024"
 },
 {
 	"id": 586,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_025"
 },
 {
 	"id": 587,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_026"
 },
 {
 	"id": 588,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_027"
 },
 {
 	"id": 589,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_028"
 },
 {
 	"id": 590,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_029"
 },
 {
 	"id": 591,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_030"
 },
 {
 	"id": 592,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_031"
 },
 {
 	"id": 593,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_032"
 },
 {
 	"id": 594,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_033"
 },
 {
 	"id": 595,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_034"
 },
 {
 	"id": 596,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_035"
 },
 {
 	"id": 597,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_036"
 },
 {
 	"id": 598,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_037"
 },
 {
 	"id": 599,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_038"
 },
 {
 	"id": 600,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_039"
 },
 {
 	"id": 601,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_040"
 },
 {
 	"id": 602,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_041"
 },
 {
 	"id": 603,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_042"
 },
 {
 	"id": 604,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_043"
 },
 {
 	"id": 605,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_044"
 },
 {
 	"id": 606,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_045"
 },
 {
 	"id": 607,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_046"
 },
 {
 	"id": 608,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_047"
 },
 {
 	"id": 609,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_048"
 },
 {
 	"id": 610,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_049"
 },
 {
 	"id": 611,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_050"
 },
 {
 	"id": 612,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_051"
 },
 {
 	"id": 613,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_052"
 },
 {
 	"id": 614,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_053"
 },
 {
 	"id": 615,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_054"
 },
 {
 	"id": 616,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_055"
 },
 {
 	"id": 617,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_056"
 },
 {
 	"id": 618,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_057"
 },
 {
 	"id": 619,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_058"
 },
 {
 	"id": 620,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_059"
 },
 {
 	"id": 621,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_060"
 },
 {
 	"id": 622,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_061"
 },
 {
 	"id": 623,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_062"
 },
 {
 	"id": 624,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_063"
 },
 {
 	"id": 625,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_064"
 },
 {
 	"id": 626,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_065"
 },
 {
 	"id": 627,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_066"
 },
 {
 	"id": 628,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_067"
 },
 {
 	"id": 629,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_068"
 },
 {
 	"id": 630,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_069"
 },
 {
 	"id": 631,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_070"
 },
 {
 	"id": 632,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_071"
 },
 {
 	"id": 633,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_072"
 },
 {
 	"id": 634,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_073"
 },
 {
 	"id": 635,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_074"
 },
 {
 	"id": 636,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_075"
 },
 {
 	"id": 637,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_076"
 },
 {
 	"id": 638,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_077"
 },
 {
 	"id": 639,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_078"
 },
 {
 	"id": 640,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_079"
 },
 {
 	"id": 641,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_080"
 },
 {
 	"id": 642,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_081"
 },
 {
 	"id": 643,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_082"
 },
 {
 	"id": 644,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_083"
 },
 {
 	"id": 645,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_084"
 },
 {
 	"id": 646,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_085"
 },
 {
 	"id": 647,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_086"
 },
 {
 	"id": 648,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_087"
 },
 {
 	"id": 649,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_088"
 },
 {
 	"id": 650,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_089"
 },
 {
 	"id": 651,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_090"
 },
 {
 	"id": 652,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_091"
 },
 {
 	"id": 653,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_092"
 },
 {
 	"id": 654,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_093"
 },
 {
 	"id": 655,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_094"
 },
 {
 	"id": 656,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_095"
 },
 {
 	"id": 657,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_096"
 },
 {
 	"id": 658,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_097"
 },
 {
 	"id": 659,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_098"
 },
 {
 	"id": 660,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_099"
 },
 {
 	"id": 661,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_100"
 },
 {
 	"id": 662,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_101"
 },
 {
 	"id": 663,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_102"
 },
 {
 	"id": 664,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_103"
 },
 {
 	"id": 665,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_104"
 },
 {
 	"id": 666,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_105"
 },
 {
 	"id": 667,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_106"
 },
 {
 	"id": 668,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_107"
 },
 {
 	"id": 669,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_108"
 },
 {
 	"id": 670,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_109"
 },
 {
 	"id": 671,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_110"
 },
 {
 	"id": 672,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_111"
 },
 {
 	"id": 673,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_112"
 },
 {
 	"id": 674,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_113"
 },
 {
 	"id": 675,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_114"
 },
 {
 	"id": 676,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_115"
 },
 {
 	"id": 677,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_116"
 },
 {
 	"id": 678,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_117"
 },
 {
 	"id": 679,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_118"
 },
 {
 	"id": 680,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_119"
 },
 {
 	"id": 681,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_120"
 },
 {
 	"id": 682,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_121"
 },
 {
 	"id": 683,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_122"
 },
 {
 	"id": 684,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_123"
 },
 {
 	"id": 685,
-	"card_set": "Basic",
 	"blizz_id": "GAME_004"
 },
 {
 	"id": 686,
-	"card_set": "Basic",
 	"blizz_id": "CS2_041e"
 },
 {
 	"id": 687,
-	"card_set": "Basic",
 	"blizz_id": "HERO_09"
 },
 {
 	"id": 688,
-	"card_set": "Basic",
 	"blizz_id": "CS2_102"
 },
 {
 	"id": 689,
-	"card_set": "Basic",
 	"blizz_id": "EX1_399e"
 },
 {
 	"id": 690,
-	"card_set": "Basic",
 	"blizz_id": "CS2_017o"
 },
 {
 	"id": 691,
-	"card_set": "Basic",
 	"blizz_id": "EX1_019e"
 },
 {
 	"id": 692,
-	"card_set": "Basic",
 	"blizz_id": "GAME_003"
 },
 {
 	"id": 693,
-	"card_set": "Basic",
 	"blizz_id": "GAME_003e"
 },
 {
 	"id": 694,
-	"card_set": "Basic",
 	"blizz_id": "CS2_083b"
 },
 {
 	"id": 695,
-	"card_set": "Basic",
 	"blizz_id": "CS2_122e"
 },
 {
 	"id": 696,
-	"card_set": "Basic",
 	"blizz_id": "NEW1_033o"
 },
 {
 	"id": 697,
-	"card_set": "Basic",
 	"blizz_id": "CS2_034"
 },
 {
 	"id": 698,
-	"card_set": "Basic",
 	"blizz_id": "EX1_565o"
 },
 {
 	"id": 699,
-	"card_set": "Basic",
 	"blizz_id": "CS2_226e"
 },
 {
 	"id": 700,
-	"card_set": "Basic",
 	"blizz_id": "DS1_175o"
 },
 {
 	"id": 701,
-	"card_set": "Basic",
 	"blizz_id": "HERO_01"
 },
 {
 	"id": 702,
-	"card_set": "Basic",
 	"blizz_id": "HERO_07"
 },
 {
 	"id": 703,
-	"card_set": "Basic",
 	"blizz_id": "EX1_246e"
 },
 {
 	"id": 704,
-	"card_set": "Missions",
 	"blizz_id": "HERO_08"
 },
 {
 	"id": 705,
-	"card_set": "Basic",
 	"blizz_id": "CS1h_001"
 },
 {
 	"id": 706,
-	"card_set": "Basic",
 	"blizz_id": "CS2_056"
 },
 {
 	"id": 707,
-	"card_set": "Basic",
 	"blizz_id": "GAME_001"
 },
 {
 	"id": 708,
-	"card_set": "Basic",
 	"blizz_id": "HERO_06"
 },
 {
 	"id": 709,
-	"card_set": "Basic",
 	"blizz_id": "DS1_070o"
 },
 {
 	"id": 710,
-	"card_set": "Basic",
 	"blizz_id": "CS2_222o"
 },
 {
 	"id": 711,
-	"card_set": "Basic",
 	"blizz_id": "EX1_508o"
 },
 {
 	"id": 712,
-	"card_set": "Basic",
 	"blizz_id": "CS2_101"
 },
 {
 	"id": 713,
-	"card_set": "Basic",
 	"blizz_id": "HERO_05"
 },
 {
 	"id": 714,
-	"card_set": "Basic",
 	"blizz_id": "CS2_017"
 },
 {
 	"id": 715,
-	"card_set": "Classic",
 	"blizz_id": "CS2_083e"
 },
 {
 	"id": 716,
-	"card_set": "Basic",
 	"blizz_id": "DS1h_292"
 },
 {
 	"id": 717,
-	"card_set": "Basic",
 	"blizz_id": "HERO_02"
 },
 {
 	"id": 718,
-	"card_set": "Basic",
 	"blizz_id": "CS2_049"
 },
 {
 	"id": 719,
-	"card_set": "Basic",
 	"blizz_id": "HERO_04"
 },
 {
 	"id": 720,
-	"card_set": "Basic",
 	"blizz_id": "HERO_03"
 },
 {
 	"id": 721,
-	"card_set": "Basic",
 	"blizz_id": "CS2_082"
 },
 {
 	"id": 722,
-	"card_set": "Classic",
 	"blizz_id": "CS2_188o"
 },
 {
 	"id": 723,
-	"card_set": "Classic",
 	"blizz_id": "EX1_561e"
 },
 {
 	"id": 724,
-	"card_set": "Classic",
 	"blizz_id": "EX1_383t"
 },
 {
 	"id": 725,
-	"card_set": "Classic",
 	"blizz_id": "EX1_398t"
 },
 {
 	"id": 726,
-	"card_set": "Classic",
 	"blizz_id": "EX1_604o"
 },
 {
 	"id": 727,
-	"card_set": "Classic",
 	"blizz_id": "EX1_509e"
 },
 {
 	"id": 728,
-	"card_set": "Classic",
 	"blizz_id": "EX1_323w"
 },
 {
 	"id": 729,
-	"card_set": "Classic",
 	"blizz_id": "CS2_059o"
 },
 {
 	"id": 730,
-	"card_set": "Classic",
 	"blizz_id": "EX1_411e"
 },
 {
 	"id": 731,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_025e"
 },
 {
 	"id": 732,
-	"card_set": "Classic",
 	"blizz_id": "tt_004o"
 },
 {
 	"id": 733,
-	"card_set": "Classic",
 	"blizz_id": "EX1_128e"
 },
 {
 	"id": 734,
-	"card_set": "Classic",
 	"blizz_id": "EX1_334e"
 },
 {
 	"id": 735,
-	"card_set": "Classic",
 	"blizz_id": "EX1_161o"
 },
 {
 	"id": 736,
-	"card_set": "Classic",
 	"blizz_id": "EX1_004e"
 },
 {
 	"id": 737,
-	"card_set": "Classic",
 	"blizz_id": "EX1_055o"
 },
 {
 	"id": 738,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_037e"
 },
 {
 	"id": 739,
-	"card_set": "Classic",
 	"blizz_id": "EX1_059e"
 },
 {
 	"id": 740,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_017e"
 },
 {
 	"id": 741,
-	"card_set": "Classic",
 	"blizz_id": "CS2_181e"
 },
 {
 	"id": 742,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_024o"
 },
 {
 	"id": 743,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_038o"
 },
 {
 	"id": 744,
-	"card_set": "Classic",
 	"blizz_id": "EX1_093e"
 },
 {
 	"id": 745,
-	"card_set": "Classic",
 	"blizz_id": "EX1_409t"
 },
 {
 	"id": 746,
-	"card_set": "Classic",
 	"blizz_id": "EX1_043e"
 },
 {
 	"id": 747,
-	"card_set": "Classic",
 	"blizz_id": "EX1_tk33"
 },
 {
 	"id": 748,
-	"card_set": "Classic",
 	"blizz_id": "EX1_623e"
 },
 {
 	"id": 749,
-	"card_set": "Classic",
 	"blizz_id": "EX1_366e"
 },
 {
 	"id": 750,
-	"card_set": "Classic",
 	"blizz_id": "EX1_080o"
 },
 {
 	"id": 751,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_029t"
 },
 {
 	"id": 752,
-	"card_set": "Classic",
 	"blizz_id": "EX1_044e"
 },
 {
 	"id": 753,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_012o"
 },
 {
 	"id": 754,
-	"card_set": "Classic",
 	"blizz_id": "EX1_tk31"
 },
 {
 	"id": 755,
-	"card_set": "Classic",
 	"blizz_id": "EX1_625t2"
 },
 {
 	"id": 756,
-	"card_set": "Classic",
 	"blizz_id": "EX1_625t"
 },
 {
 	"id": 757,
-	"card_set": "Classic",
 	"blizz_id": "EX1_507e"
 },
 {
 	"id": 758,
-	"card_set": "Classic",
 	"blizz_id": "EX1_103e"
 },
 {
 	"id": 759,
-	"card_set": "Classic",
 	"blizz_id": "EX1_411e2"
 },
 {
 	"id": 760,
-	"card_set": "Classic",
 	"blizz_id": "EX1_258e"
 },
 {
 	"id": 761,
-	"card_set": "Classic",
 	"blizz_id": "EX1_612o"
 },
 {
 	"id": 762,
-	"card_set": "Classic",
 	"blizz_id": "EX1_274e"
 },
 {
 	"id": 763,
-	"card_set": "Classic",
 	"blizz_id": "EX1_590e"
 },
 {
 	"id": 764,
-	"card_set": "Classic",
 	"blizz_id": "CS2_221e"
 },
 {
 	"id": 765,
-	"card_set": "Classic",
 	"blizz_id": "EX1_382e"
 },
 {
 	"id": 766,
-	"card_set": "Classic",
 	"blizz_id": "EX1_162o"
 },
 {
 	"id": 767,
-	"card_set": "Classic",
 	"blizz_id": "EX1_584e"
 },
 {
 	"id": 768,
-	"card_set": "Classic",
 	"blizz_id": "EX1_046e"
 },
 {
 	"id": 769,
-	"card_set": "Classic",
 	"blizz_id": "EX1_611e"
 },
 {
 	"id": 770,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_018e"
 },
 {
 	"id": 771,
-	"card_set": "Classic",
 	"blizz_id": "EX1_536e"
 },
 {
 	"id": 772,
-	"card_set": "Classic",
 	"blizz_id": "EX1_178be"
 },
 {
 	"id": 773,
-	"card_set": "Classic",
 	"blizz_id": "EX1_613e"
 },
 {
 	"id": 774,
-	"card_set": "Classic",
 	"blizz_id": "EX1_001e"
 },
 {
 	"id": 775,
-	"card_set": "Classic",
 	"blizz_id": "EX1_531e"
 },
 {
 	"id": 776,
-	"card_set": "Classic",
 	"blizz_id": "EX1_603e"
 },
 {
 	"id": 777,
-	"card_set": "Classic",
 	"blizz_id": "NEW1_027e"
 },
 {
 	"id": 778,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX1_01"
 },
 {
 	"id": 779,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX15_04"
 },
 {
 	"id": 780,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX6_03"
 },
 {
 	"id": 781,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX12_02"
 },
 {
 	"id": 782,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX12_04"
 },
 {
 	"id": 783,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX5_02"
 },
 {
 	"id": 784,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX12_03e"
 },
 {
 	"id": 785,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX11_03"
 },
 {
 	"id": 786,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX15_02"
 },
 {
 	"id": 787,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX14_02"
 },
 {
 	"id": 788,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX14_03"
 },
 {
 	"id": 789,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX6_03te"
 },
 {
 	"id": 790,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX12_01"
 },
 {
 	"id": 791,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX8_01"
 },
 {
 	"id": 792,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX2_01"
 },
 {
 	"id": 793,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX11_01"
 },
 {
 	"id": 794,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX15_03t"
 },
 {
 	"id": 795,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX8_02"
 },
 {
 	"id": 796,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX10_03"
 },
 {
 	"id": 797,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX5_01"
 },
 {
 	"id": 798,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX10_02"
 },
 {
 	"id": 799,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX7_01"
 },
 {
 	"id": 800,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX15_01e"
 },
 {
 	"id": 801,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX12_03"
 },
 {
 	"id": 802,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX9_02"
 },
 {
 	"id": 803,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX1_05"
 },
 {
 	"id": 804,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX9_07"
 },
 {
 	"id": 805,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX7_04"
 },
 {
 	"id": 806,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX7_05"
 },
 {
 	"id": 807,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX5_03"
 },
 {
 	"id": 808,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX15_05"
 },
 {
 	"id": 809,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX11_04"
 },
 {
 	"id": 810,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAXM_001"
 },
 {
 	"id": 811,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX3_03"
 },
 {
 	"id": 812,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX4_01"
 },
 {
 	"id": 813,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX10_01"
 },
 {
 	"id": 814,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX4_05"
 },
 {
 	"id": 815,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX11_02"
 },
 {
 	"id": 816,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX13_02e"
 },
 {
 	"id": 817,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX13_02"
 },
 {
 	"id": 818,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX14_04"
 },
 {
 	"id": 819,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX2_03"
 },
 {
 	"id": 820,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX4_04"
 },
 {
 	"id": 821,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX9_05"
 },
 {
 	"id": 822,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX14_01"
 },
 {
 	"id": 823,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX9_04"
 },
 {
 	"id": 824,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAXM_002"
 },
 {
 	"id": 825,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX1_04"
 },
 {
 	"id": 826,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX15_04a"
 },
 {
 	"id": 827,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX8_05t"
 },
 {
 	"id": 828,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX8_03t"
 },
 {
 	"id": 829,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX8_04t"
 },
 {
 	"id": 830,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX6_03t"
 },
 {
 	"id": 831,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX6_04"
 },
 {
 	"id": 832,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX13_03"
 },
 {
 	"id": 833,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX13_03e"
 },
 {
 	"id": 834,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX9_03"
 },
 {
 	"id": 835,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX7_03"
 },
 {
 	"id": 836,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX7_02"
 },
 {
 	"id": 837,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX9_06"
 },
 {
 	"id": 838,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX8_05"
 },
 {
 	"id": 839,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX8_03"
 },
 {
 	"id": 840,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX8_04"
 },
 {
 	"id": 841,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX3_02"
 },
 {
 	"id": 842,
-	"card_set": "Curse of Naxxramas",
 	"blizz_id": "NAX2_05"
 },
 {
 	"id": 843,
-	"card_set": "Debug",
 	"blizz_id": "XXX_048"
 },
 {
 	"id": 844,
-	"card_set": "Debug",
 	"blizz_id": "XXX_055"
 },
 {
 	"id": 845,
-	"card_set": "Debug",
 	"blizz_id": "XXX_055e"
 },
 {
 	"id": 846,
-	"card_set": "Debug",
 	"blizz_id": "XXX_095"
 },
 {
 	"id": 847,
-	"card_set": "Debug",
 	"blizz_id": "XXX_096"
 },
 {
 	"id": 848,
-	"card_set": "Debug",
 	"blizz_id": "XXX_097"
 },
 {
 	"id": 849,
-	"card_set": "Debug",
 	"blizz_id": "XXX_098"
 },
 {
 	"id": 850,
-	"card_set": "Debug",
 	"blizz_id": "XXX_099"
 },
 {
 	"id": 851,
-	"card_set": "Debug",
 	"blizz_id": "XXX_053"
 },
 {
 	"id": 852,
-	"card_set": "Debug",
 	"blizz_id": "XXX_047"
 },
 {
 	"id": 853,
-	"card_set": "Debug",
 	"blizz_id": "XXX_041"
 },
 {
 	"id": 854,
-	"card_set": "Debug",
 	"blizz_id": "XXX_057"
 },
 {
 	"id": 855,
-	"card_set": "Debug",
 	"blizz_id": "XXX_050"
 },
 {
 	"id": 856,
-	"card_set": "Debug",
 	"blizz_id": "XXX_049"
 },
 {
 	"id": 857,
-	"card_set": "Debug",
 	"blizz_id": "XXX_009e"
 },
 {
 	"id": 858,
-	"card_set": "Debug",
 	"blizz_id": "XXX_046"
 },
 {
 	"id": 859,
-	"card_set": "Debug",
 	"blizz_id": "XXX_052"
 },
 {
 	"id": 860,
-	"card_set": "Debug",
 	"blizz_id": "XXX_051"
 },
 {
 	"id": 861,
-	"card_set": "Debug",
 	"blizz_id": "XXX_056"
 },
 {
 	"id": 862,
-	"card_set": "Debug",
 	"blizz_id": "XXX_054"
 },
 {
 	"id": 863,
-	"card_set": "Debug",
 	"blizz_id": "XXX_054e"
 },
 {
 	"id": 864,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_086e"
 },
 {
 	"id": 865,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "PART_001"
 },
 {
 	"id": 866,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_030a"
 },
 {
 	"id": 867,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_110t"
 },
 {
 	"id": 868,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_100e"
 },
 {
 	"id": 869,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_056t"
 },
 {
 	"id": 870,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "PART_004e"
 },
 {
 	"id": 871,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "PART_005"
 },
 {
 	"id": 872,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_023a"
 },
 {
 	"id": 873,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "PART_004"
 },
 {
 	"id": 874,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_028t"
 },
 {
 	"id": 875,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_032b"
 },
 {
 	"id": 876,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_032a"
 },
 {
 	"id": 877,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_021e"
 },
 {
 	"id": 878,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_104a"
 },
 {
 	"id": 879,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_027e"
 },
 {
 	"id": 880,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_106e"
 },
 {
 	"id": 881,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_067a"
 },
 {
 	"id": 882,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_048e"
 },
 {
 	"id": 883,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_102e"
 },
 {
 	"id": 884,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_049e"
 },
 {
 	"id": 885,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_123e"
 },
 {
 	"id": 886,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_076a"
 },
 {
 	"id": 887,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_036e"
 },
 {
 	"id": 888,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_101e"
 },
 {
 	"id": 889,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_069a"
 },
 {
 	"id": 890,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_063a"
 },
 {
 	"id": 891,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "PART_006"
 },
 {
 	"id": 892,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "PART_003"
 },
 {
 	"id": 893,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_055e"
 },
 {
 	"id": 894,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_014a"
 },
 {
 	"id": 895,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_011a"
 },
 {
 	"id": 896,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "PART_006a"
 },
 {
 	"id": 897,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_030b"
 },
 {
 	"id": 898,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_046e"
 },
 {
 	"id": 899,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "PART_002"
 },
 {
 	"id": 900,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_111t"
 },
 {
 	"id": 901,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "GVG_060e"
 },
 {
 	"id": 902,
-	"card_set": "Goblins vs Gnomes",
 	"blizz_id": "PART_007"
 },
 {
 	"id": 903,
-	"card_set": "Missions",
 	"blizz_id": "TU4e_007"
 },
 {
 	"id": 904,
-	"card_set": "Missions",
 	"blizz_id": "TU4e_002"
 },
 {
 	"id": 905,
-	"card_set": "Missions",
 	"blizz_id": "TU4c_008e"
 },
 {
 	"id": 906,
-	"card_set": "Missions",
 	"blizz_id": "TU4d_003"
 },
 {
 	"id": 907,
-	"card_set": "Missions",
 	"blizz_id": "TU4e_004"
 },
 {
 	"id": 908,
-	"card_set": "Promotion",
 	"blizz_id": "Mekka3e"
 },
 {
 	"id": 909,
-	"card_set": "Promotion",
 	"blizz_id": "Mekka4e"
 },
 {
 	"id": 910,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA15_4"
 },
 {
 	"id": 911,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA14_3"
 },
 {
 	"id": 912,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_016"
 },
 {
 	"id": 913,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_022t"
 },
 {
 	"id": 914,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_034"
 },
 {
 	"id": 915,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_033"
 },
 {
 	"id": 916,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA17_6"
 },
 {
 	"id": 917,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA12_6"
 },
 {
 	"id": 918,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA12_5"
 },
 {
 	"id": 919,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA12_7"
 },
 {
 	"id": 920,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA12_4"
 },
 {
 	"id": 921,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA12_3"
 },
 {
 	"id": 922,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA11_3"
 },
 {
 	"id": 923,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_031"
 },
 {
 	"id": 924,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA12_8t"
 },
 {
 	"id": 925,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA10_5"
 },
 {
 	"id": 926,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA12_8"
 },
 {
 	"id": 927,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA17_7"
 },
 {
 	"id": 928,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_014"
 },
 {
 	"id": 929,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA10_4"
 },
 {
 	"id": 930,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA13_8"
 },
 {
 	"id": 931,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA01_3"
 },
 {
 	"id": 932,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_008"
 },
 {
 	"id": 933,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA02_2t"
 },
 {
 	"id": 934,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_005"
 },
 {
 	"id": 935,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_018"
 },
 {
 	"id": 936,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_022"
 },
 {
 	"id": 937,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_003"
 },
 {
 	"id": 938,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA09_4t"
 },
 {
 	"id": 939,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_020"
 },
 {
 	"id": 940,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA16_5"
 },
 {
 	"id": 941,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA08_3"
 },
 {
 	"id": 942,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_024"
 },
 {
 	"id": 943,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_010"
 },
 {
 	"id": 944,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA14_7"
 },
 {
 	"id": 945,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_028"
 },
 {
 	"id": 946,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_010b"
 },
 {
 	"id": 947,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_010a"
 },
 {
 	"id": 948,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_012"
 },
 {
 	"id": 949,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA04_3"
 },
 {
 	"id": 950,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA_01"
 },
 {
 	"id": 951,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_002"
 },
 {
 	"id": 952,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA06_4"
 },
 {
 	"id": 953,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_007"
 },
 {
 	"id": 954,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA01_4"
 },
 {
 	"id": 955,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_019"
 },
 {
 	"id": 956,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA01_4t"
 },
 {
 	"id": 957,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA09_5t"
 },
 {
 	"id": 958,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_026"
 },
 {
 	"id": 959,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_006"
 },
 {
 	"id": 960,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA17_4"
 },
 {
 	"id": 961,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_011"
 },
 {
 	"id": 962,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMA05_3"
 },
 {
 	"id": 963,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMA13_6"
 },
 {
 	"id": 964,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA14_9"
 },
 {
 	"id": 965,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA14_12"
 },
 {
 	"id": 966,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_027"
 },
 {
 	"id": 967,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMA03_3"
 },
 {
 	"id": 968,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_030"
 },
 {
 	"id": 969,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA09_3t"
 },
 {
 	"id": 970,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA17_9"
 },
 {
 	"id": 971,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_013"
 },
 {
 	"id": 972,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA10_6"
 },
 {
 	"id": 973,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA14_11"
 },
 {
 	"id": 974,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA15_3"
 },
 {
 	"id": 975,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_029"
 },
 {
 	"id": 976,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_017"
 },
 {
 	"id": 977,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_015"
 },
 {
 	"id": 978,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA16_4"
 },
 {
 	"id": 979,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA04_4"
 },
 {
 	"id": 980,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_001"
 },
 {
 	"id": 981,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMA13_5"
 },
 {
 	"id": 982,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA16_3"
 },
 {
 	"id": 983,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA07_3"
 },
 {
 	"id": 984,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_030t"
 },
 {
 	"id": 985,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA09_6"
 },
 {
 	"id": 986,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRMA14_5"
 },
 {
 	"id": 987,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_004"
 },
 {
 	"id": 988,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_025"
 },
 {
 	"id": 989,
-	"card_set": "Blackrock Mountain",
 	"blizz_id": "BRM_009"
 },
 {
 	"id": 990,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMA13_7"
 },
 {
 	"id": 991,
-	"card_set": "Debug",
 	"blizz_id": "XXX_094"
 },
 {
 	"id": 992,
-	"card_set": "Debug",
 	"blizz_id": "XXX_060"
 },
 {
 	"id": 993,
-	"card_set": "Debug",
 	"blizz_id": "XXX_059"
 },
 {
 	"id": 994,
-	"card_set": "Debug",
 	"blizz_id": "XXX_058"
 },
 {
 	"id": 995,
-	"card_set": "Credits",
 	"blizz_id": "CRED_18"
 },
 {
 	"id": 996,
-	"card_set": "Credits",
 	"blizz_id": "CRED_19"
 },
 {
 	"id": 997,
-	"card_set": "Credits",
 	"blizz_id": "CRED_20"
 },
 {
 	"id": 998,
-	"card_set": "Credits",
 	"blizz_id": "CRED_21"
 },
 {
 	"id": 999,
-	"card_set": "Credits",
 	"blizz_id": "CRED_22"
 },
 {
 	"id": 1000,
-	"card_set": "Credits",
 	"blizz_id": "CRED_23"
 },
 {
 	"id": 1001,
-	"card_set": "Credits",
 	"blizz_id": "CRED_24"
 },
 {
 	"id": 1002,
-	"card_set": "Credits",
 	"blizz_id": "CRED_25"
 },
 {
 	"id": 1003,
-	"card_set": "Credits",
 	"blizz_id": "CRED_26"
 },
 {
 	"id": 1004,
-	"card_set": "Credits",
 	"blizz_id": "CRED_28"
 },
 {
 	"id": 1005,
-	"card_set": "Credits",
 	"blizz_id": "CRED_27"
 },
 {
 	"id": 1006,
-	"card_set": "Credits",
 	"blizz_id": "CRED_30"
 },
 {
 	"id": 1007,
-	"card_set": "Credits",
 	"blizz_id": "CRED_29"
 },
 {
 	"id": 1008,
-	"card_set": "Credits",
 	"blizz_id": "CRED_31"
 },
 {
 	"id": 1009,
-	"card_set": "Credits",
 	"blizz_id": "CRED_32"
 },
 {
 	"id": 1010,
-	"card_set": "Credits",
 	"blizz_id": "CRED_33"
 },
 {
 	"id": 1011,
-	"card_set": "Credits",
 	"blizz_id": "CRED_43"
 },
 {
 	"id": 1012,
-	"card_set": "Credits",
 	"blizz_id": "CRED_45"
 },
 {
 	"id": 1013,
-	"card_set": "Credits",
 	"blizz_id": "CRED_46"
 },
 {
 	"id": 1014,
-	"card_set": "Credits",
 	"blizz_id": "CRED_34"
 },
 {
 	"id": 1015,
-	"card_set": "Credits",
 	"blizz_id": "CRED_35"
 },
 {
 	"id": 1016,
-	"card_set": "Credits",
 	"blizz_id": "CRED_36"
 },
 {
 	"id": 1017,
-	"card_set": "Credits",
 	"blizz_id": "CRED_37"
 },
 {
 	"id": 1018,
-	"card_set": "Credits",
 	"blizz_id": "CRED_38"
 },
 {
 	"id": 1019,
-	"card_set": "Credits",
 	"blizz_id": "CRED_39"
 },
 {
 	"id": 1020,
-	"card_set": "Credits",
 	"blizz_id": "CRED_40"
 },
 {
 	"id": 1021,
-	"card_set": "Credits",
 	"blizz_id": "CRED_41"
 },
 {
 	"id": 1022,
-	"card_set": "Credits",
 	"blizz_id": "CRED_42"
 },
 {
 	"id": 1023,
-	"card_set": "Credits",
 	"blizz_id": "CRED_44"
 },
 {
 	"id": 1024,
-	"card_set": "Debug",
 	"blizz_id": "XXX_061"
 },
 {
 	"id": 1025,
-	"card_set": "Debug",
 	"blizz_id": "XXX_053"
 },
 {
 	"id": 1026,
-	"card_set": "Debug",
 	"blizz_id": "XXX_062"
 },
 {
 	"id": 1027,
-	"card_set": "Debug",
 	"blizz_id": "XXX_063"
 },
 {
 	"id": 1028,
-	"card_set": "Debug",
 	"blizz_id": "XXX_059"
 },
 {
 	"id": 1029,
-	"card_set": "Debug",
 	"blizz_id": "XXX_057"
 },
 {
 	"id": 1030,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMC_86"
 },
 {
 	"id": 1031,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "TB_006"
 },
 {
 	"id": 1032,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "TB_014"
 },
 {
 	"id": 1033,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMC_95he"
 },
 {
 	"id": 1034,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMC_95h"
 },
 {
 	"id": 1035,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMC_92"
 },
 {
 	"id": 1036,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "TB_007"
 },
 {
 	"id": 1037,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMC_84"
 },
 {
 	"id": 1038,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMC_88"
 },
 {
 	"id": 1039,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMC_99"
 },
 {
 	"id": 1040,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMC_95"
 },
 {
 	"id": 1041,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMC_96"
 },
 {
 	"id": 1042,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMC_85"
 },
 {
 	"id": 1043,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "TBST_004"
 },
 {
 	"id": 1044,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "TBST_003"
 },
 {
 	"id": 1045,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "TBST_002"
 },
 {
 	"id": 1046,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "TBST_001"
 },
 {
 	"id": 1047,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "TBST_005"
 },
 {
 	"id": 1048,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMC_93"
 },
 {
 	"id": 1049,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMC_83"
 },
 {
 	"id": 1050,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "TB_015"
 },
 {
 	"id": 1051,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMC_98"
 },
 {
 	"id": 1052,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMC_99e"
 },
 {
 	"id": 1053,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "TB_008"
 },
 {
 	"id": 1054,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMC_94"
 },
 {
 	"id": 1055,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "TB_011"
 },
 {
 	"id": 1056,
-	"card_set": "Tavern Brawl",
 	"blizz_id": "BRMC_97"
 },
 {
 	"id": 1057,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_063"
 },
 {
 	"id": 1058,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_071"
 },
 {
 	"id": 1059,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_035t"
 },
 {
 	"id": 1060,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_053"
 },
 {
 	"id": 1061,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_036"
 },
 {
 	"id": 1062,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_004"
 },
 {
 	"id": 1063,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_087"
 },
 {
 	"id": 1064,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_077"
 },
 {
 	"id": 1065,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_109"
 },
 {
 	"id": 1066,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_108"
 },
 {
 	"id": 1067,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_043"
 },
 {
 	"id": 1068,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_045"
 },
 {
 	"id": 1069,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_062"
 },
 {
 	"id": 1070,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_064"
 },
 {
 	"id": 1071,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_060"
 },
 {
 	"id": 1072,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_035"
 },
 {
 	"id": 1073,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_124"
 },
 {
 	"id": 1074,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_068"
 },
 {
 	"id": 1075,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_089"
 },
 {
 	"id": 1076,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_059"
 },
 {
 	"id": 1077,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_029"
 },
 {
 	"id": 1078,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_033"
 },
 {
 	"id": 1079,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_102"
 },
 {
 	"id": 1080,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_050"
 },
 {
 	"id": 1081,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_123"
 },
 {
 	"id": 1082,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_096"
 },
 {
 	"id": 1083,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_008"
 },
 {
 	"id": 1084,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_110"
 },
 {
 	"id": 1085,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_073"
 },
 {
 	"id": 1086,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_018"
 },
 {
 	"id": 1087,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_016"
 },
 {
 	"id": 1088,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_015"
 },
 {
 	"id": 1089,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_121"
 },
 {
 	"id": 1090,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_031"
 },
 {
 	"id": 1091,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_006"
 },
 {
 	"id": 1092,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_025"
 },
 {
 	"id": 1093,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_038"
 },
 {
 	"id": 1094,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_024"
 },
 {
 	"id": 1095,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_047"
 },
 {
 	"id": 1096,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_083"
 },
 {
 	"id": 1097,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_063t"
 },
 {
 	"id": 1098,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_019"
 },
 {
 	"id": 1099,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_042"
 },
 {
 	"id": 1100,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_081"
 },
 {
 	"id": 1101,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_002"
 },
 {
 	"id": 1102,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_051"
 },
 {
 	"id": 1103,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_078"
 },
 {
 	"id": 1104,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_114"
 },
 {
 	"id": 1105,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_131"
 },
 {
 	"id": 1106,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_003"
 },
 {
 	"id": 1107,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_020"
 },
 {
 	"id": 1108,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_115"
 },
 {
 	"id": 1109,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_022"
 },
 {
 	"id": 1110,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_129"
 },
 {
 	"id": 1111,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_094"
 },
 {
 	"id": 1112,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_001"
 },
 {
 	"id": 1113,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_055"
 },
 {
 	"id": 1114,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_093"
 },
 {
 	"id": 1115,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_120"
 },
 {
 	"id": 1116,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_133"
 },
 {
 	"id": 1117,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_080"
 },
 {
 	"id": 1118,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_122"
 },
 {
 	"id": 1119,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_118"
 },
 {
 	"id": 1120,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_048"
 },
 {
 	"id": 1121,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_011"
 },
 {
 	"id": 1122,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_092"
 },
 {
 	"id": 1123,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_125"
 },
 {
 	"id": 1124,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_105"
 },
 {
 	"id": 1125,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_132"
 },
 {
 	"id": 1126,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_065"
 },
 {
 	"id": 1127,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_058"
 },
 {
 	"id": 1128,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_041"
 },
 {
 	"id": 1129,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_099"
 },
 {
 	"id": 1130,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_119"
 },
 {
 	"id": 1131,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_084"
 },
 {
 	"id": 1132,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_106"
 },
 {
 	"id": 1133,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_042a"
 },
 {
 	"id": 1134,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_037"
 },
 {
 	"id": 1135,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_061"
 },
 {
 	"id": 1136,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_082"
 },
 {
 	"id": 1137,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_067"
 },
 {
 	"id": 1138,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_085"
 },
 {
 	"id": 1139,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_112"
 },
 {
 	"id": 1140,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_117"
 },
 {
 	"id": 1141,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_088"
 },
 {
 	"id": 1142,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_090"
 },
 {
 	"id": 1143,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_044"
 },
 {
 	"id": 1144,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_076"
 },
 {
 	"id": 1145,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_079"
 },
 {
 	"id": 1146,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_127"
 },
 {
 	"id": 1147,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_103"
 },
 {
 	"id": 1148,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_066"
 },
 {
 	"id": 1149,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_042b"
 },
 {
 	"id": 1150,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_101"
 },
 {
 	"id": 1151,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_034"
 },
 {
 	"id": 1152,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_132_ROGUEt"
 },
 {
 	"id": 1153,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_005"
 },
 {
 	"id": 1154,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_013"
 },
 {
 	"id": 1155,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_056"
 },
 {
 	"id": 1156,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_010"
 },
 {
 	"id": 1157,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_113"
 },
 {
 	"id": 1158,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_111"
 },
 {
 	"id": 1159,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_009"
 },
 {
 	"id": 1160,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_042t"
 },
 {
 	"id": 1161,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_042t2"
 },
 {
 	"id": 1162,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_086"
 },
 {
 	"id": 1163,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_037t"
 },
 {
 	"id": 1164,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_039"
 },
 {
 	"id": 1165,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_130"
 },
 {
 	"id": 1166,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_074"
 },
 {
 	"id": 1167,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_028"
 },
 {
 	"id": 1168,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_014"
 },
 {
 	"id": 1169,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_032"
 },
 {
 	"id": 1170,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_098"
 },
 {
 	"id": 1171,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_095"
 },
 {
 	"id": 1172,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_100"
 },
 {
 	"id": 1173,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_070"
 },
 {
 	"id": 1174,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_069"
 },
 {
 	"id": 1175,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_012"
 },
 {
 	"id": 1176,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_007"
 },
 {
 	"id": 1177,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_057"
 },
 {
 	"id": 1178,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_054"
 },
 {
 	"id": 1179,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_128"
 },
 {
 	"id": 1180,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_049"
 },
 {
 	"id": 1181,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_021"
 },
 {
 	"id": 1182,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_052"
 },
 {
 	"id": 1183,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_097"
 },
 {
 	"id": 1184,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_091"
 },
 {
 	"id": 1185,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_104"
 },
 {
 	"id": 1186,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_046"
 },
 {
 	"id": 1187,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_017"
 },
 {
 	"id": 1188,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_030"
 },
 {
 	"id": 1189,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_072"
 },
 {
 	"id": 1190,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_023"
 },
 {
 	"id": 1191,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_099t"
 },
 {
 	"id": 1192,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_075"
 },
 {
 	"id": 1193,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_040"
 },
 {
 	"id": 1194,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_027"
 },
 {
 	"id": 1195,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_026"
 },
 {
 	"id": 1196,
-	"card_set": "The Grand Tournament",
 	"blizz_id": "AT_116"
 }]
