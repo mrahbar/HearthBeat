@@ -2,6 +2,9 @@ package com.smartsoftware.android.hearthbeat.main;
 
 import android.os.Bundle;
 
+import com.smartsoftware.android.hearthbeat.persistance.Prefs;
+import com.smartsoftware.android.hearthbeat.view.LaunchView;
+
 import java.util.Locale;
 
 /**
@@ -14,9 +17,15 @@ public class LaunchActivity extends BaseActivity {
 
     public static final String SETUP_FINISHED = "SETUP_FINISHED";
 
+    private LaunchView view;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Locale current = getResources().getConfiguration().locale;
+        boolean setupFinished = Prefs.with(this).getBoolean(SETUP_FINISHED, false);
+
+        if (!setupFinished) {
+            view = new LaunchView(this);
+        }
     }
 }

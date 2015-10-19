@@ -1,14 +1,21 @@
 package com.smartsoftware.android.hearthbeat;
 
+import android.app.Instrumentation;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
+import android.text.TextUtils;
 
 import com.smartsoftware.android.hearthbeat.main.LaunchActivity;
+import com.smartsoftware.android.hearthbeat.main.MainApplication;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import java.util.Locale;
 
 import static com.smartsoftware.android.hearthbeat.EspressoHelper.*;
 
@@ -31,6 +38,33 @@ public class LaunchActivityTest {
     public void OnInitialLaunchShowDownloadScreen() {
         launchActivity();
 
-        checkViewByStringVisible("Download");
+        checkViewByStringVisible(R.string.launch_download);
+    }
+
+    @Test
+    public void OnInitialLaunchSelectDeviceLanguage() {
+        launchActivity();
+
+        Instrumentation instrumentation = InstrumentationRegistry.getInstrumentation();
+        MainApplication app = (MainApplication) instrumentation.getTargetContext().getApplicationContext();
+
+        Resources resources = app.getResources();
+        Locale current = resources.getConfiguration().locale;
+        String languageCode = current.getLanguage()+current.getCountry();
+
+        final String[] langcodes = resources.getStringArray(R.array.langcodes);
+        final String[] names = resources.getStringArray(R.array.langcodes_names);
+        String languageName = null;
+
+        for (int i = 0, langcodesLength = langcodes.length; i < langcodesLength; i++) {
+            String code = langcodes[i];
+            if (TextUtils.equals(code, languageCode)) {
+                languageName = names[i];
+                break;
+            }
+        }
+
+
+        checkViewByStringVisible(languageName);
     }
 }

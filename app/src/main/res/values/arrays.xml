@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="langcodes_names">
+        <item>Chinese (S)</item>
+        <item>Chinese (T)</item>
+        <item>English (United States)</item>
+        <item>English (United Kingdom)</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Italian</item>
+        <item>Korean</item>
+        <item>Polish</item>
+        <item>Portuguese</item>
+        <item>Russian</item>
+        <item>Spanish (Spain)</item>
+        <item>Spanish (Mexico)</item>
+    </string-array>
+
+    <string-array name="langcodes">
+        <item>zhCN</item>
+        <item>zhTW</item>
+        <item>enUS</item>
+        <item>enGB</item>
+        <item>frFR</item>
+        <item>deDE</item>
+        <item>itIT</item>
+        <item>koKR</item>
+        <item>plPL</item>
+        <item>ptBR</item>
+        <item>ruRU</item>
+        <item>esES)</item>
+        <item>esMX)</item>
+    </string-array>
+</resources>
