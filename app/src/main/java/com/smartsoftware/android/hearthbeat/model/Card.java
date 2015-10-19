@@ -20,6 +20,7 @@ public class Card extends RealmObject {
     private String cardTextInHand;
     private String cardType;
     private String className;
+    private int classId;
 
     private boolean collectible;
     private int cost;
