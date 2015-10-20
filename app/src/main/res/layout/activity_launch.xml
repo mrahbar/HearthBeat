@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/launch_viewpager"
+        android:background="@color/default_white_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        style="?android:buttonBarStyle"
+        android:id="@+id/launch_bottom_button_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/touchfriendly_normal_size"
+        android:background="@color/icy_dark_bg_color"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/launch_bottom_button"
+            style="?android:borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/launch_bottom_btn_continue"
+            android:textColor="@color/default_white_color"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <include layout="@layout/progress_view"/>
+</RelativeLayout>
