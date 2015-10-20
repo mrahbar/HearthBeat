@@ -9,14 +9,8 @@ import com.smartsoftware.android.hearthbeat.api.HearthStoneApiService;
 import com.smartsoftware.android.hearthbeat.main.MainApplication;
 import com.smartsoftware.android.hearthbeat.persistance.DatabaseGateway;
 import com.smartsoftware.android.hearthbeat.persistance.Prefs;
-import com.squareup.okhttp.Interceptor;
 import com.squareup.okhttp.Request;
-import com.squareup.okhttp.Response;
 
-import java.io.File;
-import java.io.IOException;
-
-import javax.inject.Named;
 import javax.inject.Singleton;
 
 import dagger.Module;
@@ -25,6 +19,7 @@ import io.realm.Realm;
 import io.realm.RealmConfiguration;
 import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
+import retrofit.RxJavaCallAdapterFactory;
 
 /**
  * User: Mahmoud Reza Rahbar Azad
@@ -56,12 +51,15 @@ public class ApplicationModule {
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://omgvamp-hearthstone-v1.p.mashape.com/")
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 
         retrofit.client().networkInterceptors().add(chain -> {
-            final Request request = chain.request().newBuilder()
+            final Request original = chain.request();
+            final Request request = original.newBuilder()
                     .addHeader("X-Mashape-Key", BuildConfig.MASHAPE_KEY)
+                    .method(original.method(), original.body())
                     .build();
 
             return chain.proceed(request);

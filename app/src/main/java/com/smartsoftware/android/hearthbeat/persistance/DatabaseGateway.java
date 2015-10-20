@@ -5,6 +5,7 @@ import android.content.Context;
 import java.util.HashMap;
 
 import io.realm.Realm;
+import io.realm.RealmObject;
 
 /**
  * User: Mahmoud Reza Rahbar Azad
@@ -50,5 +51,14 @@ public class DatabaseGateway {
 
     private boolean hasInstance(Class clazz) {
         return instanceMap.containsKey(clazz);
+    }
+
+    public <E extends RealmObject> void store(Class clazz, E object) {
+        if (hasInstance(clazz)) {
+            Realm realm = getInstance(clazz);
+            realm.copyToRealm(object);
+        } else {
+            throw new RuntimeException("No open database gateway for class: "+clazz.getSimpleName());
+        }
     }
 }

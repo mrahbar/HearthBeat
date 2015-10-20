@@ -1,14 +1,15 @@
 package com.smartsoftware.android.hearthbeat.api;
 
 
+import com.smartsoftware.android.hearthbeat.model.ApiCardback;
 import com.smartsoftware.android.hearthbeat.model.Cardback;
-import com.smartsoftware.android.hearthbeat.model.HearthStoneApiCards;
+import com.smartsoftware.android.hearthbeat.model.ApiHearthStoneCards;
 
 import java.util.List;
 
-import retrofit.Call;
 import retrofit.http.GET;
 import retrofit.http.Query;
+import rx.Observable;
 
 /**
  * User: Mahmoud Reza Rahbar Azad
@@ -19,8 +20,8 @@ import retrofit.http.Query;
 public interface HearthStoneApiService {
 
     @GET("cards")
-    Call<HearthStoneApiCards> getCards(@Query("locale") String locale);
+    Observable<ApiHearthStoneCards> getCards(@Query("locale") String locale);
 
     @GET("cardbacks")
-    Call<List<Cardback>> getCardbacks(@Query("locale") String locale);
+    Observable<List<ApiCardback>> getCardbacks(@Query("locale") String locale);
 }

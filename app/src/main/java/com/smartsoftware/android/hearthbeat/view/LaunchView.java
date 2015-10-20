@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 
 import com.smartsoftware.android.hearthbeat.R;
+import com.smartsoftware.android.hearthbeat.persistance.PrefKeys;
 import com.smartsoftware.android.hearthbeat.persistance.Prefs;
 import com.smartsoftware.android.hearthbeat.ui.AccessibleLinearLayout;
 import com.smartsoftware.android.hearthbeat.ui.adapter.IntroPagerAdapter;
@@ -30,8 +31,6 @@ import butterknife.OnClick;
  */
 public class LaunchView implements ViewPager.OnPageChangeListener {
 
-    private static final String SETUP_FINISHED = "SETUP_FINISHED";
-
     @Bind(R.id.launch_viewpager)
     ViewPager viewPager;
 
@@ -45,9 +44,11 @@ public class LaunchView implements ViewPager.OnPageChangeListener {
     AccessibleLinearLayout progressView;
 
     private LaunchViewListener listener;
+    private Spinner languageSpinner;
 
     public interface LaunchViewListener {
         void onLaunchMainScreen();
+        void onStartDownload(String locale);
         void setContentView(int id);
         void bindViews(LaunchView view);
         LayoutInflater getLayoutInflater();
@@ -57,7 +58,7 @@ public class LaunchView implements ViewPager.OnPageChangeListener {
 
     public LaunchView(LaunchViewListener listener) {
         this.listener = listener;
-        boolean setupFinished = listener.getPrefs().getBoolean(SETUP_FINISHED, false);
+        boolean setupFinished = listener.getPrefs().getBoolean(PrefKeys.SETUP_FINISHED, false);
 
         if (setupFinished) {
             listener.onLaunchMainScreen();
@@ -83,8 +84,9 @@ public class LaunchView implements ViewPager.OnPageChangeListener {
                     break;
                 case 1:
                     view = layoutInflater.inflate(R.layout.activity_launch_page2, pager, false);
+                    languageSpinner = (Spinner) view.findViewById(R.id.launch_language_spinner);
                     view.findViewById(R.id.launch_download).setOnClickListener(v -> onStartDownload());
-                    initializeLanguageSpinner((Spinner) view.findViewById(R.id.launch_language_spinner));
+                    initializeLanguageSpinner(languageSpinner);
                     pager.addView(view);
                     break;
             }
@@ -133,7 +135,10 @@ public class LaunchView implements ViewPager.OnPageChangeListener {
     }
 
     private void onStartDownload() {
+        final int position = languageSpinner.getSelectedItemPosition();
+        String[] langcodes = listener.getResources().getStringArray(R.array.langcodes);
         changeProgressVisibility(true);
+        listener.onStartDownload(langcodes[position]);
     }
 
     public void changeProgressVisibility(final boolean show) {
@@ -149,4 +154,8 @@ public class LaunchView implements ViewPager.OnPageChangeListener {
                 });
     }
 
+
+    public void onDownloadFailed(){
+        changeProgressVisibility(false);
+    }
 }

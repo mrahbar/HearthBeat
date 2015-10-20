@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.view.LayoutInflater;
 
+import com.smartsoftware.android.hearthbeat.main.BaseActivity;
 import com.smartsoftware.android.hearthbeat.main.LaunchActivity;
 import com.smartsoftware.android.hearthbeat.main.MainActivity;
 import com.smartsoftware.android.hearthbeat.persistance.Prefs;
@@ -19,17 +20,31 @@ import butterknife.ButterKnife;
  */
 public class LaunchPresenter implements LaunchView.LaunchViewListener {
 
-    private LaunchActivity activity;
+    private BaseActivity activity;
     private Prefs prefs;
+    private LaunchView launchView;
+    private LaunchPresenterListener listener;
 
-    public LaunchPresenter(LaunchActivity activity, Prefs prefs) {
-        this.activity = activity;
+    public interface LaunchPresenterListener {
+        void onStartDownload(String locale);
+        BaseActivity getActivity();
+    }
+
+    public LaunchPresenter(LaunchPresenterListener listener, Prefs prefs) {
+        this.listener = listener;
+        this.activity = listener.getActivity();
         this.prefs = prefs;
+        launchView = new LaunchView(this);
     }
 
     @Override
     public void onLaunchMainScreen() {
         activity.startActivity(new Intent(activity, MainActivity.class));
+    }
+
+    @Override
+    public void onStartDownload(String locale) {
+        listener.onStartDownload(locale);
     }
 
     @Override
@@ -55,5 +70,9 @@ public class LaunchPresenter implements LaunchView.LaunchViewListener {
     @Override
     public Prefs getPrefs() {
         return prefs;
+    }
+
+    public void onDownloadFailed() {
+        launchView.onDownloadFailed();
     }
 }
