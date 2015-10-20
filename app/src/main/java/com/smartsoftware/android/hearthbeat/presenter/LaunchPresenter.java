@@ -20,9 +20,11 @@ import butterknife.ButterKnife;
 public class LaunchPresenter implements LaunchView.LaunchViewListener {
 
     private LaunchActivity activity;
+    private Prefs prefs;
 
-    public LaunchPresenter(LaunchActivity activity) {
+    public LaunchPresenter(LaunchActivity activity, Prefs prefs) {
         this.activity = activity;
+        this.prefs = prefs;
     }
 
     @Override
@@ -52,6 +54,6 @@ public class LaunchPresenter implements LaunchView.LaunchViewListener {
 
     @Override
     public Prefs getPrefs() {
-        return Prefs.with(activity);
+        return prefs;
     }
 }

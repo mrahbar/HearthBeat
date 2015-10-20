@@ -1,3 +1,11 @@
+Properties props = new Properties()
+File propsFile = file('mashape.properties')
+if (propsFile.exists()) {
+    props.load(propsFile.newDataInputStream())
+} else {
+    throw new GradleException("Missing mashape.properties.");
+}
+
 apply plugin: 'com.android.application'
 apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'com.neenbedankt.android-apt'
@@ -25,7 +33,11 @@ android {
         testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
     }
     buildTypes {
+        debug {
+            buildConfigField "String", "MASHAPE_KEY", "\"${props.getProperty("MashapeKey")}\""
+        }
         release {
+            buildConfigField "String", "MASHAPE_KEY", "\"${props.getProperty("MashapeKey")}\""
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

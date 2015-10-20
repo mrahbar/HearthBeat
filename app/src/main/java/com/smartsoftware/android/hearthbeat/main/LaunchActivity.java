@@ -2,8 +2,11 @@ package com.smartsoftware.android.hearthbeat.main;
 
 import android.os.Bundle;
 
+import com.smartsoftware.android.hearthbeat.persistance.Prefs;
 import com.smartsoftware.android.hearthbeat.presenter.LaunchPresenter;
 import com.smartsoftware.android.hearthbeat.view.LaunchView;
+
+import javax.inject.Inject;
 
 /**
  * User: Mahmoud Reza Rahbar Azad
@@ -13,13 +16,15 @@ import com.smartsoftware.android.hearthbeat.view.LaunchView;
  */
 public class LaunchActivity extends BaseActivity {
 
+    @Inject Prefs prefs;
     private LaunchView view;
     private LaunchPresenter launchPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        launchPresenter = new LaunchPresenter(this);
+        getApp().getApplicationComponent().inject(this);
+        launchPresenter = new LaunchPresenter(this, prefs);
         view = new LaunchView(launchPresenter);
     }
 }

@@ -12,7 +12,7 @@ import io.realm.annotations.PrimaryKey;
 public class Cardback extends RealmObject {
 
     @PrimaryKey
-    private String id;
+    private String cardBackId;
     private String name;
     private String description;
     private String source;
@@ -21,13 +21,40 @@ public class Cardback extends RealmObject {
     private String imgAnimated;
     private String sortCategory;
     private String sortOrder;
+    private String locale;
+    private String sourceDescription;
+    private boolean enabled;
 
-    public String getId() {
-        return id;
+    public String getCardBackId() {
+        return cardBackId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setCardBackId(String cardBackId) {
+        this.cardBackId = cardBackId;
+    }
+
+    public String getLocale() {
+        return locale;
+    }
+
+    public void setLocale(String locale) {
+        this.locale = locale;
+    }
+
+    public String getSourceDescription() {
+        return sourceDescription;
+    }
+
+    public void setSourceDescription(String sourceDescription) {
+        this.sourceDescription = sourceDescription;
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
 
     public String getName() {

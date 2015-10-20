@@ -9,4 +9,8 @@ import android.support.v7.app.AppCompatActivity;
  * Email: mrahbar.azad@gmail.com
  */
 public class BaseActivity extends AppCompatActivity {
+
+    protected MainApplication getApp() {
+        return ((MainApplication) getApplication());
+    }
 }

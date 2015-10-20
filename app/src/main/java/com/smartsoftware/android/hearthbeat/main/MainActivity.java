@@ -3,25 +3,23 @@ package com.smartsoftware.android.hearthbeat.main;
 import android.os.Bundle;
 
 import com.smartsoftware.android.hearthbeat.R;
+import com.smartsoftware.android.hearthbeat.persistance.DatabaseGateway;
 
-import io.realm.Realm;
+import javax.inject.Inject;
 
 public class MainActivity extends BaseActivity {
 
-    private Realm realm;
+    @Inject DatabaseGateway databaseGateway;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        // Open the default realm for the UI thread.
-        realm = Realm.getInstance(this);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        realm.close();
+//        databaseGateway.close(MainActivity.class); only when opened
     }
 }
