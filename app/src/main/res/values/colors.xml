@@ -9,6 +9,9 @@
     <color name="default_darker_color">#ff292929</color>
     <color name="default_black_color">#000000</color>
 
+    <color name="icy_bright_bg_color">#50ffffff</color>
+    <color name="icy_dark_bg_color">#30000000</color>
+
     <color name="colorPrimary">#2196F3</color>
     <color name="colorPrimaryDark">#0D47A1</color>
     <color name="colorPrimaryLight">#64B5F6</color>

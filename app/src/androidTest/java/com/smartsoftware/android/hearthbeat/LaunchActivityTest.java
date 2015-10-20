@@ -17,6 +17,9 @@ import org.junit.runner.RunWith;
 
 import java.util.Locale;
 
+import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.action.ViewActions.swipeLeft;
+import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static com.smartsoftware.android.hearthbeat.EspressoHelper.*;
 
 /*
@@ -37,13 +40,16 @@ public class LaunchActivityTest {
     @Test
     public void OnInitialLaunchShowDownloadScreen() {
         launchActivity();
+        checkViewByStringVisible(R.string.launch_title);
 
+        swipeViewpagerLeft(R.id.launch_viewpager);
         checkViewByStringVisible(R.string.launch_download);
     }
 
     @Test
     public void OnInitialLaunchSelectDeviceLanguage() {
         launchActivity();
+        swipeViewpagerLeft(R.id.launch_viewpager);
 
         Instrumentation instrumentation = InstrumentationRegistry.getInstrumentation();
         MainApplication app = (MainApplication) instrumentation.getTargetContext().getApplicationContext();
@@ -63,7 +69,6 @@ public class LaunchActivityTest {
                 break;
             }
         }
-
 
         checkViewByStringVisible(languageName);
     }

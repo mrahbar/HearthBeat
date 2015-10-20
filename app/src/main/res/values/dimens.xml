@@ -11,6 +11,7 @@
     <dimen name="touchfriendly_max_size">88dip</dimen>
     <dimen name="touchfriendly_row_size">72dip</dimen>
     <dimen name="touchfriendly_intermediate_size">66dip</dimen>
+    <dimen name="touchfriendly_item_size">56dp</dimen>
     <dimen name="touchfriendly_normal_size">50dip</dimen>
     <dimen name="touchfriendly_min_size">44dip</dimen>
     <dimen name="touchfriendly_btn_size">37dp</dimen>

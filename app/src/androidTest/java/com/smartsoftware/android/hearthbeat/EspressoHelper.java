@@ -7,6 +7,7 @@ import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.replaceText;
+import static android.support.test.espresso.action.ViewActions.swipeLeft;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withHint;
@@ -22,6 +23,9 @@ import static org.hamcrest.Matchers.not;
  * Email: mrahbar.azad@gmail.com
  */
 public class EspressoHelper {
+
+    private EspressoHelper() {
+    }
 
     public static void clickOnViewById(@IdRes int id) {
         onView(withId(id))
@@ -65,6 +69,11 @@ public class EspressoHelper {
     public static void enterTextOnViewWithHint(@StringRes int id, String link) {
         onView(withHint(id))
                 .perform(replaceText(link));
+    }
+
+    public static void swipeViewpagerLeft(@IdRes int viewpager) {
+        onView(withId(viewpager))
+                .perform(swipeLeft());
     }
 
     public static void clickOnListItem(int listId, int position) {
