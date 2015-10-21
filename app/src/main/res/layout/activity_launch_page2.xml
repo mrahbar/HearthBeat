@@ -24,5 +24,5 @@
         style="?android:borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/launch_download"/>
+        android:text="@string/launch_download_cards"/>
 </LinearLayout>

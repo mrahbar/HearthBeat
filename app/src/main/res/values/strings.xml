@@ -4,9 +4,11 @@
     <string name="launch_title">Welcome to\nHeartBeat</string>
     <string name="launch_subtitle">Your companion for HearthStone</string>
     <string name="launch_swipe_to_start">Swipe to start</string>
-    <string name="launch_bottom_btn_skip">Skip</string>
+    <string name="launch_bottom_btn_continue">Enter</string>
     <string name="launch_select_lang">Choose card language pack</string>
     <string name="launch_download">Download</string>
+    <string name="launch_download_cards">Download cards</string>
+    <string name="launch_download_skipped_message">You have to fetch the cards later if you want to create decks.</string>
     <string name="launch_please_wait">Please wait</string>
     <string name="launch_download_finished">Download finished</string>
 </resources>

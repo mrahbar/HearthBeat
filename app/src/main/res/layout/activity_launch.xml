@@ -5,30 +5,65 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/launch_viewpager"
-        android:background="@color/default_white_color"
+    <LinearLayout
+        android:id="@+id/intro_initial_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:paddingTop="70dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/launch_logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_intermediate"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/text_size_xxlarge"
+            android:text="@string/launch_title"
+            android:textStyle="bold"
+            android:textColor="@color/default_black_color"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/text_size_medium"
+            android:text="@string/launch_subtitle"
+            android:textColor="@color/default_header_color"/>
+    </LinearLayout>
 
     <LinearLayout
-        style="?android:buttonBarStyle"
-        android:id="@+id/launch_bottom_button_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/touchfriendly_normal_size"
         android:background="@color/icy_dark_bg_color"
         android:layout_alignParentBottom="true"
+        android:showDividers="middle"
+        android:dividerPadding="@dimen/spacing_medium"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/launch_bottom_button"
+            android:id="@+id/launch_bottom_button_download"
             style="?android:borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/launch_bottom_btn_skip"
-            android:textColor="@color/default_white_color"
-            android:textStyle="bold" />
+            android:textSize="@dimen/text_size_small"
+            android:text="@string/launch_download_cards"
+            android:textColor="@color/default_white_color" />
+
+        <Button
+            android:id="@+id/launch_bottom_button_continue"
+            style="?android:borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_size_small"
+            android:text="@string/launch_bottom_btn_continue"
+            android:textColor="@color/default_white_color" />
     </LinearLayout>
 
     <include layout="@layout/progress_view"/>

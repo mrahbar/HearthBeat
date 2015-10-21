@@ -7,9 +7,6 @@ import com.smartsoftware.android.hearthbeat.di.ApplicationComponent;
 import com.smartsoftware.android.hearthbeat.di.ApplicationModule;
 import com.smartsoftware.android.hearthbeat.di.DaggerApplicationComponent;
 
-import io.realm.Realm;
-import io.realm.RealmConfiguration;
-
 /**
  * User: Mahmoud Reza Rahbar Azad
  * Date: 18.10.2015

@@ -1,5 +1,6 @@
 package com.smartsoftware.android.hearthbeat.presenter;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.view.LayoutInflater;
@@ -59,8 +60,8 @@ public class LaunchPresenter implements LaunchView.LaunchViewListener {
     }
 
     @Override
-    public LayoutInflater getLayoutInflater() {
-        return activity.getLayoutInflater();
+    public Context getContext() {
+        return activity;
     }
 
     @Override

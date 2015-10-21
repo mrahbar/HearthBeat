@@ -30,7 +30,6 @@ public class MainUITest {
     @Test
     public void FabVisibleOnDecksPage() {
         launchActivity();
-
         checkViewByIdVisible(R.id.main_deck_add);
     }
 }
