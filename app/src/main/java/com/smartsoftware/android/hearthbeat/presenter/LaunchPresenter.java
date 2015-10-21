@@ -40,6 +40,7 @@ public class LaunchPresenter implements LaunchView.LaunchViewListener {
     @Override
     public void onLaunchMainScreen() {
         activity.startActivity(new Intent(activity, MainActivity.class));
+        activity.finish();
     }
 
     @Override
