@@ -5,36 +5,75 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/intro_initial_layout"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingTop="70dp"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/launch_logo"/>
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/spacing_intermediate"
-            android:gravity="center_horizontal"
-            android:textSize="@dimen/text_size_xxlarge"
-            android:text="@string/launch_title"
-            android:textStyle="bold"
-            android:textColor="@color/default_black_color"/>
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:textSize="@dimen/text_size_medium"
-            android:text="@string/launch_subtitle"
-            android:textColor="@color/default_header_color"/>
-    </LinearLayout>
+            <LinearLayout
+                android:id="@+id/intro_initial_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/spacing_xlarge"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/launch_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_intermediate"
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/text_size_xxlarge"
+                    android:text="@string/launch_title"
+                    android:textStyle="bold"
+                    android:textColor="@color/default_black_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/text_size_medium"
+                    android:text="@string/launch_subtitle"
+                    android:textColor="@color/default_header_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/spacing_xlarge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_intermediate"
+                    android:text="@string/launch_select_lang"
+                    android:textColor="@color/default_black_color" />
+
+                <Spinner
+                    android:id="@+id/launch_language_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/touchfriendly_min_size"
+                    android:entries="@array/langcodes_names" />
+
+                <Button
+                    android:id="@+id/launch_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/launch_download_cards" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,21 +85,10 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/launch_bottom_button_download"
-            style="?android:borderlessButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="@dimen/text_size_small"
-            android:text="@string/launch_download_cards"
-            android:textColor="@color/default_white_color" />
-
-        <Button
             android:id="@+id/launch_bottom_button_continue"
             style="?android:borderlessButtonStyle"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:textSize="@dimen/text_size_small"
             android:text="@string/launch_bottom_btn_continue"
             android:textColor="@color/default_white_color" />

@@ -110,10 +110,8 @@ public class LaunchActivityTest {
     }
 
     @Test
-    @Ignore
-    public void OnInitialLaunchSelectDeviceLanguage() {
+    public void OnInitialLaunchDeviceLanguagePreselected() {
         launchActivity();
-        clickOnViewById(R.id.launch_bottom_button_download);
 
         Instrumentation instrumentation = InstrumentationRegistry.getInstrumentation();
         MainApplication app = (MainApplication) instrumentation.getTargetContext().getApplicationContext();
@@ -134,9 +132,7 @@ public class LaunchActivityTest {
             }
         }
 
-        //onData wont work
-        onData(allOf(is(instanceOf(String.class)), is(languageName)))
-                .check(matches(isChecked()));
+        checkViewByStringVisible(languageName);
     }
 
     @Test
@@ -144,8 +140,7 @@ public class LaunchActivityTest {
         launchActivity();
         prepareHearthStoneApiService();
 
-        clickOnViewById(R.id.launch_bottom_button_download);
-        clickOnViewByText(R.string.launch_download);
+        clickOnViewById(R.id.launch_download);
 
         //This is a check for MainActivity
         checkViewByIdVisible(R.id.main_deck_add);

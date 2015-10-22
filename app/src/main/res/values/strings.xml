@@ -11,4 +11,7 @@
     <string name="launch_download_skipped_message">You have to fetch the cards later if you want to create decks.</string>
     <string name="launch_please_wait">Please wait</string>
     <string name="launch_download_finished">Download finished</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
 </resources>

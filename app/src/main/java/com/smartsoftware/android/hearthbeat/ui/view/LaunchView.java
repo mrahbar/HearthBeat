@@ -1,4 +1,4 @@
-package com.smartsoftware.android.hearthbeat.view;
+package com.smartsoftware.android.hearthbeat.ui.view;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -6,13 +6,13 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.Spinner;
 
-import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.smartsoftware.android.hearthbeat.R;
 import com.smartsoftware.android.hearthbeat.persistance.PrefKeys;
 import com.smartsoftware.android.hearthbeat.persistance.Prefs;
-import com.smartsoftware.android.hearthbeat.ui.AccessibleLinearLayout;
+import com.smartsoftware.android.hearthbeat.ui.widget.AccessibleLinearLayout;
 
 import java.util.Locale;
 
@@ -29,6 +29,9 @@ public class LaunchView  {
 
     @Bind(R.id.progress_view_container)
     AccessibleLinearLayout progressView;
+
+    @Bind(R.id.launch_language_spinner)
+    Spinner languageSpinner;
 
     private LaunchViewListener listener;
 
@@ -51,12 +54,12 @@ public class LaunchView  {
         } else {
             listener.setContentView(R.layout.activity_launch);
             listener.bindViews(this);
-
+            initializeLanguageSpinner();
             progressView.setStealTouchEvent(true);
         }
     }
 
-    private int getPreselectedLanguageIndex() {
+    private void initializeLanguageSpinner() {
         Resources resources = listener.getResources();
         Locale current = resources.getConfiguration().locale;
         String languageCode = current.getLanguage()+current.getCountry();
@@ -65,11 +68,10 @@ public class LaunchView  {
         for (int i = 0, langcodesLength = langcodes.length; i < langcodesLength; i++) {
             String code = langcodes[i];
             if (TextUtils.equals(code, languageCode)) {
-                return i;
+                languageSpinner.setSelection(i);
+                break;
             }
         }
-
-        return -1;
     }
 
     @OnClick(R.id.launch_bottom_button_continue)
@@ -87,24 +89,11 @@ public class LaunchView  {
         }
     }
 
-    @OnClick(R.id.launch_bottom_button_download)
+    @OnClick(R.id.launch_download)
     void onClickDownloadButton(View v) {
-        showLanguageDownload();
-    }
-
-    private void showLanguageDownload() {
-        new MaterialDialog.Builder(listener.getContext())
-                .title(R.string.launch_select_lang)
-                .items(R.array.langcodes_names)
-                .itemsCallbackSingleChoice(getPreselectedLanguageIndex(), (dialog, view, which, text) -> {
-                    Resources resources = listener.getResources();
-                    String[] langcodes = resources.getStringArray(R.array.langcodes);
-                    onStartDownload(langcodes[which]);
-                    return true;
-                })
-                .positiveText(R.string.launch_download)
-                .negativeText(android.R.string.cancel)
-                .show();
+        final int position = languageSpinner.getSelectedItemPosition();
+        String[] langcodes = listener.getResources().getStringArray(R.array.langcodes);
+        onStartDownload(langcodes[position]);
     }
 
     private void onStartDownload(String langcode) {

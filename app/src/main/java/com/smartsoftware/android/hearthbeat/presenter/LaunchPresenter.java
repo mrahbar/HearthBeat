@@ -3,13 +3,11 @@ package com.smartsoftware.android.hearthbeat.presenter;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.view.LayoutInflater;
 
 import com.smartsoftware.android.hearthbeat.main.BaseActivity;
-import com.smartsoftware.android.hearthbeat.main.LaunchActivity;
 import com.smartsoftware.android.hearthbeat.main.MainActivity;
 import com.smartsoftware.android.hearthbeat.persistance.Prefs;
-import com.smartsoftware.android.hearthbeat.view.LaunchView;
+import com.smartsoftware.android.hearthbeat.ui.view.LaunchView;
 
 import butterknife.ButterKnife;
 

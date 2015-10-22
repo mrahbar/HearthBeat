@@ -2,24 +2,23 @@ package com.smartsoftware.android.hearthbeat.main;
 
 import android.os.Bundle;
 
-import com.smartsoftware.android.hearthbeat.R;
-import com.smartsoftware.android.hearthbeat.persistance.DatabaseGateway;
+import com.smartsoftware.android.hearthbeat.presenter.DecksPresenter;
+import com.smartsoftware.android.hearthbeat.presenter.LaunchPresenter;
 
-import javax.inject.Inject;
+public class MainActivity extends BaseActivity implements DecksPresenter.DecksPresenterListener {
 
-public class MainActivity extends BaseActivity {
-
-    @Inject DatabaseGateway databaseGateway;
+    private DecksPresenter decksPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        getApp().getApplicationComponent().inject(this);
+        decksPresenter = new DecksPresenter(this);
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-//        databaseGateway.close(MainActivity.class); only when opened
+    public BaseActivity getActivity() {
+        return this;
     }
 }

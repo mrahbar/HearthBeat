@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
-        app:layout_behavior="com.smartsoftware.android.hearthbeat.ui.ScrollAwareFABBehavior"
+        app:layout_behavior="com.smartsoftware.android.hearthbeat.ui.widget.ScrollAwareFABBehavior"
         android:src="@drawable/ic_add"
         app:borderWidth="0dp"
         android:layout_margin="@dimen/spacing_intermediate"/>

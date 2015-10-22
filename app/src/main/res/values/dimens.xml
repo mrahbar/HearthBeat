@@ -26,4 +26,6 @@
     <dimen name="spacing_xlarge">32dp</dimen>
 
     <dimen name="toolbar_height_material">56dp</dimen>
+    <dimen name="status_bar_height">25dp</dimen>
+    <dimen name="avatar_size">64dp</dimen>
 </resources>
