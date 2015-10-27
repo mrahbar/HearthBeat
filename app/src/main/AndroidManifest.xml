@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".main.MainActivity"/>
+        <activity android:name=".main.DeckListActivity"/>
+        <activity android:name=".main.DeckBuilderActivity"/>
     </application>
 
 </manifest>

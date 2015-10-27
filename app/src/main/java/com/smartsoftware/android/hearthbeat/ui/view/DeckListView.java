@@ -7,29 +7,39 @@ import com.smartsoftware.android.hearthbeat.R;
 import com.smartsoftware.android.hearthbeat.main.BaseActivity;
 import com.smartsoftware.android.hearthbeat.ui.ScreenContainer;
 
+import butterknife.OnClick;
+
 /**
  * User: Mahmoud Reza Rahbar Azad
  * Date: 21.10.2015
  * Time: 23:32
  * Email: mrahbar.azad@gmail.com
  */
-public class DecksView {
+public class DeckListView {
 
     private ScreenContainer screenContainer;
-    private DecksViewListener listener;
+    private DeckListViewListener listener;
     private ViewGroup viewContainer;
 
-    public interface DecksViewListener {
+    public interface DeckListViewListener {
+        void bindViews(DeckListView view);
+        void onLaunchDeckBuilder();
         Resources getResources();
     }
 
-    public DecksView(DecksViewListener listener) {
+    public DeckListView(DeckListViewListener listener) {
         this.listener = listener;
         screenContainer = new ScreenContainer();
     }
 
     public void bind(BaseActivity activity) {
         viewContainer = screenContainer.bind(activity);
-        activity.getLayoutInflater().inflate(R.layout.activity_main, viewContainer);
+        activity.getLayoutInflater().inflate(R.layout.activity_decklist, viewContainer);
+        listener.bindViews(this);
+    }
+
+    @OnClick(R.id.main_deck_add)
+    public void onClickFab() {
+        listener.onLaunchDeckBuilder();
     }
 }

@@ -14,4 +14,17 @@
 
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
+    <string name="drawer_menu_decklist">Decks</string>
+    <string name="drawer_menu_cards">Collection</string>
+
+    <string name="class_priest">Priest</string>
+    <string name="class_shaman">Shaman</string>
+    <string name="class_warrior">Warrior</string>
+    <string name="class_rogue">Rogue</string>
+    <string name="class_warlock">Warlock</string>
+    <string name="class_neutral">Neutral</string>
+    <string name="class_paladin">Paladin</string>
+    <string name="class_mage">Mage</string>
+    <string name="class_hunter">Hunter</string>
+    <string name="class_druid">Druid</string>
 </resources>

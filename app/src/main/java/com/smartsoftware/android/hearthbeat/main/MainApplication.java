@@ -3,6 +3,10 @@ package com.smartsoftware.android.hearthbeat.main;
 import android.app.Application;
 import android.support.annotation.VisibleForTesting;
 
+import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.smartsoftware.android.hearthbeat.di.ApplicationComponent;
 import com.smartsoftware.android.hearthbeat.di.ApplicationModule;
 import com.smartsoftware.android.hearthbeat.di.DaggerApplicationComponent;
@@ -26,6 +30,19 @@ public class MainApplication extends Application {
                     .applicationModule(new ApplicationModule(this))
                     .build();
         }
+
+        initializeImageLoader();
+    }
+    private void initializeImageLoader() {
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this)
+                .threadPriority(Thread.NORM_PRIORITY - 2)
+                .diskCacheSize(50 * 1024 * 1024) // 50 Mb
+                .diskCacheFileNameGenerator(new Md5FileNameGenerator())
+                .tasksProcessingOrder(QueueProcessingType.LIFO)
+                .writeDebugLogs() // Remove for release app
+                .build();
+
+        ImageLoader.getInstance().init(config);
     }
 
     public ApplicationComponent getApplicationComponent() {

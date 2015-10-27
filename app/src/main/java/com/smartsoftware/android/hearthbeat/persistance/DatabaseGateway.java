@@ -2,10 +2,13 @@ package com.smartsoftware.android.hearthbeat.persistance;
 
 import android.content.Context;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import io.realm.Realm;
 import io.realm.RealmObject;
+import io.realm.RealmResults;
 
 /**
  * User: Mahmoud Reza Rahbar Azad
@@ -34,7 +37,7 @@ public class DatabaseGateway {
             Realm realm = getInstance(clazz);
             realm.executeTransaction(realm1 -> runnable.run());
         } else {
-            throw new RuntimeException("No open database gateway for class: "+clazz.getSimpleName());
+            throwError(clazz);
         }
     }
 
@@ -58,7 +61,29 @@ public class DatabaseGateway {
             Realm realm = getInstance(clazz);
             realm.copyToRealm(object);
         } else {
-            throw new RuntimeException("No open database gateway for class: "+clazz.getSimpleName());
+            throwError(clazz);
         }
+    }
+
+    public <T extends RealmObject> List<T> query(Class clazz, Class<T> objectClass) {
+        if (hasInstance(clazz)) {
+            Realm realm = getInstance(clazz);
+            RealmResults<? extends RealmObject> results = realm.where(objectClass).findAll();
+
+            List<T> list = new ArrayList<>(results.size());
+            for (Object o : results) {
+                list.add((T) o);
+            }
+
+            return list;
+        } else {
+            throwError(clazz);
+        }
+
+        return null;
+    }
+
+    private void throwError(Class clazz) {
+        throw new RuntimeException("No open database gateway for class: "+clazz.getSimpleName());
     }
 }

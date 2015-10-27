@@ -2,19 +2,18 @@ package com.smartsoftware.android.hearthbeat.main;
 
 import android.os.Bundle;
 
-import com.smartsoftware.android.hearthbeat.presenter.DecksPresenter;
-import com.smartsoftware.android.hearthbeat.presenter.LaunchPresenter;
+import com.smartsoftware.android.hearthbeat.presenter.DeckListPresenter;
 
-public class MainActivity extends BaseActivity implements DecksPresenter.DecksPresenterListener {
+public class DeckListActivity extends BaseActivity implements DeckListPresenter.DecksPresenterListener {
 
-    private DecksPresenter decksPresenter;
+    private DeckListPresenter deckListPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         getApp().getApplicationComponent().inject(this);
-        decksPresenter = new DecksPresenter(this);
+        deckListPresenter = new DeckListPresenter(this);
     }
 
     @Override
