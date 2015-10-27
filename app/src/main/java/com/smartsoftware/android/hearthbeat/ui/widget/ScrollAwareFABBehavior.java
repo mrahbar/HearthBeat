@@ -1,4 +1,4 @@
-package com.smartsoftware.android.hearthbeat.ui;
+package com.smartsoftware.android.hearthbeat.ui.widget;
 
 import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;

@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
-import com.smartsoftware.android.hearthbeat.main.MainActivity;
+import com.smartsoftware.android.hearthbeat.main.DeckListActivity;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -16,10 +16,10 @@ import static com.smartsoftware.android.hearthbeat.EspressoHelper.checkViewByIdV
 https://github.com/googlesamples/android-testing-templates
  */
 @RunWith(AndroidJUnit4.class)
-public class MainUITest {
+public class DeckListActivityTest {
 
     @Rule
-    public ActivityTestRule<MainActivity> activityRule = new ActivityTestRule<>(MainActivity.class,
+    public ActivityTestRule<DeckListActivity> activityRule = new ActivityTestRule<>(DeckListActivity.class,
             true,     // initialTouchMode
             false);   // launchActivity. False so we can customize the intent per test method
 
@@ -30,7 +30,6 @@ public class MainUITest {
     @Test
     public void FabVisibleOnDecksPage() {
         launchActivity();
-
         checkViewByIdVisible(R.id.main_deck_add);
     }
 }

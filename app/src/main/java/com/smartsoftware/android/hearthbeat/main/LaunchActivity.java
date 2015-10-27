@@ -2,14 +2,10 @@ package com.smartsoftware.android.hearthbeat.main;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 
-import com.google.gson.Gson;
-import com.smartsoftware.android.hearthbeat.R;
 import com.smartsoftware.android.hearthbeat.api.HearthStoneApiService;
 import com.smartsoftware.android.hearthbeat.model.ApiCard;
 import com.smartsoftware.android.hearthbeat.model.ApiCardback;
-import com.smartsoftware.android.hearthbeat.model.Cardback;
 import com.smartsoftware.android.hearthbeat.model.ApiHearthStoneCards;
 import com.smartsoftware.android.hearthbeat.persistance.DatabaseGateway;
 import com.smartsoftware.android.hearthbeat.persistance.PrefKeys;
@@ -22,7 +18,6 @@ import javax.inject.Inject;
 
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
 /**
@@ -36,7 +31,6 @@ public class LaunchActivity extends BaseActivity implements LaunchPresenter.Laun
     @Inject Prefs prefs;
     @Inject HearthStoneApiService apiService;
     @Inject DatabaseGateway databaseGateway;
-    @Inject Gson gson;
     private LaunchPresenter launchPresenter;
 
     @Override

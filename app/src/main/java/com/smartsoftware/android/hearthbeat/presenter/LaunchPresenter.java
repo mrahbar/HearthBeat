@@ -1,14 +1,13 @@
 package com.smartsoftware.android.hearthbeat.presenter;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.view.LayoutInflater;
 
 import com.smartsoftware.android.hearthbeat.main.BaseActivity;
-import com.smartsoftware.android.hearthbeat.main.LaunchActivity;
-import com.smartsoftware.android.hearthbeat.main.MainActivity;
+import com.smartsoftware.android.hearthbeat.main.DeckListActivity;
 import com.smartsoftware.android.hearthbeat.persistance.Prefs;
-import com.smartsoftware.android.hearthbeat.view.LaunchView;
+import com.smartsoftware.android.hearthbeat.ui.view.LaunchView;
 
 import butterknife.ButterKnife;
 
@@ -39,7 +38,8 @@ public class LaunchPresenter implements LaunchView.LaunchViewListener {
 
     @Override
     public void onLaunchMainScreen() {
-        activity.startActivity(new Intent(activity, MainActivity.class));
+        activity.startActivity(new Intent(activity, DeckListActivity.class));
+        activity.finish();
     }
 
     @Override
@@ -58,8 +58,8 @@ public class LaunchPresenter implements LaunchView.LaunchViewListener {
     }
 
     @Override
-    public LayoutInflater getLayoutInflater() {
-        return activity.getLayoutInflater();
+    public Context getContext() {
+        return activity;
     }
 
     @Override

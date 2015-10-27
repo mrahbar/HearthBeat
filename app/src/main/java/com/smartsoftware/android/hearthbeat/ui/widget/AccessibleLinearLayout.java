@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.smartsoftware.android.hearthbeat.ui;
+package com.smartsoftware.android.hearthbeat.ui.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;

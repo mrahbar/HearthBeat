@@ -1,7 +1,8 @@
 package com.smartsoftware.android.hearthbeat.di;
 
+import com.smartsoftware.android.hearthbeat.main.DeckBuilderActivity;
 import com.smartsoftware.android.hearthbeat.main.LaunchActivity;
-import com.smartsoftware.android.hearthbeat.main.MainActivity;
+import com.smartsoftware.android.hearthbeat.main.DeckListActivity;
 
 import javax.inject.Singleton;
 
@@ -20,6 +21,7 @@ import dagger.Component;
         }
 )
 public interface ApplicationComponent {
-    void inject(MainActivity activity);
+    void inject(DeckListActivity activity);
+    void inject(DeckBuilderActivity activity);
     void inject(LaunchActivity activity);
 }

@@ -30,10 +30,10 @@ import retrofit.RxJavaCallAdapterFactory;
 @Module
 public class ApplicationModule {
 
-    private HearthStoneApiService hearthStoneApiService;
     private MainApplication app;
     private Gson gson;
     private Prefs prefs;
+    private HearthStoneApiService hearthStoneApiService;
     private DatabaseGateway databaseGateway;
 
     public ApplicationModule(MainApplication app) {
