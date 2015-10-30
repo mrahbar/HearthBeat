@@ -10,7 +10,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/HeartBeat.Theme">
         <activity android:name=".main.LaunchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +21,8 @@
 
         <activity android:name=".main.DeckListActivity"/>
         <activity android:name=".main.DeckBuilderActivity"/>
+        <activity android:name=".main.SingleCardActivity"
+            android:theme="@style/HeartBeat.Theme.SingleCard"/>
     </application>
 
 </manifest>

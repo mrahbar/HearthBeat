@@ -236,7 +236,7 @@ public class ApiCard {
         this.mechanics = mechanics;
     }
 
-    public Card toModel() {
+    public Card toCardModel() {
         final Card card = new Card();
         card.setCardId(cardId);
         card.setName(name);
@@ -273,6 +273,24 @@ public class ApiCard {
         }
 
         return card;
+    }
+
+    public Hero toHeroModel() {
+        final Hero hero = new Hero();
+        hero.setCardId(cardId);
+        hero.setName(name);
+        hero.setCardSet(cardSet);
+        hero.setType(type);
+        hero.setRarity(rarity);
+        hero.setHealth(health);
+        hero.setCollectible(collectible);
+        hero.setPlayerClass(playerClass);
+        hero.setImg(img);
+        hero.setImgGold(imgGold);
+        hero.setLocale(locale);
+
+
+        return hero;
     }
 
     public static class ApiCardMechanics {

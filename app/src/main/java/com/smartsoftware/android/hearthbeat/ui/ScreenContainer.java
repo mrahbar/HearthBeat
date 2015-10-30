@@ -40,8 +40,8 @@ public class ScreenContainer {
     public ViewGroup bind(BaseActivity activity) {
         activity.setContentView(R.layout.base_activity);
         ButterKnife.bind(this, activity);
-        setupDrawerLayout(activity);
         initToolbar(activity);
+        setupDrawerLayout(activity);
         return container;
     }
 
@@ -49,11 +49,17 @@ public class ScreenContainer {
         return drawerLayout;
     }
 
+    public Toolbar getToolbar() {
+        return toolbar;
+    }
+
     private void setupDrawerLayout(final BaseActivity activity) {
         drawerToggle = new ActionBarDrawerToggle(activity, drawerLayout,
                 toolbar, R.string.drawer_open, R.string.drawer_close);
         drawerLayout.setDrawerListener(drawerToggle);
         drawerLayout.setStatusBarBackground(R.color.colorToolbar);
+
+        drawerToggle.syncState();
     }
 
     private void initToolbar(BaseActivity activity) {
@@ -62,6 +68,7 @@ public class ScreenContainer {
 
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeButtonEnabled(true);
         }
     }
 }

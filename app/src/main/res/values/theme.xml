@@ -1,12 +1,13 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="HeartBeat.Theme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@color/colorBackground</item>
         <item name="windowActionBar">false</item>
         <item name="windowActionModeOverlay">true</item>
 
         <item name="actionOverflowButtonStyle">@style/ActionBar.Overflow</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerItemStyle</item>
 
         <!-- colorPrimary is used for the default action bar background -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -17,6 +18,13 @@
         <item name="colorAccent">@color/colorAccent</item>
         <!-- You can also set colorControlNormal, colorControlActivated
              colorControlHighlight & colorSwitchThumbNormal. -->
+    </style>
+
+    <style name="HeartBeat.Theme.SingleCard" parent="HeartBeat.Theme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="windowActionBarOverlay">true</item>
     </style>
 
     <style name="Toolbar" parent="@style/Widget.AppCompat.Toolbar">
@@ -34,5 +42,9 @@
     <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">true</item>
         <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="SpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/default_darker_color</item>
     </style>
 </resources>

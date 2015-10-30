@@ -1,6 +1,7 @@
 package com.smartsoftware.android.hearthbeat.main;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.smartsoftware.android.hearthbeat.api.HearthStoneApiService;
@@ -68,7 +69,12 @@ public class LaunchActivity extends BaseActivity implements LaunchPresenter.Laun
 
             Observable.from(cards.toList())
                     .filter(ApiCard::isCollectible)
-                    .forEach(apiCard -> databaseGateway.store(LaunchActivity.class, apiCard.toModel()));
+                    .forEach(apiCard -> {
+                        if (TextUtils.equals(apiCard.getType(), "Hero"))
+                            databaseGateway.store(LaunchActivity.class, apiCard.toHeroModel());
+                        else
+                            databaseGateway.store(LaunchActivity.class, apiCard.toCardModel());
+                    });
         });
         databaseGateway.close(LaunchActivity.class);
         return null;

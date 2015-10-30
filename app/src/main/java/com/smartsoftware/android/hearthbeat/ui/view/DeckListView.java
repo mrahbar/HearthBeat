@@ -5,6 +5,7 @@ import android.view.ViewGroup;
 
 import com.smartsoftware.android.hearthbeat.R;
 import com.smartsoftware.android.hearthbeat.main.BaseActivity;
+import com.smartsoftware.android.hearthbeat.ui.ActivityView;
 import com.smartsoftware.android.hearthbeat.ui.ScreenContainer;
 
 import butterknife.OnClick;
@@ -15,7 +16,7 @@ import butterknife.OnClick;
  * Time: 23:32
  * Email: mrahbar.azad@gmail.com
  */
-public class DeckListView {
+public class DeckListView implements ActivityView {
 
     private ScreenContainer screenContainer;
     private DeckListViewListener listener;
@@ -34,8 +35,12 @@ public class DeckListView {
 
     public void bind(BaseActivity activity) {
         viewContainer = screenContainer.bind(activity);
-        activity.getLayoutInflater().inflate(R.layout.activity_decklist, viewContainer);
+        activity.getLayoutInflater().inflate(getLayout(), viewContainer);
         listener.bindViews(this);
+    }
+
+    public int getLayout() {
+        return R.layout.activity_decklist;
     }
 
     @OnClick(R.id.main_deck_add)

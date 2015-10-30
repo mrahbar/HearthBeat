@@ -3,48 +3,52 @@ package com.smartsoftware.android.hearthbeat.main;
 import android.os.Bundle;
 import android.text.TextUtils;
 
+import com.smartsoftware.android.hearthbeat.R;
 import com.smartsoftware.android.hearthbeat.model.Card;
 import com.smartsoftware.android.hearthbeat.persistance.DatabaseGateway;
 import com.smartsoftware.android.hearthbeat.presenter.DeckBuilderPresenter;
-import com.smartsoftware.android.hearthbeat.presenter.DeckListPresenter;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
-import java.util.Map;
 
 import javax.inject.Inject;
 
-import io.realm.RealmResults;
 import rx.Observable;
-import rx.functions.Action1;
-import rx.functions.Func1;
-import rx.functions.Func2;
-import rx.internal.operators.OperatorToMultimap;
-import rx.observables.GroupedObservable;
 
 public class DeckBuilderActivity extends BaseActivity implements DeckBuilderPresenter.DeckBuilderPresenterListener {
 
-    private static final String NEUTRAL_CLASS = "Neutral";
-
     @Inject DatabaseGateway databaseGateway;
     private DeckBuilderPresenter deckListPresenter;
+    private boolean paused;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         getApp().getApplicationComponent().inject(this);
 
         databaseGateway.open(DeckBuilderActivity.class, this);
-        List<Card> cards = databaseGateway.query(DeckBuilderActivity.class, Card.class);
-        Map<String, Collection<Card>> map = null;
+        List<Card> cards = databaseGateway.queryList(DeckBuilderActivity.class, Card.class);
 
+        String neutralClassName = getString(R.string.class_neutral);
         Observable.from(cards)
-                .toMultimap((card -> !TextUtils.isEmpty(card.getPlayerClass()) ? card.getPlayerClass() : NEUTRAL_CLASS))
+                .toMultimap((card -> !TextUtils.isEmpty(card.getPlayerClass()) ? card.getPlayerClass() : neutralClassName))
                 .subscribe(collectionMap -> {
                     deckListPresenter = new DeckBuilderPresenter(DeckBuilderActivity.this, collectionMap);
                 });
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        paused = true;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (paused) {
+            deckListPresenter.onResume();
+            paused = false;
+        }
     }
 
     @Override

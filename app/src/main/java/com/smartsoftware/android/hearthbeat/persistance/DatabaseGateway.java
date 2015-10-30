@@ -65,7 +65,7 @@ public class DatabaseGateway {
         }
     }
 
-    public <T extends RealmObject> List<T> query(Class clazz, Class<T> objectClass) {
+    public <T extends RealmObject> List<T> queryList(Class clazz, Class<T> objectClass) {
         if (hasInstance(clazz)) {
             Realm realm = getInstance(clazz);
             RealmResults<? extends RealmObject> results = realm.where(objectClass).findAll();
@@ -76,6 +76,21 @@ public class DatabaseGateway {
             }
 
             return list;
+        } else {
+            throwError(clazz);
+        }
+
+        return null;
+    }
+
+    public <T extends RealmObject> T querySingle(Class clazz, Class<T> objectClass, String id) {
+        if (hasInstance(clazz)) {
+            Realm realm = getInstance(clazz);
+            final T element = realm.where(objectClass)
+                    .equalTo("cardId", id)
+                    .findFirst();
+
+            return element;
         } else {
             throwError(clazz);
         }

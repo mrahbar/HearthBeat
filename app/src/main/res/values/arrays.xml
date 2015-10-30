@@ -31,4 +31,26 @@
         <item>esES)</item>
         <item>esMX)</item>
     </string-array>
+
+    <string-array name="class_names">
+        <item>Druid</item>
+        <item>Hunter</item>
+        <item>Mage</item>
+        <item>Paladin</item>
+        <item>Priest</item>
+        <item>Rogue</item>
+        <item>Shaman</item>
+        <item>Warlock</item>
+        <item>Warrior</item>
+        <item>Neutral</item>
+    </string-array>
+
+    <string-array name="card_set">
+        <item>All</item>
+        <item>Classic</item>
+        <item>Naxxramas</item>
+        <item>Blackrock Mountain</item>
+        <item>Goblins vs Gnomes</item>
+        <item>The Grand Tournament</item>
+    </string-array>
 </resources>
