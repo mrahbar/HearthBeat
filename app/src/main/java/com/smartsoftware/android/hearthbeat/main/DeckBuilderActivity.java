@@ -2,6 +2,8 @@ package com.smartsoftware.android.hearthbeat.main;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.smartsoftware.android.hearthbeat.R;
 import com.smartsoftware.android.hearthbeat.model.Card;

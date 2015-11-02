@@ -172,7 +172,6 @@ public class SingleCardView implements ActivityView {
         cardImageDrawable.setColorFilter(colorizerFilter);
     }
 
-
     private void runExitAnimation() {
         toolbar.animate()
                 .translationYBy(-toolbarHeight)

@@ -7,6 +7,7 @@
 
         <item name="actionOverflowButtonStyle">@style/ActionBar.Overflow</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="searchViewStyle">@style/SearchViewStyle</item>
         <item name="android:spinnerDropDownItemStyle">@style/SpinnerItemStyle</item>
 
         <!-- colorPrimary is used for the default action bar background -->
@@ -46,5 +47,11 @@
 
     <style name="SpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
         <item name="android:textColor">@color/default_darker_color</item>
+    </style>
+
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="searchIcon">@drawable/ic_search</item>
+        <item name="closeIcon">@drawable/ic_search</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title.Inverse</item>
     </style>
 </resources>
