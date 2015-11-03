@@ -10,6 +10,7 @@ import com.smartsoftware.android.hearthbeat.model.Card;
 import com.smartsoftware.android.hearthbeat.ui.view.DeckBuilderView;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 
 import butterknife.ButterKnife;
@@ -28,7 +29,7 @@ public class DeckBuilderPresenter implements DeckBuilderView.DeckBuilderViewList
     public interface DeckBuilderPresenterListener {
         BaseActivity getActivity();
     }
-    public DeckBuilderPresenter(DeckBuilderPresenterListener listener, Map<String, Collection<Card>> cards) {
+    public DeckBuilderPresenter(DeckBuilderPresenterListener listener, Map<String, List<Card>> cards) {
         this.listener = listener;
         view = new DeckBuilderView(this, cards);
         view.bind(listener.getActivity());

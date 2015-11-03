@@ -2,8 +2,10 @@ package com.smartsoftware.android.hearthbeat.ui.view;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.graphics.Point;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.GridLayout;
@@ -13,6 +15,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -26,21 +29,28 @@ import com.smartsoftware.android.hearthbeat.model.Card;
 import com.smartsoftware.android.hearthbeat.ui.ActivityView;
 import com.smartsoftware.android.hearthbeat.ui.adapter.DeckBuilderPagerAdapter;
 import com.smartsoftware.android.hearthbeat.ui.widget.CardViewAware;
+import com.smartsoftware.android.hearthbeat.ui.widget.DashboardLayout;
 import com.smartsoftware.android.hearthbeat.utils.ImageLoaderUtils;
 import com.smartsoftware.android.hearthbeat.utils.Utils;
 
+import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import butterknife.Bind;
 import butterknife.BindDimen;
 import butterknife.BindInt;
 import rx.Observable;
 import rx.functions.Action1;
+import rx.functions.Action2;
+import rx.functions.Func0;
+import rx.functions.Func1;
+import rx.functions.Func2;
 
 /**
  * User: Mahmoud Reza Rahbar Azad
@@ -69,7 +79,7 @@ public class DeckBuilderView implements ActivityView, DeckBuilderPagerAdapter.Pa
     private DeckBuilderViewListener listener;
     private int cardViewWidth, cardViewHeight;
     private Spinner classNameSpinner;
-    private Map<String, Collection<Card>> originalCards, filteredCards;
+    private Map<String, List<Card>> originalCards, filteredCards;
     private boolean toolbarAnimated = false;
     private ViewPagerSpinnerStateHandler viewPagerSpinnerStateHandler;
 
@@ -80,7 +90,7 @@ public class DeckBuilderView implements ActivityView, DeckBuilderPagerAdapter.Pa
         Resources getResources();
     }
 
-    public DeckBuilderView(DeckBuilderViewListener listener, Map<String, Collection<Card>> cards) {
+    public DeckBuilderView(DeckBuilderViewListener listener, Map<String, List<Card>> cards) {
         this.listener = listener;
         this.originalCards = cards;
     }
@@ -89,25 +99,38 @@ public class DeckBuilderView implements ActivityView, DeckBuilderPagerAdapter.Pa
         filteredCards = new HashMap<>();
 
         activity.setContentView(getLayout());
-        initializeView(activity);
-        initializeToolbar(activity);
+        initializeView();
+        initializeClassNameSpinner(originalCards);
+        initializeToolbar();
         initializeViewPager(originalCards);
         initializeCardViewSize(activity);
     }
 
-    private void initializeView(BaseActivity activity) {
+    public int getLayout() {
+        return R.layout.activity_deckbuilder;
+    }
+
+    private void initializeView() {
         listener.bindViews(this);
         classNameSpinner = new Spinner(toolbar.getContext());
         viewPagerSpinnerStateHandler = new ViewPagerSpinnerStateHandler(classNameSpinner, viewPager);
     }
 
-    private void initializeToolbar(BaseActivity activity) {
-        ArrayAdapter<CharSequence> classNamesAdapter = ArrayAdapter.createFromResource(toolbar.getContext(),
-                R.array.class_names, R.layout.spinner_element);
-        classNamesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+    private void initializeClassNameSpinner(Map<String, List<Card>> cards) {
+        final String[] orderedClassNames = listener.getResources().getStringArray(R.array.class_names);
 
-        classNameSpinner.setAdapter(classNamesAdapter);
+        Observable.from(orderedClassNames)
+                .filter(s -> cards.keySet().contains(s))
+                .toList()
+                .subscribe(e -> {
+                    ArrayAdapter<CharSequence> classNamesAdapter = new ArrayAdapter(toolbar.getContext(),
+                            R.layout.spinner_element, e.toArray(new String[e.size()]));
+                    classNamesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    classNameSpinner.setAdapter(classNamesAdapter);
+                });
+    }
 
+    private void initializeToolbar() {
         ArrayAdapter<CharSequence> cardSetAdapter = ArrayAdapter.createFromResource(toolbar.getContext(),
                 R.array.card_set, R.layout.spinner_element);
         cardSetAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -120,19 +143,16 @@ public class DeckBuilderView implements ActivityView, DeckBuilderPagerAdapter.Pa
                 if (position == 0) {
                     initializeViewPager(originalCards);
                 } else {
-                    filteredCards.clear();
                     final String cardSet = listener.getResources().getStringArray(R.array.card_set)[position];
-                    for (String key : originalCards.keySet()) {
-                        Collection<Card> collection = originalCards.get(key);
+                    filterCards(entry -> {
                         List<Card> filtered = new ArrayList<>();
-                        for (Card c : collection) {
+                        for (Card c : entry.getValue()) {
                             if (TextUtils.equals(c.getCardSet(), cardSet)) {
                                 filtered.add(c);
                             }
                         }
-                        filteredCards.put(key, filtered);
-                    }
-                    initializeViewPager(filteredCards);
+                        return new AbstractMap.SimpleEntry<>(entry.getKey(), filtered);
+                    });
                 }
             }
 
@@ -146,14 +166,15 @@ public class DeckBuilderView implements ActivityView, DeckBuilderPagerAdapter.Pa
         setupSearchView(toolbar.getMenu());
 
         toolbar.setNavigationIcon(R.drawable.ic_back);
-        toolbar.setNavigationOnClickListener(v -> listener.onFinish());
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onFinish();
+            }
+        });
     }
 
-    public int getLayout() {
-        return R.layout.activity_deckbuilder;
-    }
-
-    private void initializeViewPager(Map<String, Collection<Card>> cards) {
+    private void initializeViewPager(Map<String, List<Card>> cards) {
         Collection<Collection<Card>> cardsList = new ArrayList<>();
         final String[] classNames = listener.getResources().getStringArray(R.array.class_names);
         for (String className : classNames) {
@@ -162,8 +183,8 @@ public class DeckBuilderView implements ActivityView, DeckBuilderPagerAdapter.Pa
             cardsList.add(collection);
         }
 
-        final int elementsPerPageCount = cardGridColumns * cardGridRows;
-        final DeckBuilderPagerAdapter adapter = new DeckBuilderPagerAdapter(this, elementsPerPageCount, cardsList);
+        int elementsPerPageCount = cardGridColumns * cardGridRows;
+        DeckBuilderPagerAdapter adapter = new DeckBuilderPagerAdapter(this, elementsPerPageCount, cardsList);
 
         viewPagerSpinnerStateHandler.updateCards(adapter.getCount(), cards.size(), elementsPerPageCount, cardsList);
         viewPager.setAdapter(adapter);
@@ -186,19 +207,19 @@ public class DeckBuilderView implements ActivityView, DeckBuilderPagerAdapter.Pa
 
     @Override
     public View onPageCreated(Context context, Collection<Card> cards) {
-        GridLayout gridLayout = new GridLayout(context);
-        gridLayout.setOrientation(GridLayout.HORIZONTAL);
-        gridLayout.setAlignmentMode(GridLayout.ALIGN_BOUNDS);
-        gridLayout.setColumnCount(cardGridColumns);
+        DashboardLayout gridLayout = new DashboardLayout(context);
+        gridLayout.setGrid(cardGridColumns, cardGridRows);
         gridLayout.setLayoutParams(new ViewPager.LayoutParams());
 
         for (Card c : cards) {
             ImageView cardView = new ImageView(context);
             cardView.setTag(c);
             cardView.setOnClickListener(this);
+            cardView.setMinimumWidth(cardViewWidth);
+            cardView.setMinimumHeight(cardViewHeight);
+
             CardViewAware viewAware = new CardViewAware(cardView, cardViewWidth, cardViewHeight);
-            ImageLoader.getInstance()
-                    .displayImage(c.getImg(), viewAware, ImageLoaderUtils.CARD_IMAGE_NORMAL);
+            ImageLoader.getInstance().displayImage(c.getImg(), viewAware, ImageLoaderUtils.CARD_IMAGE_NORMAL);
 
             gridLayout.addView(cardView);
         }
@@ -220,20 +241,52 @@ public class DeckBuilderView implements ActivityView, DeckBuilderPagerAdapter.Pa
 
         searchView.setQueryHint(context.getString(R.string.menu_deckbuilder_search_hint));
         searchView.setOnQueryTextListener(this);
+        searchView.setOnCloseListener(() -> {
+            initializeViewPager(originalCards);
+            return false;
+        });
     }
 
     @Override
     public boolean onQueryTextSubmit(String query) {
-        return false;
+        filterCardsByQuery(query);
+        return true;
     }
 
     @Override
     public boolean onQueryTextChange(String newText) {
-        return false;
+        filterCardsByQuery(newText);
+        return true;
     }
 
-    private void filterCards(String query) {
+    private void filterCardsByQuery(String query) {
+        if (query.length() > 2) {
+            filterCards(entry -> {
+                List<Card> filtered = new ArrayList<>();
+                for (Card c : entry.getValue()) {
+                    if (c.getName().toLowerCase().contains(query.toLowerCase())) {
+                        filtered.add(c);
+                    }
+                }
+                return new AbstractMap.SimpleEntry<>(entry.getKey(), filtered);
+            });
+        }
+    }
 
+    private void filterCards(FilterStrategy filterStrategy) {
+        Observable.just(originalCards)
+                .map(Map::entrySet)
+                .flatMapIterable(entries -> entries)
+                .map(filterStrategy::filterCardEntry)
+                .collect((Func0<HashMap<String, List<Card>>>) HashMap::new, (collector, entry) -> collector.put(entry.getKey(), entry.getValue()))
+                .subscribe(filteredMap -> {
+                    filteredCards = filteredMap;
+                    initializeViewPager(filteredCards);
+                });
+    }
+
+    private interface FilterStrategy {
+        AbstractMap.SimpleEntry<String, List<Card>> filterCardEntry(Map.Entry<String, List<Card>> entry);
     }
 
     @Override

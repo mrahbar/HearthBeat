@@ -36,7 +36,7 @@ public class MainApplication extends Application {
     private void initializeImageLoader() {
         ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this)
                 .threadPriority(Thread.NORM_PRIORITY - 2)
-                .diskCacheSize(50 * 1024 * 1024) // 50 Mb
+                .diskCacheSize(100 * 1024 * 1024) // 100 Mb
                 .diskCacheFileNameGenerator(new Md5FileNameGenerator())
                 .tasksProcessingOrder(QueueProcessingType.LIFO)
                 .writeDebugLogs() // Remove for release app
