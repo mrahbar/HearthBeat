@@ -19,4 +19,7 @@
     <color name="colorAccentLight">#EC407A</color>
     <color name="colorBackground">#ebf0f2</color>
     <color name="colorToolbar">#0D47A1</color>
+
+    <color name="page_indicator_dark">#80333333</color>
+    <color name="page_indicator_dark_selected">#ff333333</color>
 </resources>

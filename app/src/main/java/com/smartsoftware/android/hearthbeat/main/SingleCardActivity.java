@@ -3,10 +3,11 @@ package com.smartsoftware.android.hearthbeat.main;
 import android.os.Bundle;
 
 import com.smartsoftware.android.hearthbeat.R;
+import com.smartsoftware.android.hearthbeat.di.ApplicationComponent;
 import com.smartsoftware.android.hearthbeat.model.Card;
 import com.smartsoftware.android.hearthbeat.persistance.DatabaseGateway;
 import com.smartsoftware.android.hearthbeat.presenter.SingleCardPresenter;
-import com.smartsoftware.android.hearthbeat.ui.view.DeckBuilderView;
+import com.smartsoftware.android.hearthbeat.ui.view.CollectionView;
 
 import javax.inject.Inject;
 
@@ -24,16 +25,20 @@ public class SingleCardActivity extends BaseActivity implements SingleCardPresen
     private SingleCardPresenter presenter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getApp().getApplicationComponent().inject(this);
         setContentView(R.layout.activity_singlecard);
 
         Bundle bundle = getIntent().getBundleExtra(EXTRA_BUNDLE);
-        DeckBuilderView.CardIntentBundle intentBundle = DeckBuilderView.CardIntentBundle.fromBundle(bundle);
+        CollectionView.CardIntentBundle intentBundle = CollectionView.CardIntentBundle.fromBundle(bundle);
         databaseGateway.open(SingleCardActivity.class, this);
         Card card = databaseGateway.querySingle(SingleCardActivity.class, Card.class, intentBundle.cardId);
         presenter = new SingleCardPresenter(this, intentBundle, card, savedInstanceState == null);
+    }
+
+    @Override
+    public void injectActivity(ApplicationComponent component) {
+        component.inject(this);
     }
 
     @Override

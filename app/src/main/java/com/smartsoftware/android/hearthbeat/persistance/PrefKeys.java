@@ -8,7 +8,8 @@ package com.smartsoftware.android.hearthbeat.persistance;
  */
 public class PrefKeys {
 
-    public static final String SETUP_FINISHED = "SETUP_FINISHED";
+    public static final String LAUNCH_VIEW_SHOWN = "LAUNCH_VIEW_SHOWN";
+    public static final String LANG_CODE = "LANG_CODE";
 
     private PrefKeys() {}
 }

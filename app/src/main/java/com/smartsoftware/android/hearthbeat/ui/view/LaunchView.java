@@ -47,7 +47,7 @@ public class LaunchView  {
 
     public LaunchView(LaunchViewListener listener) {
         this.listener = listener;
-        boolean setupFinished = listener.getPrefs().getBoolean(PrefKeys.SETUP_FINISHED, false);
+        boolean setupFinished = listener.getPrefs().getBoolean(PrefKeys.LAUNCH_VIEW_SHOWN, false);
 
         if (setupFinished) {
             listener.onLaunchMainScreen();
@@ -76,17 +76,12 @@ public class LaunchView  {
 
     @OnClick(R.id.launch_bottom_button_continue)
     void onClickContinueButton(View v) {
-        boolean setupFinished = listener.getPrefs().getBoolean(PrefKeys.SETUP_FINISHED, false);
-        if (setupFinished) {
-            listener.onLaunchMainScreen();
-        } else {
-            new MaterialDialog.Builder(listener.getContext())
-                    .content(R.string.launch_download_skipped_message)
-                    .positiveText(android.R.string.ok)
-                    .cancelable(true)
-                    .onPositive((materialDialog, dialogAction) -> listener.onLaunchMainScreen())
-                    .show();
-        }
+        new MaterialDialog.Builder(listener.getContext())
+                .content(R.string.launch_download_skipped_message)
+                .positiveText(android.R.string.ok)
+                .cancelable(true)
+                .onPositive((materialDialog, dialogAction) -> listener.onLaunchMainScreen())
+                .show();
     }
 
     @OnClick(R.id.launch_download)

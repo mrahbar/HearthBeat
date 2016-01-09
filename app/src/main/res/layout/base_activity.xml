@@ -21,10 +21,21 @@
             android:layout_height="wrap_content"
             app:popupTheme="@style/Theme.AppCompat.Light.NoActionBar"/>
 
-        <FrameLayout
-            android:id="@+id/activity_content"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/activity_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ViewStub android:id="@+id/activity_progress_stub"
+                android:layout="@layout/progress_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"  />
+        </RelativeLayout>
+
     </LinearLayout>
 
     <android.support.design.widget.NavigationView

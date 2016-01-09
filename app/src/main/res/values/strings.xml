@@ -7,10 +7,12 @@
     <string name="launch_bottom_btn_continue">Enter</string>
     <string name="launch_select_lang">Choose card language pack</string>
     <string name="launch_download">Download</string>
-    <string name="launch_download_cards">Download cards</string>
-    <string name="launch_download_skipped_message">You have to fetch the cards later if you want to create decks.</string>
+    <string name="launch_download_cards">Download card infos (~1MB)</string>
+    <string name="launch_download_skipped_message">You have to fetch the card infos later if you want to create decks.</string>
+    <string name="launch_download_now">Start downloading card infos now (~1MB)?</string>
     <string name="launch_please_wait">Please wait</string>
     <string name="launch_download_finished">Download finished</string>
+    <string name="launch_download_failed">Download failed</string>
 
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>

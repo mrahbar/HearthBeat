@@ -1,16 +1,11 @@
 package com.smartsoftware.android.hearthbeat.presenter;
 
-import android.content.Intent;
 import android.content.res.Resources;
 
 import com.smartsoftware.android.hearthbeat.main.BaseActivity;
-import com.smartsoftware.android.hearthbeat.main.SingleCardActivity;
 import com.smartsoftware.android.hearthbeat.model.Card;
-import com.smartsoftware.android.hearthbeat.ui.view.DeckBuilderView;
+import com.smartsoftware.android.hearthbeat.ui.view.CollectionView;
 import com.smartsoftware.android.hearthbeat.ui.view.SingleCardView;
-
-import java.util.Collection;
-import java.util.Map;
 
 import butterknife.ButterKnife;
 
@@ -30,7 +25,7 @@ public class SingleCardPresenter implements SingleCardView.SingleCardViewListene
         BaseActivity getActivity();
     }
 
-    public SingleCardPresenter(SingleCardPresenterListener listener, DeckBuilderView.CardIntentBundle intentBundle, Card card, boolean firstLaunch) {
+    public SingleCardPresenter(SingleCardPresenterListener listener, CollectionView.CardIntentBundle intentBundle, Card card, boolean firstLaunch) {
         this.listener = listener;
         view = new SingleCardView(this, intentBundle, card, firstLaunch);
         view.bind(getActivity());

@@ -29,7 +29,7 @@ public class ApiCard {
     private String inPlayText;
     private String flavor;
     private String artist;
-    private String durability;
+    private int durability;
 
     private boolean collectible;
     private boolean elite;
@@ -148,11 +148,11 @@ public class ApiCard {
         this.artist = artist;
     }
 
-    public String getDurability() {
+    public int getDurability() {
         return durability;
     }
 
-    public void setDurability(String durability) {
+    public void setDurability(int durability) {
         this.durability = durability;
     }
 

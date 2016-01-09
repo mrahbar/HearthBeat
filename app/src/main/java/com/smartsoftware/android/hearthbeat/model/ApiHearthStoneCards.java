@@ -38,6 +38,9 @@ public class ApiHearthStoneCards {
     @SerializedName("Blackrock Mountain")
     private List<ApiCard> Blackrock_Mountain;
 
+    @SerializedName("The League of Explorers")
+    private List<ApiCard> The_League_of_Explorers;
+
     public List<ApiCard> getMissions() {
         return Missions;
     }
@@ -150,6 +153,14 @@ public class ApiHearthStoneCards {
         Blackrock_Mountain = blackrock_Mountain;
     }
 
+    public List<ApiCard> getThe_League_of_Explorers() {
+        return The_League_of_Explorers;
+    }
+
+    public void setThe_League_of_Explorers(List<ApiCard> the_League_of_Explorers) {
+        The_League_of_Explorers = the_League_of_Explorers;
+    }
+
     public List<ApiCard> toList() {
         List<ApiCard> newList = new ArrayList<>();
         newList.addAll(Missions);
@@ -166,6 +177,7 @@ public class ApiHearthStoneCards {
         newList.addAll(Promotion);
         newList.addAll(The_Grand_Tournament);
         newList.addAll(Blackrock_Mountain);
+        newList.addAll(The_League_of_Explorers);
 
         return newList;
     }

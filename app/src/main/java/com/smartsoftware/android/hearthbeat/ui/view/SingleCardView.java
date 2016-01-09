@@ -47,7 +47,7 @@ public class SingleCardView implements ActivityView {
     int toolbarHeight;
 
     private SingleCardViewListener listener;
-    private DeckBuilderView.CardIntentBundle intentBundle;
+    private CollectionView.CardIntentBundle intentBundle;
     private Card card;
     private boolean firstLaunch;
     private int leftDelta, topDelta;
@@ -62,7 +62,7 @@ public class SingleCardView implements ActivityView {
         Resources getResources();
     }
 
-    public SingleCardView(SingleCardViewListener listener, DeckBuilderView.CardIntentBundle intentBundle, Card card, boolean firstLaunch) {
+    public SingleCardView(SingleCardViewListener listener, CollectionView.CardIntentBundle intentBundle, Card card, boolean firstLaunch) {
         this.listener = listener;
         this.intentBundle = intentBundle;
         this.card = card;
@@ -93,9 +93,8 @@ public class SingleCardView implements ActivityView {
     }
 
     private void initializeToolbar() {
-        toolbar.setTitle(card.getName());
         toolbar.setTranslationY(-toolbarHeight);
-        toolbar.setNavigationIcon(R.drawable.ic_back);
+        toolbar.setNavigationIcon(R.drawable.ic_close);
         toolbar.setNavigationOnClickListener(v -> runExitAnimation());
     }
 

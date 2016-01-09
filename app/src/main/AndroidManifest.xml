@@ -19,8 +19,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".main.DeckListActivity"/>
-        <activity android:name=".main.DeckBuilderActivity"/>
+        <activity android:name=".main.FeedActivity"/>
+        <activity android:name=".main.CollectionActivity"/>
         <activity android:name=".main.SingleCardActivity"
             android:theme="@style/HeartBeat.Theme.SingleCard"/>
     </application>

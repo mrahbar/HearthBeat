@@ -9,7 +9,7 @@
     tools:context=".main.SingleCardActivity">
 
     <android.support.v7.widget.Toolbar
-        style="@style/Toolbar"
+        style="@style/ToolbarColorBackground"
         android:id="@+id/single_card_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

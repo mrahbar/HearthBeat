@@ -19,7 +19,7 @@ import rx.Observable;
  */
 public interface HearthStoneApiService {
 
-    @GET("cards")
+    @GET("cards?collectible=1")
     Observable<ApiHearthStoneCards> getCards(@Query("locale") String locale);
 
     @GET("cardbacks")

@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
+import com.smartsoftware.android.hearthbeat.R;
 
 /**
  * User: Mahmoud Reza Rahbar Azad
@@ -22,6 +23,7 @@ public class ImageLoaderUtils {
             .resetViewBeforeLoading(true)
             .cacheInMemory(false)
             .cacheOnDisk(true)
+            .showImageOnLoading(R.drawable.default_card_back)
             .extraForDownloader(ImageType.CARD_IMAGE)
             .imageScaleType(ImageScaleType.IN_SAMPLE_POWER_OF_2)
             .bitmapConfig(Bitmap.Config.RGB_565)

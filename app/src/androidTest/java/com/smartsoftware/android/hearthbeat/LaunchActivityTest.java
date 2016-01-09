@@ -142,7 +142,7 @@ public class LaunchActivityTest {
 
         clickOnViewById(R.id.launch_download);
 
-        //This is a check for DeckListActivity
+        //This is a check for FeedActivity
         checkViewByIdVisible(R.id.main_deck_add);
         assertEquals(35, databaseGateway.getMap(Cardback.class).size());
     }

@@ -4,12 +4,10 @@ import android.content.Intent;
 import android.content.res.Resources;
 
 import com.smartsoftware.android.hearthbeat.main.BaseActivity;
-import com.smartsoftware.android.hearthbeat.main.DeckBuilderActivity;
 import com.smartsoftware.android.hearthbeat.main.SingleCardActivity;
 import com.smartsoftware.android.hearthbeat.model.Card;
-import com.smartsoftware.android.hearthbeat.ui.view.DeckBuilderView;
+import com.smartsoftware.android.hearthbeat.ui.view.CollectionView;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
@@ -21,17 +19,17 @@ import butterknife.ButterKnife;
  * Time: 23:36
  * Email: mrahbar.azad@gmail.com
  */
-public class DeckBuilderPresenter implements DeckBuilderView.DeckBuilderViewListener {
+public class CollectionPresenter implements CollectionView.DeckBuilderViewListener {
 
-    private DeckBuilderView view;
-    private DeckBuilderPresenterListener listener;
+    private CollectionView view;
+    private CollectionPresenterListener listener;
 
-    public interface DeckBuilderPresenterListener {
+    public interface CollectionPresenterListener {
         BaseActivity getActivity();
     }
-    public DeckBuilderPresenter(DeckBuilderPresenterListener listener, Map<String, List<Card>> cards) {
+    public CollectionPresenter(CollectionPresenterListener listener, Map<String, List<Card>> cards) {
         this.listener = listener;
-        view = new DeckBuilderView(this, cards);
+        view = new CollectionView(this, cards);
         view.bind(listener.getActivity());
     }
 
@@ -44,12 +42,12 @@ public class DeckBuilderPresenter implements DeckBuilderView.DeckBuilderViewList
     }
 
     @Override
-    public void bindViews(DeckBuilderView view) {
+    public void bindViews(CollectionView view) {
         ButterKnife.bind(view, getActivity());
     }
 
     @Override
-    public void showCard(DeckBuilderView.CardIntentBundle cardBundle) {
+    public void showCard(CollectionView.CardIntentBundle cardBundle) {
         Intent intent = new Intent(getActivity(), SingleCardActivity.class);
         intent.putExtra(SingleCardActivity.EXTRA_BUNDLE, cardBundle.toBundle());
         getActivity().startActivity(intent);

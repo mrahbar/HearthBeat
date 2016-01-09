@@ -1,9 +1,10 @@
 package com.smartsoftware.android.hearthbeat.di;
 
-import com.smartsoftware.android.hearthbeat.main.DeckBuilderActivity;
+import com.smartsoftware.android.hearthbeat.main.CollectionActivity;
 import com.smartsoftware.android.hearthbeat.main.LaunchActivity;
-import com.smartsoftware.android.hearthbeat.main.DeckListActivity;
+import com.smartsoftware.android.hearthbeat.main.FeedActivity;
 import com.smartsoftware.android.hearthbeat.main.SingleCardActivity;
+import com.smartsoftware.android.hearthbeat.presenter.FeedPresenter;
 
 import javax.inject.Singleton;
 
@@ -22,8 +23,10 @@ import dagger.Component;
         }
 )
 public interface ApplicationComponent {
-    void inject(DeckListActivity activity);
-    void inject(DeckBuilderActivity activity);
+    void inject(FeedActivity activity);
+    void inject(CollectionActivity activity);
     void inject(LaunchActivity activity);
     void inject(SingleCardActivity activity);
+
+    void inject(FeedPresenter presenter);
 }

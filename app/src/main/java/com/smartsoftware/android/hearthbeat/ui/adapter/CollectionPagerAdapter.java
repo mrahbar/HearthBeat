@@ -21,7 +21,7 @@ import static rx.observables.MathObservable.sumLong;
  * Time: 17:14
  * Email: mrahbar.azad@gmail.com
  */
-public class DeckBuilderPagerAdapter extends PagerAdapter {
+public class CollectionPagerAdapter extends PagerAdapter {
 
 
     public interface PageFactory {
@@ -32,7 +32,7 @@ public class DeckBuilderPagerAdapter extends PagerAdapter {
     private int numPages;
     private List<List<Card>> pageCards;
 
-    public DeckBuilderPagerAdapter(PageFactory pageFactory, int elementsPerPageCount, Collection<Collection<Card>> values) {
+    public CollectionPagerAdapter(PageFactory pageFactory, int elementsPerPageCount, Collection<Collection<Card>> values) {
         this.pageFactory = pageFactory;
 
         sumLong(Observable.from(values)
@@ -43,17 +43,17 @@ public class DeckBuilderPagerAdapter extends PagerAdapter {
 
         Observable.from(values)
                 .flatMapIterable(elements -> {
-                    List<List<Card>> pageCards1 = new ArrayList<>(numPages);
+                    List<List<Card>> lists = new ArrayList<>(numPages);
 
                     Observable.from(elements)
                             .window(elementsPerPageCount)
                             .subscribe(subObservable -> {
                                 subObservable.toList().subscribe(c -> {
-                                    pageCards1.add(c);
+                                    lists.add(c);
                                 });
                             });
 
-                    return pageCards1;
+                    return lists;
                 })
                 .toList()
                 .subscribe(collections -> {

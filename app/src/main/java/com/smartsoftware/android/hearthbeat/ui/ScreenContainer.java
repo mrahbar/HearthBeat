@@ -1,5 +1,7 @@
 package com.smartsoftware.android.hearthbeat.ui;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.content.res.Resources;
 import android.support.design.widget.NavigationView;
@@ -7,10 +9,13 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewStub;
 
 import com.smartsoftware.android.hearthbeat.R;
 import com.smartsoftware.android.hearthbeat.main.BaseActivity;
+import com.smartsoftware.android.hearthbeat.ui.widget.AccessibleLinearLayout;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -35,7 +40,7 @@ public class ScreenContainer {
     @Bind(R.id.activity_content)
     ViewGroup container;
 
-    private ActionBarDrawerToggle drawerToggle;
+    private AccessibleLinearLayout progressView;
 
     public ViewGroup bind(BaseActivity activity) {
         activity.setContentView(R.layout.base_activity);
@@ -45,16 +50,12 @@ public class ScreenContainer {
         return container;
     }
 
-    public DrawerLayout getDrawerLayout() {
-        return drawerLayout;
-    }
-
     public Toolbar getToolbar() {
         return toolbar;
     }
 
     private void setupDrawerLayout(final BaseActivity activity) {
-        drawerToggle = new ActionBarDrawerToggle(activity, drawerLayout,
+        ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(activity, drawerLayout,
                 toolbar, R.string.drawer_open, R.string.drawer_close);
         drawerLayout.setDrawerListener(drawerToggle);
         drawerLayout.setStatusBarBackground(R.color.colorToolbar);
@@ -70,5 +71,24 @@ public class ScreenContainer {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeButtonEnabled(true);
         }
+    }
+
+    public void changeProgressVisibility(final boolean show) {
+        if (progressView == null) {
+            ViewStub viewStub = (ViewStub) drawerLayout.findViewById(R.id.activity_progress_stub);
+            progressView = (AccessibleLinearLayout) viewStub.inflate();
+            progressView.setStealTouchEvent(true);
+        }
+
+        progressView.setVisibility(show ? View.VISIBLE : View.GONE);
+        progressView.animate()
+                .setDuration(drawerLayout.getResources().getInteger(android.R.integer.config_shortAnimTime))
+                .alpha(show ? 1 : 0)
+                .setListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        progressView.setVisibility(show ? View.VISIBLE : View.GONE);
+                    }
+                });
     }
 }

@@ -2,38 +2,33 @@ package com.smartsoftware.android.hearthbeat.main;
 
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.smartsoftware.android.hearthbeat.R;
+import com.smartsoftware.android.hearthbeat.di.ApplicationComponent;
 import com.smartsoftware.android.hearthbeat.model.Card;
 import com.smartsoftware.android.hearthbeat.persistance.DatabaseGateway;
-import com.smartsoftware.android.hearthbeat.presenter.DeckBuilderPresenter;
+import com.smartsoftware.android.hearthbeat.presenter.CollectionPresenter;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.inject.Inject;
 
 import rx.Observable;
-import rx.functions.Func1;
 
-public class DeckBuilderActivity extends BaseActivity implements DeckBuilderPresenter.DeckBuilderPresenterListener {
+public class CollectionActivity extends BaseActivity implements CollectionPresenter.CollectionPresenterListener {
 
     @Inject DatabaseGateway databaseGateway;
-    private DeckBuilderPresenter deckListPresenter;
+    private CollectionPresenter deckListPresenter;
     private boolean paused;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getApp().getApplicationComponent().inject(this);
 
-        databaseGateway.open(DeckBuilderActivity.class, this);
-        List<Card> cards = databaseGateway.queryList(DeckBuilderActivity.class, Card.class);
+        databaseGateway.open(CollectionActivity.class, this);
+        List<Card> cards = databaseGateway.queryList(CollectionActivity.class, Card.class);
 
         String neutralClassName = getString(R.string.class_neutral);
         Observable.from(cards)
@@ -46,8 +41,13 @@ public class DeckBuilderActivity extends BaseActivity implements DeckBuilderPres
                     return map;
                 })
                 .subscribe(collectionMap -> {
-                    deckListPresenter = new DeckBuilderPresenter(DeckBuilderActivity.this, collectionMap);
+                    deckListPresenter = new CollectionPresenter(CollectionActivity.this, collectionMap);
                 });
+    }
+
+    @Override
+    public void injectActivity(ApplicationComponent component) {
+        component.inject(this);
     }
 
     @Override
@@ -73,6 +73,6 @@ public class DeckBuilderActivity extends BaseActivity implements DeckBuilderPres
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        databaseGateway.close(DeckBuilderActivity.class);
+        databaseGateway.close(CollectionActivity.class);
     }
 }

@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
-import com.smartsoftware.android.hearthbeat.main.DeckListActivity;
+import com.smartsoftware.android.hearthbeat.main.FeedActivity;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -19,7 +19,7 @@ https://github.com/googlesamples/android-testing-templates
 public class DeckListActivityTest {
 
     @Rule
-    public ActivityTestRule<DeckListActivity> activityRule = new ActivityTestRule<>(DeckListActivity.class,
+    public ActivityTestRule<FeedActivity> activityRule = new ActivityTestRule<>(FeedActivity.class,
             true,     // initialTouchMode
             false);   // launchActivity. False so we can customize the intent per test method
 

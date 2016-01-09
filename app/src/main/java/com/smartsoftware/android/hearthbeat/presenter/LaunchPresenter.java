@@ -5,7 +5,8 @@ import android.content.Intent;
 import android.content.res.Resources;
 
 import com.smartsoftware.android.hearthbeat.main.BaseActivity;
-import com.smartsoftware.android.hearthbeat.main.DeckListActivity;
+import com.smartsoftware.android.hearthbeat.main.FeedActivity;
+import com.smartsoftware.android.hearthbeat.persistance.PrefKeys;
 import com.smartsoftware.android.hearthbeat.persistance.Prefs;
 import com.smartsoftware.android.hearthbeat.ui.view.LaunchView;
 
@@ -38,7 +39,8 @@ public class LaunchPresenter implements LaunchView.LaunchViewListener {
 
     @Override
     public void onLaunchMainScreen() {
-        activity.startActivity(new Intent(activity, DeckListActivity.class));
+        prefs.save(PrefKeys.LAUNCH_VIEW_SHOWN, true);
+        activity.startActivity(new Intent(activity, FeedActivity.class));
         activity.finish();
     }
 

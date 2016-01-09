@@ -36,6 +36,11 @@
         <item name="collapseIcon">@drawable/ic_back</item>
     </style>
 
+    <style name="ToolbarColorBackground" parent="Toolbar">
+        <item name="android:background">@color/default_ltwhite_color</item>
+        <item name="collapseIcon">@drawable/ic_close</item>
+    </style>
+
     <style name="ActionBar.Overflow" parent="Widget.AppCompat.ActionButton.Overflow">
         <item name="android:src">@drawable/ic_more</item>
     </style>

@@ -2,20 +2,15 @@ package com.smartsoftware.android.hearthbeat.ui.view;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.graphics.Color;
 import android.graphics.Point;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v7.widget.GridLayout;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -27,7 +22,7 @@ import com.smartsoftware.android.hearthbeat.R;
 import com.smartsoftware.android.hearthbeat.main.BaseActivity;
 import com.smartsoftware.android.hearthbeat.model.Card;
 import com.smartsoftware.android.hearthbeat.ui.ActivityView;
-import com.smartsoftware.android.hearthbeat.ui.adapter.DeckBuilderPagerAdapter;
+import com.smartsoftware.android.hearthbeat.ui.adapter.CollectionPagerAdapter;
 import com.smartsoftware.android.hearthbeat.ui.widget.CardViewAware;
 import com.smartsoftware.android.hearthbeat.ui.widget.DashboardLayout;
 import com.smartsoftware.android.hearthbeat.utils.ImageLoaderUtils;
@@ -40,17 +35,13 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import butterknife.Bind;
 import butterknife.BindDimen;
 import butterknife.BindInt;
 import rx.Observable;
 import rx.functions.Action1;
-import rx.functions.Action2;
 import rx.functions.Func0;
-import rx.functions.Func1;
-import rx.functions.Func2;
 
 /**
  * User: Mahmoud Reza Rahbar Azad
@@ -58,7 +49,7 @@ import rx.functions.Func2;
  * Time: 23:32
  * Email: mrahbar.azad@gmail.com
  */
-public class DeckBuilderView implements ActivityView, DeckBuilderPagerAdapter.PageFactory,
+public class CollectionView implements ActivityView, CollectionPagerAdapter.PageFactory,
         View.OnClickListener, SearchView.OnQueryTextListener {
 
     @BindInt(R.integer.card_grid_columns)
@@ -84,13 +75,13 @@ public class DeckBuilderView implements ActivityView, DeckBuilderPagerAdapter.Pa
     private ViewPagerSpinnerStateHandler viewPagerSpinnerStateHandler;
 
     public interface DeckBuilderViewListener {
-        void bindViews(DeckBuilderView view);
+        void bindViews(CollectionView view);
         void showCard(CardIntentBundle cardBundle);
         void onFinish();
         Resources getResources();
     }
 
-    public DeckBuilderView(DeckBuilderViewListener listener, Map<String, List<Card>> cards) {
+    public CollectionView(DeckBuilderViewListener listener, Map<String, List<Card>> cards) {
         this.listener = listener;
         this.originalCards = cards;
     }
@@ -166,12 +157,7 @@ public class DeckBuilderView implements ActivityView, DeckBuilderPagerAdapter.Pa
         setupSearchView(toolbar.getMenu());
 
         toolbar.setNavigationIcon(R.drawable.ic_back);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                listener.onFinish();
-            }
-        });
+        toolbar.setNavigationOnClickListener(v -> listener.onFinish());
     }
 
     private void initializeViewPager(Map<String, List<Card>> cards) {
@@ -184,7 +170,7 @@ public class DeckBuilderView implements ActivityView, DeckBuilderPagerAdapter.Pa
         }
 
         int elementsPerPageCount = cardGridColumns * cardGridRows;
-        DeckBuilderPagerAdapter adapter = new DeckBuilderPagerAdapter(this, elementsPerPageCount, cardsList);
+        CollectionPagerAdapter adapter = new CollectionPagerAdapter(this, elementsPerPageCount, cardsList);
 
         viewPagerSpinnerStateHandler.updateCards(adapter.getCount(), cards.size(), elementsPerPageCount, cardsList);
         viewPager.setAdapter(adapter);

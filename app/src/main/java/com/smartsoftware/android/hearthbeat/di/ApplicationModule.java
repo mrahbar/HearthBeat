@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.smartsoftware.android.hearthbeat.BuildConfig;
 import com.smartsoftware.android.hearthbeat.api.HearthStoneApiService;
+import com.smartsoftware.android.hearthbeat.api.RedditApiService;
 import com.smartsoftware.android.hearthbeat.main.MainApplication;
 import com.smartsoftware.android.hearthbeat.persistance.DatabaseGateway;
 import com.smartsoftware.android.hearthbeat.persistance.Prefs;
@@ -35,6 +36,7 @@ public class ApplicationModule {
     private Prefs prefs;
     private HearthStoneApiService hearthStoneApiService;
     private DatabaseGateway databaseGateway;
+    private final RedditApiService redditApiService;
 
     public ApplicationModule(MainApplication app) {
         this.app = app;
@@ -49,13 +51,19 @@ public class ApplicationModule {
                 .setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
                 .create();
 
-        Retrofit retrofit = new Retrofit.Builder()
+        Retrofit redditApiRetrofit = new Retrofit.Builder()
+                .baseUrl("https://www.reddit.com/")
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build();
+
+        Retrofit hearthstoneApiRetrofit = new Retrofit.Builder()
                 .baseUrl("https://omgvamp-hearthstone-v1.p.mashape.com/")
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 
-        retrofit.client().networkInterceptors().add(chain -> {
+        hearthstoneApiRetrofit.client().networkInterceptors().add(chain -> {
             final Request original = chain.request();
             final Request request = original.newBuilder()
                     .addHeader("X-Mashape-Key", BuildConfig.MASHAPE_KEY)
@@ -65,7 +73,8 @@ public class ApplicationModule {
             return chain.proceed(request);
         });
 
-        hearthStoneApiService = retrofit.create(HearthStoneApiService.class);
+        hearthStoneApiService = hearthstoneApiRetrofit.create(HearthStoneApiService.class);
+        redditApiService = redditApiRetrofit.create(RedditApiService.class);
     }
 
     @Provides
@@ -90,6 +99,12 @@ public class ApplicationModule {
     @Singleton
     HearthStoneApiService provideHearthStoneApiService() {
         return hearthStoneApiService;
+    }
+
+    @Provides
+    @Singleton
+    RedditApiService provideRedditApiService() {
+        return redditApiService;
     }
 
     @Provides

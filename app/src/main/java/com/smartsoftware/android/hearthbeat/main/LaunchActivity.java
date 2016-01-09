@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.smartsoftware.android.hearthbeat.api.DownloadCardsCommand;
 import com.smartsoftware.android.hearthbeat.api.HearthStoneApiService;
+import com.smartsoftware.android.hearthbeat.di.ApplicationComponent;
 import com.smartsoftware.android.hearthbeat.model.ApiCard;
 import com.smartsoftware.android.hearthbeat.model.ApiCardback;
 import com.smartsoftware.android.hearthbeat.model.ApiHearthStoneCards;
@@ -27,18 +29,25 @@ import rx.schedulers.Schedulers;
  * Time: 22:13
  * Email: mrahbar.azad@gmail.com
  */
-public class LaunchActivity extends BaseActivity implements LaunchPresenter.LaunchPresenterListener {
+public class LaunchActivity extends BaseActivity implements LaunchPresenter.LaunchPresenterListener, DownloadCardsCommand.CallListener {
 
     @Inject Prefs prefs;
     @Inject HearthStoneApiService apiService;
     @Inject DatabaseGateway databaseGateway;
     private LaunchPresenter launchPresenter;
+    private DownloadCardsCommand downloadCardsCommand;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getApp().getApplicationComponent().inject(this);
         launchPresenter = new LaunchPresenter(this, prefs);
+        downloadCardsCommand = new DownloadCardsCommand(apiService, databaseGateway, this);
+        downloadCardsCommand.setCallListener(this);
+    }
+
+    @Override
+    public void injectActivity(ApplicationComponent component) {
+        component.inject(this);
     }
 
     @Override
@@ -49,44 +58,16 @@ public class LaunchActivity extends BaseActivity implements LaunchPresenter.Laun
     @Override
     public void onStartDownload(String locale) {
         Log.v("LaunchActivity", "Download started");
-        call(locale);
+        prefs.save(PrefKeys.LANG_CODE, locale);
+        downloadCardsCommand.call(locale);
     }
 
-    private void call(String locale) {
-        Observable.zip(apiService.getCards(locale), apiService.getCardbacks(locale),
-                (hearthStoneApiCards, cardbacks) -> store(hearthStoneApiCards, cardbacks))
-                .subscribeOn(Schedulers.newThread())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(v -> onDownloadFinished(), e -> onDownloadError(e));
-    }
-
-    private Void store(ApiHearthStoneCards cards, List<ApiCardback> cardbacks) {
-        Log.v("LaunchActivity", "Download storing");
-        databaseGateway.open(LaunchActivity.class, this);
-        databaseGateway.execute(LaunchActivity.class, () -> {
-            Observable.from(cardbacks)
-                    .forEach(apiCardback -> databaseGateway.store(LaunchActivity.class, apiCardback.toModel()));
-
-            Observable.from(cards.toList())
-                    .filter(ApiCard::isCollectible)
-                    .forEach(apiCard -> {
-                        if (TextUtils.equals(apiCard.getType(), "Hero"))
-                            databaseGateway.store(LaunchActivity.class, apiCard.toHeroModel());
-                        else
-                            databaseGateway.store(LaunchActivity.class, apiCard.toCardModel());
-                    });
-        });
-        databaseGateway.close(LaunchActivity.class);
-        return null;
-    }
-
-    private void onDownloadFinished() {
+    public void onDownloadFinished() {
         Log.v("LaunchActivity", "Download finished");
-        prefs.save(PrefKeys.SETUP_FINISHED, true);
         launchPresenter.onLaunchMainScreen();
     }
 
-    private void onDownloadError(Throwable e) {
+    public void onDownloadError(Throwable e) {
         e.printStackTrace();
         launchPresenter.onDownloadFailed();
     }
