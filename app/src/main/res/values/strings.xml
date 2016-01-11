@@ -19,8 +19,8 @@
     <string name="drawer_menu_decklist">Decks</string>
     <string name="drawer_menu_cards">Collection</string>
 
-    <string name="menu_deckbuilder_search">Search</string>
-    <string name="menu_deckbuilder_search_hint">Enter card title</string>
+    <string name="menu_collection_search">Search</string>
+    <string name="menu_collection_search_hint">Enter card title</string>
 
     <string name="class_priest">Priest</string>
     <string name="class_shaman">Shaman</string>

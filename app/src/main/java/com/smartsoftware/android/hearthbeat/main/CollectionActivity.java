@@ -3,10 +3,10 @@ package com.smartsoftware.android.hearthbeat.main;
 import android.os.Bundle;
 import android.text.TextUtils;
 
+import com.raizlabs.android.dbflow.sql.language.SQLite;
 import com.smartsoftware.android.hearthbeat.R;
 import com.smartsoftware.android.hearthbeat.di.ApplicationComponent;
 import com.smartsoftware.android.hearthbeat.model.Card;
-import com.smartsoftware.android.hearthbeat.persistance.DatabaseGateway;
 import com.smartsoftware.android.hearthbeat.presenter.CollectionPresenter;
 
 import java.util.ArrayList;
@@ -19,7 +19,6 @@ import rx.Observable;
 
 public class CollectionActivity extends BaseActivity implements CollectionPresenter.CollectionPresenterListener {
 
-    @Inject DatabaseGateway databaseGateway;
     private CollectionPresenter deckListPresenter;
     private boolean paused;
 
@@ -27,8 +26,9 @@ public class CollectionActivity extends BaseActivity implements CollectionPresen
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        databaseGateway.open(CollectionActivity.class, this);
-        List<Card> cards = databaseGateway.queryList(CollectionActivity.class, Card.class);
+        List<Card> cards = SQLite.select()
+                .from(Card.class)
+                .queryList();
 
         String neutralClassName = getString(R.string.class_neutral);
         Observable.from(cards)
@@ -68,11 +68,5 @@ public class CollectionActivity extends BaseActivity implements CollectionPresen
     @Override
     public BaseActivity getActivity() {
         return this;
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        databaseGateway.close(CollectionActivity.class);
     }
 }

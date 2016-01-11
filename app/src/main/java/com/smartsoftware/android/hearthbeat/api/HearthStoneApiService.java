@@ -1,7 +1,6 @@
 package com.smartsoftware.android.hearthbeat.api;
 
 
-import com.smartsoftware.android.hearthbeat.model.ApiCardback;
 import com.smartsoftware.android.hearthbeat.model.Cardback;
 import com.smartsoftware.android.hearthbeat.model.ApiHearthStoneCards;
 
@@ -23,5 +22,5 @@ public interface HearthStoneApiService {
     Observable<ApiHearthStoneCards> getCards(@Query("locale") String locale);
 
     @GET("cardbacks")
-    Observable<List<ApiCardback>> getCardbacks(@Query("locale") String locale);
+    Observable<List<Cardback>> getCardbacks(@Query("locale") String locale);
 }

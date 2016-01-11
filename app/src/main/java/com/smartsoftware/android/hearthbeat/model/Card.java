@@ -1,8 +1,15 @@
 package com.smartsoftware.android.hearthbeat.model;
 
-import io.realm.RealmList;
-import io.realm.RealmObject;
-import io.realm.annotations.PrimaryKey;
+import com.raizlabs.android.dbflow.annotation.Column;
+import com.raizlabs.android.dbflow.annotation.OneToMany;
+import com.raizlabs.android.dbflow.annotation.PrimaryKey;
+import com.raizlabs.android.dbflow.annotation.Table;
+import com.raizlabs.android.dbflow.sql.language.SQLite;
+import com.raizlabs.android.dbflow.structure.BaseModel;
+import com.smartsoftware.android.hearthbeat.data.AppDatabase;
+
+import java.util.List;
+
 
 /**
  * User: Mahmoud Reza Rahbar Azad
@@ -10,39 +17,41 @@ import io.realm.annotations.PrimaryKey;
  * Time: 19:24
  * Email: mrahbar.azad@gmail.com
  */
-public class Card extends RealmObject {
+@Table(database = AppDatabase.class)
+public class Card extends BaseModel {
 
-    @PrimaryKey
-    private String cardId;
+    @PrimaryKey(autoincrement = true)
+    long id;
+    
+    @Column String cardId;
+    @Column String name;
+    @Column String cardSet;
+    @Column String type;
+    @Column String faction;
+    @Column String rarity;
 
-    private String name;
-    private String cardSet;
-    private String type;
-    private String faction;
-    private String rarity;
+    @Column int cost;
+    @Column int attack;
+    @Column int health;
 
-    private int cost;
-    private int attack;
-    private int health;
+    @Column String text;
+    @Column String inPlayText;
+    @Column String flavor;
+    @Column String artist;
+    @Column int durability;
 
-    private String text;
-    private String inPlayText;
-    private String flavor;
-    private String artist;
-    private int durability;
+    @Column boolean collectible;
+    @Column boolean elite;
 
-    private boolean collectible;
-    private boolean elite;
+    @Column String playerClass;
+    @Column String howToGet;
+    @Column String howToGetGold;
+    @Column String race;
+    @Column String img;
+    @Column String imgGold;
+    @Column String locale;
 
-    private String playerClass;
-    private String howToGet;
-    private String howToGetGold;
-    private String race;
-    private String img;
-    private String imgGold;
-    private String locale;
-
-    private RealmList<CardMechanics> mechanics;
+    List<CardMechanics> mechanics;
 
     public String getCardId() {
         return cardId;
@@ -228,11 +237,44 @@ public class Card extends RealmObject {
         this.locale = locale;
     }
 
-    public RealmList<CardMechanics> getMechanics() {
+    public List<CardMechanics> getMechanics() {
         return mechanics;
     }
 
-    public void setMechanics(RealmList<CardMechanics> mechanics) {
+    public void setMechanics(List<CardMechanics> mechanics) {
         this.mechanics = mechanics;
+    }
+
+    @OneToMany(methods = {OneToMany.Method.ALL}, variableName = "mechanics")
+    public List<CardMechanics> loadCardMechanics() {
+        if (mechanics == null || mechanics.isEmpty()) {
+            mechanics = SQLite.select()
+                    .from(CardMechanics.class)
+                    .where(CardMechanics_Table.cardForeignKeyContainer_id.eq(id))
+                    .queryList();
+        }
+        return mechanics;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public Hero toHeroModel() {
+        final Hero hero = new Hero();
+        hero.setCardId(cardId);
+        hero.setName(name);
+        hero.setCardSet(cardSet);
+        hero.setType(type);
+        hero.setRarity(rarity);
+        hero.setHealth(health);
+        hero.setCollectible(collectible);
+        hero.setPlayerClass(playerClass);
+        hero.setImg(img);
+        hero.setImgGold(imgGold);
+        hero.setLocale(locale);
+
+
+        return hero;
     }
 }

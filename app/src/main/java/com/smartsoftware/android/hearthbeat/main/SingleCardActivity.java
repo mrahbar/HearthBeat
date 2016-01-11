@@ -2,10 +2,11 @@ package com.smartsoftware.android.hearthbeat.main;
 
 import android.os.Bundle;
 
+import com.raizlabs.android.dbflow.sql.language.SQLite;
 import com.smartsoftware.android.hearthbeat.R;
 import com.smartsoftware.android.hearthbeat.di.ApplicationComponent;
 import com.smartsoftware.android.hearthbeat.model.Card;
-import com.smartsoftware.android.hearthbeat.persistance.DatabaseGateway;
+import com.smartsoftware.android.hearthbeat.model.Card_Table;
 import com.smartsoftware.android.hearthbeat.presenter.SingleCardPresenter;
 import com.smartsoftware.android.hearthbeat.ui.view.CollectionView;
 
@@ -21,7 +22,6 @@ public class SingleCardActivity extends BaseActivity implements SingleCardPresen
 
     public static final String EXTRA_BUNDLE = "extraBundle";
 
-    @Inject DatabaseGateway databaseGateway;
     private SingleCardPresenter presenter;
 
     @Override
@@ -31,20 +31,16 @@ public class SingleCardActivity extends BaseActivity implements SingleCardPresen
 
         Bundle bundle = getIntent().getBundleExtra(EXTRA_BUNDLE);
         CollectionView.CardIntentBundle intentBundle = CollectionView.CardIntentBundle.fromBundle(bundle);
-        databaseGateway.open(SingleCardActivity.class, this);
-        Card card = databaseGateway.querySingle(SingleCardActivity.class, Card.class, intentBundle.cardId);
+        Card card = SQLite.select()
+                .from(Card.class)
+                .where(Card_Table.cardId.eq(intentBundle.cardId))
+                .querySingle();
         presenter = new SingleCardPresenter(this, intentBundle, card, savedInstanceState == null);
     }
 
     @Override
     public void injectActivity(ApplicationComponent component) {
         component.inject(this);
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        databaseGateway.close(SingleCardActivity.class);
     }
 
     @Override

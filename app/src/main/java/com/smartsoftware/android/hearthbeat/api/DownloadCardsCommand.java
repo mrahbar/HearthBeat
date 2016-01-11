@@ -1,18 +1,13 @@
 package com.smartsoftware.android.hearthbeat.api;
 
-import android.content.Context;
 import android.text.TextUtils;
-import android.util.Log;
 
-import com.smartsoftware.android.hearthbeat.main.BaseActivity;
-import com.smartsoftware.android.hearthbeat.model.ApiCard;
-import com.smartsoftware.android.hearthbeat.model.ApiCardback;
 import com.smartsoftware.android.hearthbeat.model.ApiHearthStoneCards;
-import com.smartsoftware.android.hearthbeat.persistance.DatabaseGateway;
+import com.smartsoftware.android.hearthbeat.model.Card;
+import com.smartsoftware.android.hearthbeat.model.CardMechanics;
+import com.smartsoftware.android.hearthbeat.model.Cardback;
 
 import java.util.List;
-
-import javax.inject.Inject;
 
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
@@ -32,14 +27,10 @@ public class DownloadCardsCommand {
     }
 
     private HearthStoneApiService apiService;
-    private DatabaseGateway databaseGateway;
-    private Context context;
     private CallListener callListener;
 
-    public DownloadCardsCommand(HearthStoneApiService apiService, DatabaseGateway databaseGateway, Context context) {
+    public DownloadCardsCommand(HearthStoneApiService apiService) {
         this.apiService = apiService;
-        this.databaseGateway = databaseGateway;
-        this.context = context;
     }
 
     public void setCallListener(CallListener callListener) {
@@ -62,22 +53,24 @@ public class DownloadCardsCommand {
                 });
     }
 
-    private Void store(ApiHearthStoneCards cards, List<ApiCardback> cardbacks) {
-        databaseGateway.open(DownloadCardsCommand.class, context);
-        databaseGateway.execute(DownloadCardsCommand.class, () -> {
-            Observable.from(cardbacks)
-                    .forEach(apiCardback -> databaseGateway.store(DownloadCardsCommand.class, apiCardback.toModel()));
+    private Void store(ApiHearthStoneCards cards, List<Cardback> cardbacks) {
+        Observable.from(cardbacks)
+                .forEach((cardback) -> {
+                    cardback.save();
+                });
 
-            Observable.from(cards.toList())
-                    .filter(ApiCard::isCollectible)
-                    .forEach(apiCard -> {
-                        if (TextUtils.equals(apiCard.getType(), "Hero"))
-                            databaseGateway.store(DownloadCardsCommand.class, apiCard.toHeroModel());
-                        else
-                            databaseGateway.store(DownloadCardsCommand.class, apiCard.toCardModel());
-                    });
-        });
-        databaseGateway.close(DownloadCardsCommand.class);
+        Observable.from(cards.toList())
+                .filter(Card::isCollectible)
+                .forEach(c -> {
+                    if (TextUtils.equals(c.getType(), "Hero"))
+                        c.toHeroModel().save();
+                    else {
+                        for (CardMechanics cm : c.getMechanics()) {
+                            cm.associateCard(c);
+                        }
+                        c.save();
+                    }
+                });
         return null;
     }
 }

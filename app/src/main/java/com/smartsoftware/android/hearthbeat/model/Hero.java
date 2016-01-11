@@ -1,8 +1,10 @@
 package com.smartsoftware.android.hearthbeat.model;
 
-import io.realm.RealmList;
-import io.realm.RealmObject;
-import io.realm.annotations.PrimaryKey;
+import com.raizlabs.android.dbflow.annotation.Column;
+import com.raizlabs.android.dbflow.annotation.PrimaryKey;
+import com.raizlabs.android.dbflow.annotation.Table;
+import com.raizlabs.android.dbflow.structure.BaseModel;
+import com.smartsoftware.android.hearthbeat.data.AppDatabase;
 
 /**
  * User: Mahmoud Reza Rahbar Azad
@@ -10,23 +12,29 @@ import io.realm.annotations.PrimaryKey;
  * Time: 19:24
  * Email: mrahbar.azad@gmail.com
  */
-public class Hero extends RealmObject {
+@Table(database = AppDatabase.class)
+public class Hero extends BaseModel {
 
-    @PrimaryKey
-    private String cardId;
+    @PrimaryKey(autoincrement = true)
+    long id;
+    
+    @Column String cardId;
+    @Column String name;
+    @Column String cardSet;
+    @Column String type;
+    @Column String rarity;
 
-    private String name;
-    private String cardSet;
-    private String type;
-    private String rarity;
+    @Column int health;
+    @Column boolean collectible;
 
-    private int health;
-    private boolean collectible;
+    @Column String playerClass;
+    @Column String img;
+    @Column String imgGold;
+    @Column String locale;
 
-    private String playerClass;
-    private String img;
-    private String imgGold;
-    private String locale;
+    public long getId() {
+        return id;
+    }
 
     public String getCardId() {
         return cardId;

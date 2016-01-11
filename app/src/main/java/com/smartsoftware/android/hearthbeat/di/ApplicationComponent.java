@@ -5,6 +5,7 @@ import com.smartsoftware.android.hearthbeat.main.LaunchActivity;
 import com.smartsoftware.android.hearthbeat.main.FeedActivity;
 import com.smartsoftware.android.hearthbeat.main.SingleCardActivity;
 import com.smartsoftware.android.hearthbeat.presenter.FeedPresenter;
+import com.smartsoftware.android.hearthbeat.ui.view.FeedsView;
 
 import javax.inject.Singleton;
 
@@ -29,4 +30,5 @@ public interface ApplicationComponent {
     void inject(SingleCardActivity activity);
 
     void inject(FeedPresenter presenter);
+    void inject(FeedsView feedsView);
 }

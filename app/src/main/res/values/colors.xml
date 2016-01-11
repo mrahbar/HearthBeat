@@ -9,6 +9,7 @@
     <color name="default_darker_color">#ff292929</color>
     <color name="default_black_color">#000000</color>
 
+    <color name="mid_grey">#40808080</color>
     <color name="icy_bright_bg_color">#50ffffff</color>
     <color name="icy_dark_bg_color">#30000000</color>
 
@@ -22,4 +23,9 @@
 
     <color name="page_indicator_dark">#80333333</color>
     <color name="page_indicator_dark_selected">#ff333333</color>
+
+    <!-- reddit news -->
+    <color name="reddit_news">#03a9f4</color> <!--light blue 500 -->-->
+    <color name="reddit_news_dark">#039be5</color> <!-- light blue 600 -->
+    <color name="reddit_news_link_highlight">#b303a9f4</color>
 </resources>

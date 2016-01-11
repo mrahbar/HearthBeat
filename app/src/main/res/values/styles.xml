@@ -14,5 +14,29 @@
         <item name="android:textSize">@dimen/text_size_small</item>
     </style>
 
+    <style name="Widget.HeartBeat" parent="android:Widget" />
 
+    <style name="Widget.HeartBeat.TilePrimary">
+        <item name="android:textAppearance">@style/TextAppearance.TilePrimary</item>
+    </style>
+
+    <style name="Widget.HeartBeat.TileSecondary">
+        <item name="android:textAppearance">@style/TextAppearance.TileSecondary</item>
+    </style>
+
+    <style name="TextAppearance.TilePrimary" parent="@android:style/TextAppearance.Material.Subhead">
+        <item name="android:letterSpacing">0.01</item>
+        <item name="lineHeightHint">20sp</item>
+        <item name="font">roboto-mono-regular</item>
+    </style>
+
+    <style name="TextAppearance.TileSecondary" parent="@android:style/TextAppearance.Material.Body2">
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="PlaidDarkOverlay" parent="@android:style/ThemeOverlay.Material.Dark.ActionBar">
+        <!-- Used to theme dark elements in light themed screens.
+             Extend the material dark Action Bar overlay as this contains text styling. -->
+    </style>
 </resources>

@@ -153,7 +153,7 @@ public class CollectionView implements ActivityView, CollectionPagerAdapter.Page
 
         toolbar.addView(classNameSpinner);
         toolbar.addView(cardSetSpinner);
-        toolbar.inflateMenu(R.menu.deckbuilder);
+        toolbar.inflateMenu(R.menu.collection);
         setupSearchView(toolbar.getMenu());
 
         toolbar.setNavigationIcon(R.drawable.ic_back);
@@ -214,7 +214,7 @@ public class CollectionView implements ActivityView, CollectionPagerAdapter.Page
     }
 
     private void setupSearchView(Menu menu) {
-        SearchView searchView = (SearchView) menu.findItem(R.id.menu_deckbuilder_search).getActionView();
+        SearchView searchView = (SearchView) menu.findItem(R.id.menu_collection_search).getActionView();
         searchView.setIconifiedByDefault(true);
         searchView.setInputType(EditorInfo.TYPE_CLASS_TEXT);
         searchView.setSubmitButtonEnabled(false);
@@ -225,7 +225,7 @@ public class CollectionView implements ActivityView, CollectionPagerAdapter.Page
         searchAutoComplete.setTextColor(ContextCompat.getColor(context, R.color.default_white_color));
         searchAutoComplete.setHintTextColor(ContextCompat.getColor(context, R.color.default_white_color));
 
-        searchView.setQueryHint(context.getString(R.string.menu_deckbuilder_search_hint));
+        searchView.setQueryHint(context.getString(R.string.menu_collection_search_hint));
         searchView.setOnQueryTextListener(this);
         searchView.setOnCloseListener(() -> {
             initializeViewPager(originalCards);

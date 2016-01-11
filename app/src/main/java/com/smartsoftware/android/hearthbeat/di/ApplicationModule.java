@@ -7,8 +7,8 @@ import com.google.gson.GsonBuilder;
 import com.smartsoftware.android.hearthbeat.BuildConfig;
 import com.smartsoftware.android.hearthbeat.api.HearthStoneApiService;
 import com.smartsoftware.android.hearthbeat.api.RedditApiService;
+import com.smartsoftware.android.hearthbeat.data.DataManager;
 import com.smartsoftware.android.hearthbeat.main.MainApplication;
-import com.smartsoftware.android.hearthbeat.persistance.DatabaseGateway;
 import com.smartsoftware.android.hearthbeat.persistance.Prefs;
 import com.squareup.okhttp.Request;
 
@@ -16,8 +16,6 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import io.realm.Realm;
-import io.realm.RealmConfiguration;
 import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
 import retrofit.RxJavaCallAdapterFactory;
@@ -35,15 +33,12 @@ public class ApplicationModule {
     private Gson gson;
     private Prefs prefs;
     private HearthStoneApiService hearthStoneApiService;
-    private DatabaseGateway databaseGateway;
-    private final RedditApiService redditApiService;
+    private RedditApiService redditApiService;
+    private DataManager dataManager;
 
     public ApplicationModule(MainApplication app) {
         this.app = app;
-
-        RealmConfiguration config = new RealmConfiguration.Builder(app).build();
-        Realm.setDefaultConfiguration(config);
-        databaseGateway = new DatabaseGateway();
+        dataManager = new DataManager();
 
         prefs = Prefs.with(app);
         gson = new GsonBuilder()
@@ -109,8 +104,7 @@ public class ApplicationModule {
 
     @Provides
     @Singleton
-    DatabaseGateway provideDatabaseGateway() {
-        return databaseGateway;
+    DataManager provideDataManager() {
+        return dataManager;
     }
-
 }

@@ -1,6 +1,14 @@
 package com.smartsoftware.android.hearthbeat.model;
 
-import io.realm.RealmObject;
+import com.raizlabs.android.dbflow.annotation.Column;
+import com.raizlabs.android.dbflow.annotation.ForeignKey;
+import com.raizlabs.android.dbflow.annotation.PrimaryKey;
+import com.raizlabs.android.dbflow.annotation.Table;
+import com.raizlabs.android.dbflow.config.FlowManager;
+import com.raizlabs.android.dbflow.structure.BaseModel;
+import com.raizlabs.android.dbflow.structure.container.ForeignKeyContainer;
+import com.smartsoftware.android.hearthbeat.data.AppDatabase;
+
 
 /**
  * User: Mahmoud Reza Rahbar Azad
@@ -8,14 +16,18 @@ import io.realm.RealmObject;
  * Time: 20:32
  * Email: mrahbar.azad@gmail.com
  */
-public class CardMechanics extends RealmObject {
-    private String name;
+@Table(database = AppDatabase.class)
+public class CardMechanics extends BaseModel {
 
-    public String getName() {
-        return name;
-    }
+    @PrimaryKey(autoincrement = true)
+    long id;
 
-    public void setName(String name) {
-        this.name = name;
+    @Column String name;
+
+    @ForeignKey(saveForeignKeyModel = false)
+    ForeignKeyContainer<Card> cardForeignKeyContainer;
+
+    public void associateCard(Card card) {
+        cardForeignKeyContainer = FlowManager.getContainerAdapter(Card.class).toForeignKeyContainer(card);
     }
 }

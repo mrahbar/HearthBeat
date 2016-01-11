@@ -24,8 +24,13 @@
     <dimen name="spacing_intermediate">16dp</dimen>
     <dimen name="spacing_large">24dp</dimen>
     <dimen name="spacing_xlarge">32dp</dimen>
+    <dimen name="spacing_xxlarge">64dp</dimen>
 
     <dimen name="toolbar_height_material">56dp</dimen>
     <dimen name="status_bar_height">25dp</dimen>
     <dimen name="avatar_size">64dp</dimen>
+
+    <!-- grid -->
+    <integer name="num_columns">2</integer>
+    <dimen name="grid_icon_with_padding">40dp</dimen> <!-- 24dp icon + 2 * @dimen/spacing_normal -->
 </resources>

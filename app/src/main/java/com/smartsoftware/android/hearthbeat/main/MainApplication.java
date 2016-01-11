@@ -7,6 +7,7 @@ import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
+import com.raizlabs.android.dbflow.config.FlowManager;
 import com.smartsoftware.android.hearthbeat.di.ApplicationComponent;
 import com.smartsoftware.android.hearthbeat.di.ApplicationModule;
 import com.smartsoftware.android.hearthbeat.di.DaggerApplicationComponent;
@@ -31,6 +32,7 @@ public class MainApplication extends Application {
                     .build();
         }
 
+        FlowManager.init(this);
         initializeImageLoader();
     }
     private void initializeImageLoader() {

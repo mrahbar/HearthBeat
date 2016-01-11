@@ -1,11 +1,11 @@
 package com.smartsoftware.android.hearthbeat.presenter;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.text.TextUtils;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.raizlabs.android.dbflow.sql.language.SQLite;
 import com.smartsoftware.android.hearthbeat.R;
 import com.smartsoftware.android.hearthbeat.api.DownloadCardsCommand;
 import com.smartsoftware.android.hearthbeat.api.HearthStoneApiService;
@@ -14,7 +14,6 @@ import com.smartsoftware.android.hearthbeat.di.ApplicationComponent;
 import com.smartsoftware.android.hearthbeat.main.BaseActivity;
 import com.smartsoftware.android.hearthbeat.main.CollectionActivity;
 import com.smartsoftware.android.hearthbeat.model.Card;
-import com.smartsoftware.android.hearthbeat.persistance.DatabaseGateway;
 import com.smartsoftware.android.hearthbeat.persistance.PrefKeys;
 import com.smartsoftware.android.hearthbeat.persistance.Prefs;
 import com.smartsoftware.android.hearthbeat.ui.view.FeedsView;
@@ -24,6 +23,8 @@ import java.util.List;
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 /**
  * User: Mahmoud Reza Rahbar Azad
@@ -34,10 +35,9 @@ import butterknife.ButterKnife;
 public class FeedPresenter extends BasePresenter implements FeedsView.FeedsViewListener {
 
     @Inject Prefs prefs;
-    @Inject DatabaseGateway databaseGateway;
     @Inject HearthStoneApiService hearthStoneApiService;
     @Inject RedditApiService redditApiService;
-    private FeedsView listView;
+    private FeedsView feedsView;
     private FeedsListener listener;
 
     public interface FeedsListener {
@@ -48,8 +48,8 @@ public class FeedPresenter extends BasePresenter implements FeedsView.FeedsViewL
         this.listener = listener;
         applicationComponent.inject(this);
 
-        listView = new FeedsView(this);
-        listView.bind(getActivity());
+        feedsView = new FeedsView(this, applicationComponent);
+        feedsView.bind(getActivity());
     }
 
     private BaseActivity getActivity() {
@@ -63,16 +63,9 @@ public class FeedPresenter extends BasePresenter implements FeedsView.FeedsViewL
 
     @Override
     public void onLaunchCollectionActivity() {
-//        redditApiService.getPopularSubmissions()
-//                .subscribeOn(Schedulers.newThread())
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribe(r -> {
-//                    Log.v("FeedPresenter", String.valueOf(r.data.children.size()));
-//                });
-
-        databaseGateway.open(FeedPresenter.class, getActivity());
-        List<Card> cards = databaseGateway.queryList(FeedPresenter.class, Card.class);
-        databaseGateway.close(FeedPresenter.class);
+        List<Card> cards = SQLite.select()
+                .from(Card.class)
+                .queryList();
 
         if (cards.size() == 0) {
             new MaterialDialog.Builder(getActivity())
@@ -87,32 +80,37 @@ public class FeedPresenter extends BasePresenter implements FeedsView.FeedsViewL
         }
     }
 
+    @Override
+    public void onRefreshFeed() {
+        redditApiService.getPopularSubmissions()
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(r -> {
+                    //TODO convert to proper model
+                });
+    }
+
     private void startCardDownload() {
         final String locale = prefs.getString(PrefKeys.LANG_CODE, null);
 
         if (!TextUtils.isEmpty(locale)) {
-            listView.showProgressView();
-            DownloadCardsCommand downloadCardsCommand = new DownloadCardsCommand(hearthStoneApiService, databaseGateway, getActivity());
+            feedsView.showProgressView();
+            DownloadCardsCommand downloadCardsCommand = new DownloadCardsCommand(hearthStoneApiService);
             downloadCardsCommand.setCallListener(new DownloadCardsCommand.CallListener() {
                 @Override
                 public void onDownloadFinished() {
-                    listView.hideProgressView();
+                    feedsView.hideProgressView();
                     Toast.makeText(getActivity(), R.string.launch_download_finished, Toast.LENGTH_SHORT).show();
                     getActivity().startActivity(new Intent(getActivity(), CollectionActivity.class));
                 }
 
                 @Override
                 public void onDownloadError(Throwable e) {
-                    listView.hideProgressView();
-                    listView.showMessage(R.string.launch_download_failed);
+                    feedsView.hideProgressView();
+                    feedsView.showMessage(R.string.launch_download_failed);
                 }
             });
             downloadCardsCommand.call(locale);
         }
-    }
-
-    @Override
-    public Resources getResources() {
-        return getActivity().getResources();
     }
 }
