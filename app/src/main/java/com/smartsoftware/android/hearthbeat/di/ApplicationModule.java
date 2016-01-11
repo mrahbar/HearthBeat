@@ -2,6 +2,10 @@ package com.smartsoftware.android.hearthbeat.di;
 
 import android.content.Context;
 
+import com.codeslap.persistence.DatabaseSpec;
+import com.codeslap.persistence.Persistence;
+import com.codeslap.persistence.PersistenceConfig;
+import com.codeslap.persistence.SqlAdapter;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.smartsoftware.android.hearthbeat.BuildConfig;
@@ -9,6 +13,11 @@ import com.smartsoftware.android.hearthbeat.api.HearthStoneApiService;
 import com.smartsoftware.android.hearthbeat.api.RedditApiService;
 import com.smartsoftware.android.hearthbeat.data.DataManager;
 import com.smartsoftware.android.hearthbeat.main.MainApplication;
+import com.smartsoftware.android.hearthbeat.model.Card;
+import com.smartsoftware.android.hearthbeat.model.CardMechanics;
+import com.smartsoftware.android.hearthbeat.model.Cardback;
+import com.smartsoftware.android.hearthbeat.model.Deck;
+import com.smartsoftware.android.hearthbeat.model.Hero;
 import com.smartsoftware.android.hearthbeat.persistance.Prefs;
 import com.squareup.okhttp.Request;
 
@@ -35,10 +44,15 @@ public class ApplicationModule {
     private HearthStoneApiService hearthStoneApiService;
     private RedditApiService redditApiService;
     private DataManager dataManager;
+    private SqlAdapter sqlAdapter;
 
     public ApplicationModule(MainApplication app) {
         this.app = app;
         dataManager = new DataManager();
+
+        DatabaseSpec database = PersistenceConfig.registerSpec(/**db version**/1);
+        database.match(Card.class, Cardback.class, CardMechanics.class, Hero.class, Deck.class);
+        sqlAdapter = Persistence.getAdapter(app);
 
         prefs = Prefs.with(app);
         gson = new GsonBuilder()
@@ -82,6 +96,13 @@ public class ApplicationModule {
     @Singleton
     Context provideContext() {
         return app;
+    }
+
+
+    @Provides
+    @Singleton
+    SqlAdapter provideSqlAdapter() {
+        return sqlAdapter;
     }
 
     @Provides

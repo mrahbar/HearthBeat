@@ -1,14 +1,7 @@
 package com.smartsoftware.android.hearthbeat.model;
 
-import com.raizlabs.android.dbflow.annotation.Column;
-import com.raizlabs.android.dbflow.annotation.ForeignKey;
-import com.raizlabs.android.dbflow.annotation.PrimaryKey;
-import com.raizlabs.android.dbflow.annotation.Table;
-import com.raizlabs.android.dbflow.config.FlowManager;
-import com.raizlabs.android.dbflow.structure.BaseModel;
-import com.raizlabs.android.dbflow.structure.container.ForeignKeyContainer;
-import com.smartsoftware.android.hearthbeat.data.AppDatabase;
 
+import com.codeslap.persistence.PrimaryKey;
 
 /**
  * User: Mahmoud Reza Rahbar Azad
@@ -16,18 +9,26 @@ import com.smartsoftware.android.hearthbeat.data.AppDatabase;
  * Time: 20:32
  * Email: mrahbar.azad@gmail.com
  */
-@Table(database = AppDatabase.class)
-public class CardMechanics extends BaseModel {
+public class CardMechanics {
 
-    @PrimaryKey(autoincrement = true)
-    long id;
+    @PrimaryKey
+    private long id;
 
-    @Column String name;
+    private String name;
 
-    @ForeignKey(saveForeignKeyModel = false)
-    ForeignKeyContainer<Card> cardForeignKeyContainer;
+    public long getId() {
+        return id;
+    }
 
-    public void associateCard(Card card) {
-        cardForeignKeyContainer = FlowManager.getContainerAdapter(Card.class).toForeignKeyContainer(card);
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

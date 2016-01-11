@@ -67,9 +67,7 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.6.1'
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
     compile 'com.lsjwzh:recyclerviewpager:1.0.8'
-    apt 'com.github.Raizlabs.DBFlow:dbflow-processor:3.0.0-beta1'
-    compile "com.github.Raizlabs.DBFlow:dbflow-core:3.0.0-beta1"
-    compile "com.github.Raizlabs.DBFlow:dbflow:3.0.0-beta1"
+    compile "com.codeslap:persistence:0.9.24"
 
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:1.10.19'

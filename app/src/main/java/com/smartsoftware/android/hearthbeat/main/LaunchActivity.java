@@ -3,6 +3,7 @@ package com.smartsoftware.android.hearthbeat.main;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.codeslap.persistence.SqlAdapter;
 import com.smartsoftware.android.hearthbeat.api.DownloadCardsCommand;
 import com.smartsoftware.android.hearthbeat.api.HearthStoneApiService;
 import com.smartsoftware.android.hearthbeat.di.ApplicationComponent;
@@ -22,6 +23,7 @@ public class LaunchActivity extends BaseActivity implements LaunchPresenter.Laun
 
     @Inject Prefs prefs;
     @Inject HearthStoneApiService apiService;
+    @Inject SqlAdapter sqlAdapter;
     private LaunchPresenter launchPresenter;
     private DownloadCardsCommand downloadCardsCommand;
 
@@ -29,7 +31,7 @@ public class LaunchActivity extends BaseActivity implements LaunchPresenter.Laun
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         launchPresenter = new LaunchPresenter(this, prefs);
-        downloadCardsCommand = new DownloadCardsCommand(apiService);
+        downloadCardsCommand = new DownloadCardsCommand(apiService, sqlAdapter);
         downloadCardsCommand.setCallListener(this);
     }
 

@@ -1,10 +1,7 @@
 package com.smartsoftware.android.hearthbeat.model;
 
-import com.raizlabs.android.dbflow.annotation.Column;
-import com.raizlabs.android.dbflow.annotation.PrimaryKey;
-import com.raizlabs.android.dbflow.annotation.Table;
-import com.raizlabs.android.dbflow.structure.BaseModel;
-import com.smartsoftware.android.hearthbeat.data.AppDatabase;
+
+import com.codeslap.persistence.PrimaryKey;
 
 /**
  * User: Mahmoud Reza Rahbar Azad
@@ -12,28 +9,21 @@ import com.smartsoftware.android.hearthbeat.data.AppDatabase;
  * Time: 23:39
  * Email: mrahbar.azad@gmail.com
  */
-@Table(database = AppDatabase.class)
-public class Cardback extends BaseModel {
+public class Cardback  {
 
-    @PrimaryKey(autoincrement = true)
-    long id;
-    
-    @Column String cardBackId;
-    @Column String name;
-    @Column String description;
-    @Column String source;
-    @Column String howToGet;
-    @Column String img;
-    @Column String imgAnimated;
-    @Column String sortCategory;
-    @Column String sortOrder;
-    @Column String locale;
-    @Column String sourceDescription;
-    @Column boolean enabled;
-
-    public long getId() {
-        return id;
-    }
+    @PrimaryKey
+    private String cardBackId;
+    private String name;
+    private String description;
+    private String source;
+    private String howToGet;
+    private String img;
+    private String imgAnimated;
+    private String sortCategory;
+    private String sortOrder;
+    private String locale;
+    private String sourceDescription;
+    private boolean enabled;
 
     public String getCardBackId() {
         return cardBackId;

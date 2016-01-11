@@ -1,12 +1,6 @@
 package com.smartsoftware.android.hearthbeat.model;
 
-import com.raizlabs.android.dbflow.annotation.Column;
-import com.raizlabs.android.dbflow.annotation.OneToMany;
-import com.raizlabs.android.dbflow.annotation.PrimaryKey;
-import com.raizlabs.android.dbflow.annotation.Table;
-import com.raizlabs.android.dbflow.sql.language.SQLite;
-import com.raizlabs.android.dbflow.structure.BaseModel;
-import com.smartsoftware.android.hearthbeat.data.AppDatabase;
+import com.codeslap.persistence.PrimaryKey;
 
 import java.util.List;
 
@@ -17,41 +11,39 @@ import java.util.List;
  * Time: 19:24
  * Email: mrahbar.azad@gmail.com
  */
-@Table(database = AppDatabase.class)
-public class Card extends BaseModel {
+public class Card{
 
-    @PrimaryKey(autoincrement = true)
-    long id;
-    
-    @Column String cardId;
-    @Column String name;
-    @Column String cardSet;
-    @Column String type;
-    @Column String faction;
-    @Column String rarity;
+    @PrimaryKey
+    private String cardId;
 
-    @Column int cost;
-    @Column int attack;
-    @Column int health;
+    private String name;
+    private String cardSet;
+    private String type;
+    private String faction;
+    private String rarity;
 
-    @Column String text;
-    @Column String inPlayText;
-    @Column String flavor;
-    @Column String artist;
-    @Column int durability;
+    private int cost;
+    private int attack;
+    private int health;
 
-    @Column boolean collectible;
-    @Column boolean elite;
+    private String text;
+    private String inPlayText;
+    private String flavor;
+    private String artist;
+    private int durability;
 
-    @Column String playerClass;
-    @Column String howToGet;
-    @Column String howToGetGold;
-    @Column String race;
-    @Column String img;
-    @Column String imgGold;
-    @Column String locale;
+    private boolean collectible;
+    private boolean elite;
 
-    List<CardMechanics> mechanics;
+    private String playerClass;
+    private String howToGet;
+    private String howToGetGold;
+    private String race;
+    private String img;
+    private String imgGold;
+    private String locale;
+
+    private List<CardMechanics> mechanics;
 
     public String getCardId() {
         return cardId;
@@ -243,21 +235,6 @@ public class Card extends BaseModel {
 
     public void setMechanics(List<CardMechanics> mechanics) {
         this.mechanics = mechanics;
-    }
-
-    @OneToMany(methods = {OneToMany.Method.ALL}, variableName = "mechanics")
-    public List<CardMechanics> loadCardMechanics() {
-        if (mechanics == null || mechanics.isEmpty()) {
-            mechanics = SQLite.select()
-                    .from(CardMechanics.class)
-                    .where(CardMechanics_Table.cardForeignKeyContainer_id.eq(id))
-                    .queryList();
-        }
-        return mechanics;
-    }
-
-    public long getId() {
-        return id;
     }
 
     public Hero toHeroModel() {

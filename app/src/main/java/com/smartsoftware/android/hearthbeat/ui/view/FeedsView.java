@@ -19,6 +19,8 @@ import com.smartsoftware.android.hearthbeat.ui.ScreenContainer;
 import com.smartsoftware.android.hearthbeat.ui.adapter.FeedsAdapter;
 import com.smartsoftware.android.hearthbeat.ui.recyclerview.InfiniteScrollListener;
 
+import java.util.ArrayList;
+
 import javax.inject.Inject;
 
 import butterknife.Bind;
@@ -80,7 +82,7 @@ public class FeedsView implements ActivityView {
     }
 
     private void initializeGrid() {
-        FeedsAdapter adapter = new FeedsAdapter(null, layoutInflater, dataManager);
+        FeedsAdapter adapter = new FeedsAdapter(new ArrayList<>(), layoutInflater, dataManager);
 
         grid.setAdapter(adapter);
         GridLayoutManager layoutManager = new GridLayoutManager(grid.getContext(), columns);

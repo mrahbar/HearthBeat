@@ -5,7 +5,7 @@ import android.text.TextUtils;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.raizlabs.android.dbflow.sql.language.SQLite;
+import com.codeslap.persistence.SqlAdapter;
 import com.smartsoftware.android.hearthbeat.R;
 import com.smartsoftware.android.hearthbeat.api.DownloadCardsCommand;
 import com.smartsoftware.android.hearthbeat.api.HearthStoneApiService;
@@ -37,6 +37,7 @@ public class FeedPresenter extends BasePresenter implements FeedsView.FeedsViewL
     @Inject Prefs prefs;
     @Inject HearthStoneApiService hearthStoneApiService;
     @Inject RedditApiService redditApiService;
+    @Inject SqlAdapter sqlAdapter;
     private FeedsView feedsView;
     private FeedsListener listener;
 
@@ -63,9 +64,7 @@ public class FeedPresenter extends BasePresenter implements FeedsView.FeedsViewL
 
     @Override
     public void onLaunchCollectionActivity() {
-        List<Card> cards = SQLite.select()
-                .from(Card.class)
-                .queryList();
+        List<Card> cards = sqlAdapter.findAll(Card.class);
 
         if (cards.size() == 0) {
             new MaterialDialog.Builder(getActivity())
@@ -95,7 +94,7 @@ public class FeedPresenter extends BasePresenter implements FeedsView.FeedsViewL
 
         if (!TextUtils.isEmpty(locale)) {
             feedsView.showProgressView();
-            DownloadCardsCommand downloadCardsCommand = new DownloadCardsCommand(hearthStoneApiService);
+            DownloadCardsCommand downloadCardsCommand = new DownloadCardsCommand(hearthStoneApiService, sqlAdapter);
             downloadCardsCommand.setCallListener(new DownloadCardsCommand.CallListener() {
                 @Override
                 public void onDownloadFinished() {

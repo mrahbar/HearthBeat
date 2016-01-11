@@ -2,9 +2,9 @@ package com.smartsoftware.android.hearthbeat.api;
 
 import android.text.TextUtils;
 
+import com.codeslap.persistence.SqlAdapter;
 import com.smartsoftware.android.hearthbeat.model.ApiHearthStoneCards;
 import com.smartsoftware.android.hearthbeat.model.Card;
-import com.smartsoftware.android.hearthbeat.model.CardMechanics;
 import com.smartsoftware.android.hearthbeat.model.Cardback;
 
 import java.util.List;
@@ -27,10 +27,12 @@ public class DownloadCardsCommand {
     }
 
     private HearthStoneApiService apiService;
+    private SqlAdapter sqlAdapter;
     private CallListener callListener;
 
-    public DownloadCardsCommand(HearthStoneApiService apiService) {
+    public DownloadCardsCommand(HearthStoneApiService apiService, SqlAdapter sqlAdapter) {
         this.apiService = apiService;
+        this.sqlAdapter = sqlAdapter;
     }
 
     public void setCallListener(CallListener callListener) {
@@ -56,19 +58,16 @@ public class DownloadCardsCommand {
     private Void store(ApiHearthStoneCards cards, List<Cardback> cardbacks) {
         Observable.from(cardbacks)
                 .forEach((cardback) -> {
-                    cardback.save();
+                    sqlAdapter.store(cardback);
                 });
 
         Observable.from(cards.toList())
                 .filter(Card::isCollectible)
                 .forEach(c -> {
                     if (TextUtils.equals(c.getType(), "Hero"))
-                        c.toHeroModel().save();
+                        sqlAdapter.store(c.toHeroModel());
                     else {
-                        for (CardMechanics cm : c.getMechanics()) {
-                            cm.associateCard(c);
-                        }
-                        c.save();
+                        sqlAdapter.store(c);
                     }
                 });
         return null;

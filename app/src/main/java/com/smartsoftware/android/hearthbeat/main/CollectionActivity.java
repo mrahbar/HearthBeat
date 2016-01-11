@@ -3,7 +3,7 @@ package com.smartsoftware.android.hearthbeat.main;
 import android.os.Bundle;
 import android.text.TextUtils;
 
-import com.raizlabs.android.dbflow.sql.language.SQLite;
+import com.codeslap.persistence.SqlAdapter;
 import com.smartsoftware.android.hearthbeat.R;
 import com.smartsoftware.android.hearthbeat.di.ApplicationComponent;
 import com.smartsoftware.android.hearthbeat.model.Card;
@@ -19,6 +19,7 @@ import rx.Observable;
 
 public class CollectionActivity extends BaseActivity implements CollectionPresenter.CollectionPresenterListener {
 
+    @Inject SqlAdapter sqlAdapter;
     private CollectionPresenter deckListPresenter;
     private boolean paused;
 
@@ -26,9 +27,7 @@ public class CollectionActivity extends BaseActivity implements CollectionPresen
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        List<Card> cards = SQLite.select()
-                .from(Card.class)
-                .queryList();
+        List<Card> cards = sqlAdapter.findAll(Card.class);
 
         String neutralClassName = getString(R.string.class_neutral);
         Observable.from(cards)

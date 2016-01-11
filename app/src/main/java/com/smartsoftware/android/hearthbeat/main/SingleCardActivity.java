@@ -2,11 +2,10 @@ package com.smartsoftware.android.hearthbeat.main;
 
 import android.os.Bundle;
 
-import com.raizlabs.android.dbflow.sql.language.SQLite;
+import com.codeslap.persistence.SqlAdapter;
 import com.smartsoftware.android.hearthbeat.R;
 import com.smartsoftware.android.hearthbeat.di.ApplicationComponent;
 import com.smartsoftware.android.hearthbeat.model.Card;
-import com.smartsoftware.android.hearthbeat.model.Card_Table;
 import com.smartsoftware.android.hearthbeat.presenter.SingleCardPresenter;
 import com.smartsoftware.android.hearthbeat.ui.view.CollectionView;
 
@@ -22,6 +21,7 @@ public class SingleCardActivity extends BaseActivity implements SingleCardPresen
 
     public static final String EXTRA_BUNDLE = "extraBundle";
 
+    @Inject SqlAdapter sqlAdapter;
     private SingleCardPresenter presenter;
 
     @Override
@@ -31,10 +31,10 @@ public class SingleCardActivity extends BaseActivity implements SingleCardPresen
 
         Bundle bundle = getIntent().getBundleExtra(EXTRA_BUNDLE);
         CollectionView.CardIntentBundle intentBundle = CollectionView.CardIntentBundle.fromBundle(bundle);
-        Card card = SQLite.select()
-                .from(Card.class)
-                .where(Card_Table.cardId.eq(intentBundle.cardId))
-                .querySingle();
+        Card where = new Card();
+        where.setCardId(intentBundle.cardId);
+        Card card = sqlAdapter.findFirst(where);
+
         presenter = new SingleCardPresenter(this, intentBundle, card, savedInstanceState == null);
     }
 
