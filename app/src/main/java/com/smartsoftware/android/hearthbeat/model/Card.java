@@ -1,7 +1,5 @@
 package com.smartsoftware.android.hearthbeat.model;
 
-import com.codeslap.persistence.PrimaryKey;
-
 import java.util.List;
 
 
@@ -11,9 +9,9 @@ import java.util.List;
  * Time: 19:24
  * Email: mrahbar.azad@gmail.com
  */
-public class Card{
+public class Card implements Model {
+    public static final String KEY_SUFFIX = "CARD:";
 
-    @PrimaryKey
     private String cardId;
 
     private String name;
@@ -253,5 +251,10 @@ public class Card{
 
 
         return hero;
+    }
+
+    @Override
+    public String buildKey() {
+        return KEY_SUFFIX+cardId;
     }
 }

@@ -1,16 +1,14 @@
 package com.smartsoftware.android.hearthbeat.model;
 
-import com.codeslap.persistence.PrimaryKey;
-
 /**
  * User: Mahmoud Reza Rahbar Azad
  * Date: 18.10.2015
  * Time: 19:24
  * Email: mrahbar.azad@gmail.com
  */
-public class Hero {
+public class Hero implements Model {
+    public static final String KEY_SUFFIX = "HERO:";
 
-    @PrimaryKey
     private String cardId;
     private String name;
     private String cardSet;
@@ -111,5 +109,10 @@ public class Hero {
 
     public void setLocale(String locale) {
         this.locale = locale;
+    }
+
+    @Override
+    public String buildKey() {
+        return KEY_SUFFIX+cardId;
     }
 }

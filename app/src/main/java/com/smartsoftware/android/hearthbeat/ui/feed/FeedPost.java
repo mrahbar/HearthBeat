@@ -8,23 +8,37 @@ package com.smartsoftware.android.hearthbeat.ui.feed;
  */
 public abstract class FeedPost {
 
-    public final long id;
+    public final String id;
+    public final String type;
     public final String title;
     public String url;
 
-    public FeedPost(long id,
-                     String title,
-                     String url) {
+    public FeedPost(String id,
+                    String type, String title,
+                    String url) {
         this.id = id;
+        this.type = type;
         this.title = title;
         this.url = url;
     }
 
-    /**
-     * Equals check based on the id field
-     */
+
     @Override
     public boolean equals(Object o) {
-        return (o.getClass() == getClass() && ((FeedPost) o).id == id);
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        FeedPost feedPost = (FeedPost) o;
+
+        if (!id.equals(feedPost.id)) return false;
+        return type.equals(feedPost.type);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id.hashCode();
+        result = 31 * result + type.hashCode();
+        return result;
     }
 }

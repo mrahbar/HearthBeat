@@ -3,8 +3,6 @@ package com.smartsoftware.android.hearthbeat.main;
 import android.app.Application;
 import android.support.annotation.VisibleForTesting;
 
-import com.codeslap.persistence.DatabaseSpec;
-import com.codeslap.persistence.PersistenceConfig;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -12,11 +10,6 @@ import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.smartsoftware.android.hearthbeat.di.ApplicationComponent;
 import com.smartsoftware.android.hearthbeat.di.ApplicationModule;
 import com.smartsoftware.android.hearthbeat.di.DaggerApplicationComponent;
-import com.smartsoftware.android.hearthbeat.model.Card;
-import com.smartsoftware.android.hearthbeat.model.CardMechanics;
-import com.smartsoftware.android.hearthbeat.model.Cardback;
-import com.smartsoftware.android.hearthbeat.model.Deck;
-import com.smartsoftware.android.hearthbeat.model.Hero;
 
 /**
  * User: Mahmoud Reza Rahbar Azad

@@ -7,29 +7,31 @@
     android:id="@+id/story_title_background"
     android:layout_width="match_parent"
     android:layout_height="0dp"
+    android:foreground="@drawable/post_foreground_selector"
     android:background="@color/reddit_news"
     android:orientation="vertical"
     android:stateListAnimator="@animator/raise"
     android:theme="@style/PlaidDarkOverlay">
 
     <com.smartsoftware.android.hearthbeat.ui.widget.BaselineGridTextView
-        android:id="@+id/story_title"
+        android:id="@+id/reddit_post_title"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="@dimen/spacing_intermediate"
         android:layout_weight="1"
         android:ellipsize="end"
-        android:breakStrategy="simple"
+        android:maxLines="2"
         tools:text="Amazing designer news story"
         style="@style/Widget.HeartBeat.TilePrimary" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="end"
         android:orientation="horizontal">
 
         <com.smartsoftware.android.hearthbeat.ui.widget.BaselineGridTextView
-            android:id="@+id/story_score"
+            android:id="@+id/reddit_post_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
@@ -38,11 +40,12 @@
             android:gravity="center_vertical"
             android:padding="@dimen/spacing_medium"
             app:topPaddingHint="@dimen/spacing_medium"
+            android:drawableStart="@drawable/ic_score_small"
             tools:text="7"
             style="@style/Widget.HeartBeat.TileSecondary" />
 
         <com.smartsoftware.android.hearthbeat.ui.widget.BaselineGridTextView
-            android:id="@+id/story_comments"
+            android:id="@+id/reddit_post_comments"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
@@ -50,16 +53,10 @@
             android:drawablePadding="@dimen/spacing_medium"
             android:gravity="center_vertical"
             android:padding="@dimen/spacing_medium"
+            android:drawableStart="@drawable/ic_comment_small"
             app:topPaddingHint="@dimen/spacing_medium"
             tools:text="7"
             style="@style/Widget.HeartBeat.TileSecondary" />
     </LinearLayout>
 
-
-    <!--
-    android:foreground="@drawable/light_ripple"
-
-        android:background="@drawable/light_ripple"
-        android:drawableStart="@drawable/ic_comment_light"
-        -->
 </com.smartsoftware.android.hearthbeat.ui.widget.FourThreeLinearLayout>

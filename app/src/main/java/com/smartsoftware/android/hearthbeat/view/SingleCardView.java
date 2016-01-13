@@ -1,4 +1,4 @@
-package com.smartsoftware.android.hearthbeat.ui.view;
+package com.smartsoftware.android.hearthbeat.view;
 
 import android.animation.ObjectAnimator;
 import android.content.res.Resources;
@@ -9,18 +9,22 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.smartsoftware.android.hearthbeat.R;
 import com.smartsoftware.android.hearthbeat.main.BaseActivity;
 import com.smartsoftware.android.hearthbeat.model.Card;
 import com.smartsoftware.android.hearthbeat.ui.ActivityView;
+import com.smartsoftware.android.hearthbeat.ui.widget.SlidingUpPanelLayout;
 
 import butterknife.Bind;
+import butterknife.BindColor;
 import butterknife.BindDimen;
 
 /**
@@ -43,8 +47,25 @@ public class SingleCardView implements ActivityView {
     @Bind(R.id.single_card_toolbar)
     Toolbar toolbar;
 
+    @Bind(R.id.single_card_slidingview)
+    SlidingUpPanelLayout slidingUpPanel;
+
+    @Bind(R.id.single_card_details_flavor)
+    TextView cardDetailFlavor;
+    @Bind(R.id.single_card_details_cardset)
+    TextView cardDetailCardset;
+    @Bind(R.id.single_card_details_artist)
+    TextView cardDetailArtist;
+    @Bind(R.id.single_card_details_howtoget)
+    TextView cardDetailHowToGet;
+    @Bind(R.id.single_card_details_howtoget_golden)
+    TextView cardDetailHowToGetGolden;
+
     @BindDimen(R.dimen.toolbar_height_material)
     int toolbarHeight;
+
+    @BindColor(android.R.color.transparent)
+    int fadeColor;
 
     private SingleCardViewListener listener;
     private CollectionView.CardIntentBundle intentBundle;
@@ -90,6 +111,24 @@ public class SingleCardView implements ActivityView {
         Bitmap bitmap = ImageLoader.getInstance().loadImageSync(card.getImg());
         cardImageDrawable = new BitmapDrawable(listener.getResources(), bitmap);
         cardImageView.setImageDrawable(cardImageDrawable);
+
+        slidingUpPanel.setAnchorPoint(0.75f);
+        slidingUpPanel.setBackgroundFadeEnabled(true);
+        slidingUpPanel.setCoveredFadeColor(fadeColor);
+
+        setDetailText(cardDetailFlavor, card.getFlavor());
+        setDetailText(cardDetailCardset, card.getCardSet());
+        setDetailText(cardDetailArtist, card.getArtist());
+        setDetailText(cardDetailHowToGet, card.getHowToGet());
+        setDetailText(cardDetailHowToGetGolden, card.getHowToGetGold());
+    }
+
+    private void setDetailText(TextView view, String text) {
+        if (!TextUtils.isEmpty(text)) {
+            view.setText(card.getFlavor());
+        } else {
+            view.setVisibility(View.GONE);
+        }
     }
 
     private void initializeToolbar() {

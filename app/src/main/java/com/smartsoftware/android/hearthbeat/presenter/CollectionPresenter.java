@@ -6,7 +6,7 @@ import android.content.res.Resources;
 import com.smartsoftware.android.hearthbeat.main.BaseActivity;
 import com.smartsoftware.android.hearthbeat.main.SingleCardActivity;
 import com.smartsoftware.android.hearthbeat.model.Card;
-import com.smartsoftware.android.hearthbeat.ui.view.CollectionView;
+import com.smartsoftware.android.hearthbeat.view.CollectionView;
 
 import java.util.List;
 import java.util.Map;

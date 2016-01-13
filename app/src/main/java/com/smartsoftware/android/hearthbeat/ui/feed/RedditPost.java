@@ -9,10 +9,12 @@ package com.smartsoftware.android.hearthbeat.ui.feed;
 public class RedditPost extends FeedPost {
 
     public final long num_comments, score;
+    public final String thumbnail;
 
-    public RedditPost(long id, String title, String url, long num_comments, long score) {
-        super(id, title, url);
+    public RedditPost(String id, String title, String url, long num_comments, long score, String thumbnail) {
+        super(id, "Reddit", title, url.replace("www.","m."));
         this.num_comments = num_comments;
         this.score = score;
+        this.thumbnail = thumbnail;
     }
 }

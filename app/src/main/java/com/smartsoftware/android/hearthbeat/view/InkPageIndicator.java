@@ -1,4 +1,4 @@
-package com.smartsoftware.android.hearthbeat.ui.view;
+package com.smartsoftware.android.hearthbeat.view;
 
 /*
  * Copyright 2015 Google Inc.

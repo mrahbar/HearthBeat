@@ -2,10 +2,11 @@ package com.smartsoftware.android.hearthbeat.api;
 
 import android.text.TextUtils;
 
-import com.codeslap.persistence.SqlAdapter;
 import com.smartsoftware.android.hearthbeat.model.ApiHearthStoneCards;
 import com.smartsoftware.android.hearthbeat.model.Card;
 import com.smartsoftware.android.hearthbeat.model.Cardback;
+import com.smartsoftware.android.hearthbeat.model.Hero;
+import com.smartsoftware.android.hearthbeat.persistance.DatabaseManager;
 
 import java.util.List;
 
@@ -27,10 +28,10 @@ public class DownloadCardsCommand {
     }
 
     private HearthStoneApiService apiService;
-    private SqlAdapter sqlAdapter;
+    private DatabaseManager sqlAdapter;
     private CallListener callListener;
 
-    public DownloadCardsCommand(HearthStoneApiService apiService, SqlAdapter sqlAdapter) {
+    public DownloadCardsCommand(HearthStoneApiService apiService, DatabaseManager sqlAdapter) {
         this.apiService = apiService;
         this.sqlAdapter = sqlAdapter;
     }
@@ -57,18 +58,13 @@ public class DownloadCardsCommand {
 
     private Void store(ApiHearthStoneCards cards, List<Cardback> cardbacks) {
         Observable.from(cardbacks)
-                .forEach((cardback) -> {
-                    sqlAdapter.store(cardback);
-                });
+                .forEach(sqlAdapter::store);
 
         Observable.from(cards.toList())
                 .filter(Card::isCollectible)
                 .forEach(c -> {
-                    if (TextUtils.equals(c.getType(), "Hero"))
-                        sqlAdapter.store(c.toHeroModel());
-                    else {
-                        sqlAdapter.store(c);
-                    }
+                    if (TextUtils.equals(c.getType(), "Hero")) sqlAdapter.store(c.toHeroModel());
+                    else sqlAdapter.store(c);
                 });
         return null;
     }

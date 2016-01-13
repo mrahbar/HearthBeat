@@ -14,6 +14,8 @@
     <string name="launch_download_finished">Download finished</string>
     <string name="launch_download_failed">Download failed</string>
 
+    <string name="feed_refreshing">Refreshing content</string>
+
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
     <string name="drawer_menu_decklist">Decks</string>
@@ -32,4 +34,9 @@
     <string name="class_mage">Mage</string>
     <string name="class_hunter">Hunter</string>
     <string name="class_druid">Druid</string>
+
+    <string name="card_details_cardset">Card Set</string>
+    <string name="card_details_artitst">Artist Name</string>
+    <string name="card_details_howtoget">How to get this Card</string>
+    <string name="card_details_howtoget_golden">How to get golden Card</string>
 </resources>

@@ -3,10 +3,10 @@ package com.smartsoftware.android.hearthbeat.main;
 import android.os.Bundle;
 import android.text.TextUtils;
 
-import com.codeslap.persistence.SqlAdapter;
 import com.smartsoftware.android.hearthbeat.R;
 import com.smartsoftware.android.hearthbeat.di.ApplicationComponent;
 import com.smartsoftware.android.hearthbeat.model.Card;
+import com.smartsoftware.android.hearthbeat.persistance.DatabaseManager;
 import com.smartsoftware.android.hearthbeat.presenter.CollectionPresenter;
 
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ import rx.Observable;
 
 public class CollectionActivity extends BaseActivity implements CollectionPresenter.CollectionPresenterListener {
 
-    @Inject SqlAdapter sqlAdapter;
+    @Inject DatabaseManager sqlAdapter;
     private CollectionPresenter deckListPresenter;
     private boolean paused;
 
@@ -27,7 +27,7 @@ public class CollectionActivity extends BaseActivity implements CollectionPresen
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        List<Card> cards = sqlAdapter.findAll(Card.class);
+        List<Card> cards = sqlAdapter.findAll(Card.KEY_SUFFIX, Card.class);
 
         String neutralClassName = getString(R.string.class_neutral);
         Observable.from(cards)

@@ -1,8 +1,5 @@
 package com.smartsoftware.android.hearthbeat.model;
 
-import com.codeslap.persistence.PrimaryKey;
-import com.google.gson.annotations.SerializedName;
-
 import java.util.Date;
 import java.util.List;
 
@@ -13,9 +10,9 @@ import java.util.List;
  * Time: 22:48
  * Email: mrahbar.azad@gmail.com
  */
-public class Deck {
+public class Deck implements Model {
+    public static final String KEY_SUFFIX = "DECK:";
 
-    @PrimaryKey
     private String id;
 
     private String remoteId;
@@ -125,5 +122,10 @@ public class Deck {
 
     public void setCard(List<Card> card) {
         this.card = card;
+    }
+
+    @Override
+    public String buildKey() {
+        return KEY_SUFFIX+id;
     }
 }

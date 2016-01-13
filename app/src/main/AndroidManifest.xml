@@ -23,6 +23,10 @@
         <activity android:name=".main.CollectionActivity"/>
         <activity android:name=".main.SingleCardActivity"
             android:theme="@style/HeartBeat.Theme.SingleCard"/>
+        <activity android:name=".main.WebviewActivity" android:hardwareAccelerated="false" />
+        <service
+            android:name=".chrome.KeepAliveService"
+            android:exported="true"/>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.smartsoftware.android.hearthbeat.ui.view;
+package com.smartsoftware.android.hearthbeat.view;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

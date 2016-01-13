@@ -16,14 +16,25 @@ import com.smartsoftware.android.hearthbeat.R;
 public class ImageLoaderUtils {
 
     public enum ImageType {
-        CARD_IMAGE
+        CARD_IMAGE,
+        THUMBNAIL
     }
 
     public static final DisplayImageOptions CARD_IMAGE_NORMAL = new DisplayImageOptions.Builder()
             .resetViewBeforeLoading(true)
-            .cacheInMemory(false)
+            .cacheInMemory(true)
             .cacheOnDisk(true)
             .showImageOnLoading(R.drawable.default_card_back)
+            .extraForDownloader(ImageType.CARD_IMAGE)
+            .imageScaleType(ImageScaleType.IN_SAMPLE_POWER_OF_2)
+            .bitmapConfig(Bitmap.Config.RGB_565)
+            .displayer(new FadeInBitmapDisplayer(300))
+            .build();
+
+    public static final DisplayImageOptions PREVIEW_THUMBNAIL_NORMAL = new DisplayImageOptions.Builder()
+            .resetViewBeforeLoading(true)
+            .cacheInMemory(false)
+            .cacheOnDisk(true)
             .extraForDownloader(ImageType.CARD_IMAGE)
             .imageScaleType(ImageScaleType.IN_SAMPLE_POWER_OF_2)
             .bitmapConfig(Bitmap.Config.RGB_565)

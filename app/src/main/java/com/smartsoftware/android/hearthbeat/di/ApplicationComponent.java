@@ -5,7 +5,7 @@ import com.smartsoftware.android.hearthbeat.main.LaunchActivity;
 import com.smartsoftware.android.hearthbeat.main.FeedActivity;
 import com.smartsoftware.android.hearthbeat.main.SingleCardActivity;
 import com.smartsoftware.android.hearthbeat.presenter.FeedPresenter;
-import com.smartsoftware.android.hearthbeat.ui.view.FeedsView;
+import com.smartsoftware.android.hearthbeat.view.FeedsView;
 
 import javax.inject.Singleton;
 

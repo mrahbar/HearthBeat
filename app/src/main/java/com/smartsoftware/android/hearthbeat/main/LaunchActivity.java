@@ -3,10 +3,10 @@ package com.smartsoftware.android.hearthbeat.main;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.codeslap.persistence.SqlAdapter;
 import com.smartsoftware.android.hearthbeat.api.DownloadCardsCommand;
 import com.smartsoftware.android.hearthbeat.api.HearthStoneApiService;
 import com.smartsoftware.android.hearthbeat.di.ApplicationComponent;
+import com.smartsoftware.android.hearthbeat.persistance.DatabaseManager;
 import com.smartsoftware.android.hearthbeat.persistance.PrefKeys;
 import com.smartsoftware.android.hearthbeat.persistance.Prefs;
 import com.smartsoftware.android.hearthbeat.presenter.LaunchPresenter;
@@ -23,7 +23,7 @@ public class LaunchActivity extends BaseActivity implements LaunchPresenter.Laun
 
     @Inject Prefs prefs;
     @Inject HearthStoneApiService apiService;
-    @Inject SqlAdapter sqlAdapter;
+    @Inject DatabaseManager sqlAdapter;
     private LaunchPresenter launchPresenter;
     private DownloadCardsCommand downloadCardsCommand;
 

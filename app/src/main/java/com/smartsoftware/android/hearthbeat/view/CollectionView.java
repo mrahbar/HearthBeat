@@ -1,4 +1,4 @@
-package com.smartsoftware.android.hearthbeat.ui.view;
+package com.smartsoftware.android.hearthbeat.view;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -58,13 +58,13 @@ public class CollectionView implements ActivityView, CollectionPagerAdapter.Page
     @BindInt(R.integer.card_grid_rows)
     int cardGridRows;
 
-    @Bind(R.id.deckbuilder_viewpager)
+    @Bind(R.id.collection_viewpager)
     ViewPager viewPager;
 
     @BindDimen(R.dimen.toolbar_height_material)
     int toolbarHeight;
 
-    @Bind(R.id.deckbuilder_toolbar)
+    @Bind(R.id.collection_toolbar)
     Toolbar toolbar;
 
     private DeckBuilderViewListener listener;
@@ -98,7 +98,7 @@ public class CollectionView implements ActivityView, CollectionPagerAdapter.Page
     }
 
     public int getLayout() {
-        return R.layout.activity_deckbuilder;
+        return R.layout.activity_collection;
     }
 
     private void initializeView() {

@@ -1,17 +1,16 @@
 package com.smartsoftware.android.hearthbeat.model;
 
 
-import com.codeslap.persistence.PrimaryKey;
-
 /**
  * User: Mahmoud Reza Rahbar Azad
  * Date: 18.10.2015
  * Time: 23:39
  * Email: mrahbar.azad@gmail.com
  */
-public class Cardback  {
+public class Cardback implements Model {
 
-    @PrimaryKey
+    public static final String KEY_SUFFIX = "CARDBACK:";
+
     private String cardBackId;
     private String name;
     private String description;
@@ -119,5 +118,10 @@ public class Cardback  {
 
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
+    }
+
+    @Override
+    public String buildKey() {
+        return KEY_SUFFIX+cardBackId;
     }
 }

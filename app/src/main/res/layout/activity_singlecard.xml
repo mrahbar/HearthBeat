@@ -14,32 +14,101 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <ScrollView
+    <com.smartsoftware.android.hearthbeat.ui.widget.SlidingUpPanelLayout
+        android:id="@+id/single_card_slidingview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+
+        <ImageView
+            android:id="@+id/single_card_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/spacing_large" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/icy_dark_bg_color"
+            android:padding="@dimen/spacing_small"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/single_card_imageview"
-                android:layout_width="300dp"
-                android:layout_height="450dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="@dimen/spacing_large" />
+                <TextView
+                    android:id="@+id/single_card_details_flavor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/spacing_small"
+                    android:textSize="@dimen/text_size_intermediate"
+                    tools:text="Cast Moonfire, and never stop. - How to Be a Druid, Chapter 5, Section 3"/>
 
-            <LinearLayout
-                android:id="@+id/single_card_card_details"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/default_dark_color"
-                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:padding="@dimen/spacing_small"
+                    android:textSize="@dimen/text_size_medium"
+                    android:text="@string/card_details_cardset"/>
 
-            </LinearLayout>
+                <TextView
+                    android:id="@+id/single_card_details_cardset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_small"
+                    android:textSize="@dimen/text_size_medium"
+                    tools:text="Basic"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:padding="@dimen/spacing_small"
+                    android:textSize="@dimen/text_size_medium"
+                    android:text="@string/card_details_artitst"/>
+
+                <TextView
+                    android:id="@+id/single_card_details_artist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_small"
+                    android:textSize="@dimen/text_size_medium"
+                    tools:text="Richard Wright"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:padding="@dimen/spacing_small"
+                    android:textSize="@dimen/text_size_medium"
+                    android:text="@string/card_details_howtoget"/>
+
+                <TextView
+                    android:id="@+id/single_card_details_howtoget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_small"
+                    android:textSize="@dimen/text_size_medium"
+                    tools:text="Unlocked at Level 6."/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:padding="@dimen/spacing_small"
+                    android:textSize="@dimen/text_size_medium"
+                    android:text="@string/card_details_howtoget_golden"/>
+
+                <TextView
+                    android:id="@+id/single_card_details_howtoget_golden"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_small"
+                    android:textSize="@dimen/text_size_medium"
+                    tools:text="Unlocked at Level 40."/>
         </LinearLayout>
-    </ScrollView>
+    </com.smartsoftware.android.hearthbeat.ui.widget.SlidingUpPanelLayout>
 
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.smartsoftware.android.hearthbeat.ui.view;
+package com.smartsoftware.android.hearthbeat.view;
 
 import android.support.annotation.StringRes;
 import android.support.design.widget.CoordinatorLayout;
@@ -8,7 +8,12 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import com.smartsoftware.android.hearthbeat.R;
 import com.smartsoftware.android.hearthbeat.data.DataManager;
@@ -17,9 +22,12 @@ import com.smartsoftware.android.hearthbeat.main.BaseActivity;
 import com.smartsoftware.android.hearthbeat.ui.ActivityView;
 import com.smartsoftware.android.hearthbeat.ui.ScreenContainer;
 import com.smartsoftware.android.hearthbeat.ui.adapter.FeedsAdapter;
+import com.smartsoftware.android.hearthbeat.ui.feed.FeedPost;
+import com.smartsoftware.android.hearthbeat.ui.recyclerview.GridItemDividerDecoration;
 import com.smartsoftware.android.hearthbeat.ui.recyclerview.InfiniteScrollListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -33,11 +41,15 @@ import butterknife.OnClick;
  * Time: 23:32
  * Email: mrahbar.azad@gmail.com
  */
-public class FeedsView implements ActivityView {
+public class FeedsView implements ActivityView, FeedsAdapter.FeedAdapterListener {
 
     private ScreenContainer screenContainer;
     private FeedsViewListener listener;
     private LayoutInflater layoutInflater;
+    private FeedsAdapter adapter;
+
+    @Bind(android.R.id.empty)
+    ProgressBar loading;
 
     @Bind(R.id.main_deck_layout)
     CoordinatorLayout layout;
@@ -55,12 +67,14 @@ public class FeedsView implements ActivityView {
         void bindViews(FeedsView view);
         void onLaunchCollectionActivity();
         void onRefreshFeed();
+        void openURL(String url);
     }
 
-    public FeedsView(FeedsViewListener listener, ApplicationComponent applicationComponent) {
+    public FeedsView(FeedsViewListener listener, ApplicationComponent applicationComponent, List<FeedPost> posts) {
         applicationComponent.inject(this);
         this.listener = listener;
         screenContainer = new ScreenContainer();
+        adapter = new FeedsAdapter(posts, dataManager, this);
     }
 
     public void bind(BaseActivity activity) {
@@ -68,22 +82,12 @@ public class FeedsView implements ActivityView {
         layoutInflater = activity.getLayoutInflater();
         layoutInflater.inflate(getLayout(), viewContainer);
         listener.bindViews(this);
-        initializeToolbar();
+        adapter.setLayoutInflater(layoutInflater);
         initializeGrid();
-    }
-
-    private void initializeToolbar() {
-        final Toolbar toolbar = screenContainer.getToolbar();
-        toolbar.inflateMenu(R.menu.feeds);
-        toolbar.setOnMenuItemClickListener(item -> {
-            listener.onRefreshFeed();
-            return true;
-        });
+        checkEmptyState();
     }
 
     private void initializeGrid() {
-        FeedsAdapter adapter = new FeedsAdapter(new ArrayList<>(), layoutInflater, dataManager);
-
         grid.setAdapter(adapter);
         GridLayoutManager layoutManager = new GridLayoutManager(grid.getContext(), columns);
         grid.setLayoutManager(layoutManager);
@@ -95,12 +99,25 @@ public class FeedsView implements ActivityView {
             }
         });
         grid.setHasFixedSize(true);
-//        grid.addItemDecoration(new GridItemDividerDecoration(adapter.getDividedViewHolderClasses(),
-//                this, R.dimen.divider_height, R.color.divider));
-//        grid.setItemAnimator(new HomeGridItemAnimator());
+        grid.addItemDecoration(new GridItemDividerDecoration(grid.getContext(), R.dimen.divider_height, R.color.divider));
+    }
+
+    private void checkEmptyState() {
+        if (adapter.getItemCount() == 0) {
+            loading.setVisibility(View.VISIBLE);
+
+            // ensure grid scroll tracking/toolbar z-order is reset
+            gridScrollY = 0;
+            screenContainer.getToolbar().setTranslationZ(0f);
+
+            listener.onRefreshFeed();
+        } else {
+            loading.setVisibility(View.GONE);
+        }
     }
 
     private int gridScrollY = 0;
+
     private RecyclerView.OnScrollListener gridScroll = new RecyclerView.OnScrollListener() {
         @Override
         public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
@@ -113,6 +130,24 @@ public class FeedsView implements ActivityView {
             }
         }
     };
+
+    public void onCreateOptionsMenu(MenuInflater menuInflater, Menu menu) {
+        menuInflater.inflate(R.menu.feeds, menu);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_feeds_search:
+                listener.onRefreshFeed();
+                break;
+        }
+        return true;
+    }
+
+    @Override
+    public void openURL(String url) {
+        listener.openURL(url);
+    }
 
     public int getLayout() {
         return R.layout.activity_feed;
@@ -133,5 +168,10 @@ public class FeedsView implements ActivityView {
 
     public void showMessage(@StringRes int msgId) {
         Snackbar.make(layout, msgId, Snackbar.LENGTH_LONG).show();
+    }
+
+    public void onRefreshFinished(List<FeedPost> posts) {
+        loading.setVisibility(View.GONE);
+        adapter.updatePosts(posts);
     }
 }

@@ -8,7 +8,7 @@ import com.smartsoftware.android.hearthbeat.main.BaseActivity;
 import com.smartsoftware.android.hearthbeat.main.FeedActivity;
 import com.smartsoftware.android.hearthbeat.persistance.PrefKeys;
 import com.smartsoftware.android.hearthbeat.persistance.Prefs;
-import com.smartsoftware.android.hearthbeat.ui.view.LaunchView;
+import com.smartsoftware.android.hearthbeat.view.LaunchView;
 
 import butterknife.ButterKnife;
 

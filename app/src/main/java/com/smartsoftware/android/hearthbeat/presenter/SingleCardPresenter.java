@@ -4,8 +4,8 @@ import android.content.res.Resources;
 
 import com.smartsoftware.android.hearthbeat.main.BaseActivity;
 import com.smartsoftware.android.hearthbeat.model.Card;
-import com.smartsoftware.android.hearthbeat.ui.view.CollectionView;
-import com.smartsoftware.android.hearthbeat.ui.view.SingleCardView;
+import com.smartsoftware.android.hearthbeat.view.CollectionView;
+import com.smartsoftware.android.hearthbeat.view.SingleCardView;
 
 import butterknife.ButterKnife;
 

@@ -24,8 +24,15 @@
     <color name="page_indicator_dark">#80333333</color>
     <color name="page_indicator_dark_selected">#ff333333</color>
 
+    <color name="divider">#1f000000</color> <!-- 12% black -->
+
     <!-- reddit news -->
     <color name="reddit_news">#03a9f4</color> <!--light blue 500 -->-->
     <color name="reddit_news_dark">#039be5</color> <!-- light blue 600 -->
     <color name="reddit_news_link_highlight">#b303a9f4</color>
+
+    <color name="twitch_news">#6441a5</color> <!--light blue 500 -->-->
+    <color name="twitch_news_dark">#6639bf</color> <!-- light blue 600 -->
+    <color name="twitch_news_link_highlight">#b36441a5</color>
+
 </resources>
